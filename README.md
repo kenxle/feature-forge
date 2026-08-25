@@ -3,14 +3,12 @@
 **A full feature lifecycle for coding agents: crucible, brief, wireframe, architecture, plan, TDD build loop, adversarial review, ship. Docs are the source of truth, sub-agents do the work, and a human reviews at three gates.**
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Status: cleaning up for release](https://img.shields.io/badge/status-cleaning%20up%20for%20release-orange.svg)](#status)
+[![Status: coming soon](https://img.shields.io/badge/status-coming%20soon-orange.svg)](#status)
 [![Agents: Claude Code](https://img.shields.io/badge/agents-Claude%20Code-8A7CFF.svg)](#status)
 
 ## Status
 
-**Not published yet.** The Feature Forge has been running against real production work for months, but it is still wired to one person's machine: private repo paths, personal skill names, and a few habits that only make sense in my setup. This repo exists so the project has a home while I pull all of that out.
-
-Watch it if you want to know when the code lands.
+**Coming soon.** Watch this repo if you want to know when the code lands.
 
 ## Why
 
@@ -35,7 +33,7 @@ The human reads a compiled HTML page at three gates and comments in the browser.
 
 ## What's in the box
 
-Once it's cleaned up, this repo will hold:
+This repo will hold:
 
 - The `feature-forge` orchestration skill and its phase skills: crucible, brief, architecture, plan.
 - The reviewer sub-agents: PM, architect, security, engineering manager, code lead, testing, adversary, and a clarity reader that catches unreadable prose before a human has to.
