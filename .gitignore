@@ -1,0 +1,4 @@
+.DS_Store
+.claude-commit*
+node_modules/
+__pycache__/
