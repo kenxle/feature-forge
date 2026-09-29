@@ -14,6 +14,9 @@ These are acknowledged process influences, not bundled dependencies or a claim
 that their code is included. This repository packages its own process guidance
 and the newly authored tools described below.
 
+The broader [research and inspirations inventory](docs/inspirations.md)
+acknowledges practitioners and systems studied across earlier research.
+
 The old renderer/header were inspected: private shared-assets imports and a
 Mermaid CDN fetch are excluded. Installer, renderer, CSS, examples and tests here
 are newly authored. No third-party fonts, icons, JavaScript or vendor assets

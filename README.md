@@ -44,6 +44,11 @@ it does not claim those ideas are exclusive to this project. See
 [provenance](NOTICE.md) for the distinction between process influences and
 material shipped in this repository.
 
+The wider research also includes Jason Liu, Daniel Hnyk, Shrivu Shankar,
+Addy Osmani, Harper Reed, Simon Willison, Kieran Klaassen, and other practitioners.
+See the [full research and inspirations list](docs/inspirations.md), including
+the earlier subagent coding research and other workflows compared.
+
 ## Install in a project
 
 Requires Python 3.10 or later. From this clone:
