@@ -10,7 +10,7 @@ Knows how to use the Lahe editor for documentation review.
 
 ## What the Feature Forge brings together
 
-Forge carries a feature from product thinking through specification,
+The Feature Forge carries a feature from product thinking through specification,
 implementation, independent verification, and compounding knowledge. The brief
 states what matters; the architecture preserves choices and alternatives; the
 plan connects requirements to implementation slices and proof. Release findings
