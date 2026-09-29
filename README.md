@@ -21,6 +21,8 @@ Its emphasis is the continuity between those stages:
 - **One accountable feature record:** decisions, questions, acceptance, evidence,
   and lessons stay connected from the initial premise through release.
 - **Two reading surfaces:** Agents read MD. Humans read HTML.
+  The Lahe editor or the orchestrator coordinates between the two so that each
+  stakeholder has the optimal surface and context.
 - **Coherent implementation slices:** dependencies, ownership, integration, and
   safe landings are explicit without equating agents, tasks, and PRs.
 - **Independent completion:** someone other than the builder or orchestrator
