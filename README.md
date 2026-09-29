@@ -71,7 +71,7 @@ commands, branch conventions and approval policy.
 6. **Review.** Present the complete dossier for consolidated human document approval.
 7. **Implement.** Build with TDD, unit tests, playwright tests, and an agent browser walkthrough before PR.
 8. **Verify.** Before PR, an independent reviewer verifies integrated implementation against requirements and acceptance using evidence. Resolve gaps.
-8. Prepare PR, follow human merge/deployment approval policy, verify release and record lessons.
+9. **Ship and land.** Prepare PR, follow human merge/deployment approval policy, verify release in prod.
 
 Choose delegation, models, reuse and reviewer grouping judiciously. One independent
 owner per check; agents, workstreams and PRs need not map one to one. Do not
