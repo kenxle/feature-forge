@@ -20,8 +20,7 @@ Its emphasis is the continuity between those stages:
 
 - **One accountable feature record:** decisions, questions, acceptance, evidence,
   and lessons stay connected from the initial premise through release.
-- **Two reading surfaces:** agents receive relevant authoritative source sections;
-  the human reviews a comprehensive dossier composed from those same sources.
+- **Two reading surfaces:** Agents read MD. Humans read HTML.
 - **Coherent implementation slices:** dependencies, ownership, integration, and
   safe landings are explicit without equating agents, tasks, and PRs.
 - **Independent completion:** someone other than the builder or orchestrator
