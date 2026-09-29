@@ -42,11 +42,11 @@ including [gstack](https://github.com/garrytan/gstack),
 in a number of projects since February 2026. Ideas are not exclusive to this project,
 merely assembled in a new way.
 
-The wider research also includes Jason Liu, Daniel Hnyk, Shrivu Shankar,
-Addy Osmani, Harper Reed, Simon Willison, Kieran Klaassen, and other practitioners.
-See the [full research and inspirations list](docs/inspirations.md), including
-the earlier subagent coding research, system prompt architecture teardown,
-code orchestration alternatives, and other workflows compared.
+The wider research also includes a Fable 5 system prompt architecture teardown,
+agent orchestration frameworks like LangGraph, subagent guidance, and work by
+Jason Liu, Daniel Hnyk, Shrivu Shankar, Addy Osmani, Harper Reed, Simon Willison,
+Kieran Klaassen, and other practitioners. See the
+[full research and inspirations list](docs/inspirations.md).
 See [provenance](NOTICE.md) for the distinction between process influences and
 material shipped in this repository.
 
