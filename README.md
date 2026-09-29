@@ -67,7 +67,7 @@ commands, branch conventions and approval policy.
 2. **Product thinking.** Think through the product problem, establish scope and clarify uncertainties. Push back on whether you should be spending your limited time and resources on this.
 3. **Brief.** Context, user, requirements, analytics, and rollout.
 4. **Architecture.** Explore the codebase. Explore the internet. Explore alternatives. Write a thorough architecture without any code, and spawn optional reviewers for security and architecture.
-4. Plan coherent slices, dependencies, contracts and one verification table. Retain an independent testing checkpoint.
+5. **Plan.** Create coherent slices of work that consider the needs of implementation agents.
 5. Present the complete dossier for consolidated human document approval.
 6. Build with targeted tests; integrate and check seams, then run one final independent walk of changed user flows before PR.
 7. Before PR, an independent reviewer verifies integrated implementation against requirements and acceptance using evidence. Resolve gaps.
