@@ -36,6 +36,14 @@ collaboration, or that code from these projects is shipped here.
 - [ClaudeKit: subagent practices](https://claudekit.cc/blog/vc-04-subagents-from-basic-to-deep-dive-i-misunderstood)
 - [ClaudeFast: subagent practices](https://claudefa.st/blog/guide/agents/sub-agent-best-practices)
 
+## System prompt architecture
+
+The research also includes the June system prompt architecture teardown of the
+[purported Fable 5 prompt published by CL4R1T4S](https://github.com/elder-plinius/CL4R1T4S/blob/main/ANTHROPIC/CLAUDE-FABLE-5.md).
+It was studied as a structural artifact, not treated as a verified Anthropic
+release. The companion research compared it with
+[Anthropic's context engineering guidance](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents).
+
 ## Other systems compared
 
 - [GitHub Spec Kit](https://github.com/github/spec-kit)
@@ -46,7 +54,7 @@ collaboration, or that code from these projects is shipped here.
 - [Anthropic: Claude Code best practices](https://code.claude.com/docs/en/best-practices) and [multi-agent research](https://www.anthropic.com/engineering/multi-agent-research-system)
 
 This inventory draws on the February skills research, March subagent coding
-research, July workflow comparison, September pstack research, and the owner's
+research, June system prompt architecture research, July workflow comparison, September pstack research, and the owner's
 identification of PM Skills. It records research history rather than claiming
 that every recommendation in those earlier reports remains part of Forge.
 See [provenance](../NOTICE.md) for material included in this repository.
