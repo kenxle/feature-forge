@@ -3,8 +3,8 @@
 A feature development process for coding agents: clarify, brief, plan, build,
 verify, ship, and learn. Small understood changes use the Whetstone short route.
 
-Claude Code is the supported installation target. The process is model agnostic.
-No hosted service or telemetry is included.
+The process is model agnostic, but designed mostly on Claude Code, with some
+Codex as well. No hosted service or telemetry is included.
 
 Knows how to use the Lahe editor for documentation review.
 
