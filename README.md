@@ -76,14 +76,18 @@ commands, branch conventions and approval policy.
 
 Multiple reviewer personas are available for subagent review. To preserve tokens and prevent context poisoning, the orchestrator is given the judgment to choose which reviewers are invoked during the documentation process. Implementation always gets code review, completion review, and browser walkthrough. [Available reviewer perspectives](skills/feature-forge/references/reviewers.md) include product management, architecture, security, testing, code quality, completion evaluation, cross-model review, and design judgment.
 
-## Example and optional HTML
+## Example feature documents
 
 [The non-Rails CSV example](examples/csv-export/README.md) demonstrates sources,
 slices and an explicitly illustrative completion review. No application is
 claimed to have been shipped.
 
-Markdown needs no renderer dependencies. Optional HTML requires separately
-installed [Pandoc](https://pandoc.org/installing.html):
+## HTML for human review
+
+The included renderer combines a feature's Markdown documents into an HTML
+dossier for human review. Markdown remains the source for agents and edits.
+You can use this renderer or let LAHE render Markdown directly; the bundled
+renderer requires separately installed [Pandoc](https://pandoc.org/installing.html):
 
 ```sh
 python3 skills/feature-forge/scripts/build_feature_docs.py examples/csv-export
