@@ -5,8 +5,8 @@ clarify, brief, design, plan, build coherent slices, independently verify,
 ship, and learn. Modular Markdown sources compose into a comprehensive human
 dossier. Small understood changes use the Whetstone short route.
 
-Claude Code is the supported installation target. The process is host neutral;
-other hosts have not been tested. No hosted service or telemetry is included.
+Claude Code is the supported installation target. The process is model agnostic.
+No hosted service or telemetry is included.
 
 ## What Forge brings together
 
