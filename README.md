@@ -39,8 +39,8 @@ including [gstack](https://github.com/garrytan/gstack),
 [pstack](https://cursor.com/marketplace/cursor/pstack),
 [Superpowers](https://github.com/obra/superpowers), and
 [Paweł Huryn's PM Skills](https://github.com/phuryn/pm-skills), alongside practical iteration
-in a number of projects over N months. Forge's emphasis above describes the process assembled here;
-it does not claim those ideas are exclusive to this project. See
+in a number of projects over N months. Ideas are not exclusive to this project,
+merely assembled in a new way. See
 [provenance](NOTICE.md) for the distinction between process influences and
 material shipped in this repository.
 
