@@ -8,6 +8,38 @@ dossier. Small understood changes use the Whetstone short route.
 Claude Code is the supported installation target. The process is host neutral;
 other hosts have not been tested. No hosted service or telemetry is included.
 
+## What Forge brings together
+
+Forge carries a feature from product thinking through specification,
+implementation, independent verification, and compounding knowledge. The brief
+states what matters; the architecture preserves choices and alternatives; the
+plan connects requirements to implementation slices and proof. Release findings
+and lessons feed back into durable project guidance for the next feature.
+
+Its emphasis is the continuity between those stages:
+
+- **One accountable feature record:** decisions, questions, acceptance, evidence,
+  and lessons stay connected from the initial premise through release.
+- **Two reading surfaces:** agents receive relevant authoritative source sections;
+  the human reviews a comprehensive dossier composed from those same sources.
+- **Coherent implementation slices:** dependencies, ownership, integration, and
+  safe landings are explicit without equating agents, tasks, and PRs.
+- **Independent completion:** someone other than the builder or orchestrator
+  checks the integrated implementation against the specification.
+- **Compounding knowledge:** cleanup records useful findings and proposes updates
+  to project guidance so later work can use what the feature taught.
+
+## Inspirations
+
+This process has been shaped by studying and using other agent workflows,
+including [gstack](https://github.com/garrytan/gstack),
+[pstack](https://cursor.com/marketplace/cursor/pstack), and
+[Superpowers](https://github.com/obra/superpowers), alongside practical iteration
+on real features. Forge's emphasis above describes the process assembled here;
+it does not claim those ideas are exclusive to this project. See
+[provenance](NOTICE.md) for the distinction between process influences and
+material shipped in this repository.
+
 ## Install in a project
 
 Requires Python 3.10 or later. From this clone:
