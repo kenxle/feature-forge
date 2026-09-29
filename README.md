@@ -60,8 +60,8 @@ commands, branch conventions and approval policy.
 ## Process
 
 1. Establish scope and an isolated branch/worktree; clarify uncertainties.
-2. Brief context, solution, requirements, analytics and rollout. Retain useful PM review.
-3. Design from reconnaissance and preserve alternatives. Select architecture/security perspectives by need. Skip wireframes.
+2. Brief context, solution, requirements, analytics and rollout.
+3. Design from reconnaissance and preserve alternatives. Select architecture/security perspectives by need.
 4. Plan coherent slices, dependencies, contracts and one verification table. Retain an independent testing checkpoint.
 5. Present the complete dossier for consolidated human document approval.
 6. Build with targeted tests; integrate and check seams, then run one final independent walk of changed user flows before PR.
@@ -72,6 +72,11 @@ Choose delegation, models, reuse and reviewer grouping judiciously. One independ
 owner per check; agents, workstreams and PRs need not map one to one. Do not
 repeat the documentation pipeline per slice. Browser automation is an option
 for browser apps, not a requirement for other projects.
+
+[Available reviewer perspectives](skills/feature-forge/references/reviewers.md)
+include product management, architecture, security, testing, code quality,
+completion evaluation, cross-model review, and design judgment. Select the
+perspectives the feature needs rather than dispatching the entire roster.
 
 Behavior changes follow red/green/refactor using project tools, with practical
 verification choices for reconnaissance, UI exploration and vendor material.
