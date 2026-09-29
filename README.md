@@ -66,7 +66,7 @@ commands, branch conventions and approval policy.
 1. **Dev hygiene.** Set up an isolated branch/worktree and the feature's working files.
 2. **Product thinking.** Think through the product problem, establish scope and clarify uncertainties. Push back on whether you should be spending your limited time and resources on this.
 3. **Brief.** Context, user, requirements, analytics, and rollout.
-3. Design from reconnaissance and preserve alternatives. Select architecture/security perspectives by need.
+4. **Architecture.** Explore the codebase. Explore the internet. Explore alternatives. Write a thorough architecture without any code, and spawn optional reviewers for security and architecture.
 4. Plan coherent slices, dependencies, contracts and one verification table. Retain an independent testing checkpoint.
 5. Present the complete dossier for consolidated human document approval.
 6. Build with targeted tests; integrate and check seams, then run one final independent walk of changed user flows before PR.
