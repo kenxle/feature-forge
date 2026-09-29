@@ -40,15 +40,15 @@ including [gstack](https://github.com/garrytan/gstack),
 [Superpowers](https://github.com/obra/superpowers), and
 [Paweł Huryn's PM Skills](https://github.com/phuryn/pm-skills), alongside practical iteration
 in a number of projects over N months. Ideas are not exclusive to this project,
-merely assembled in a new way. See
-[provenance](NOTICE.md) for the distinction between process influences and
-material shipped in this repository.
+merely assembled in a new way.
 
 The wider research also includes Jason Liu, Daniel Hnyk, Shrivu Shankar,
 Addy Osmani, Harper Reed, Simon Willison, Kieran Klaassen, and other practitioners.
 See the [full research and inspirations list](docs/inspirations.md), including
 the earlier subagent coding research, system prompt architecture teardown,
 code orchestration alternatives, and other workflows compared.
+See [provenance](NOTICE.md) for the distinction between process influences and
+material shipped in this repository.
 
 ## Install in a project
 
