@@ -53,8 +53,6 @@ agent orchestration frameworks like LangGraph, subagent guidance, and work by
 Jason Liu, Daniel Hnyk, Shrivu Shankar, Addy Osmani, Harper Reed, Simon Willison,
 Kieran Klaassen, and other practitioners. See the
 [full research and inspirations list](docs/inspirations.md).
-See [provenance](NOTICE.md) for the distinction between process influences and
-material shipped in this repository.
 
 ## Install in a project
 
@@ -127,4 +125,4 @@ evidence reuse are intentionally outside this portable package.
 [Live Agentic HTML Editor](https://github.com/kenxle/live-agentic-html-editor).
 Human gates also work by sharing Markdown or local HTML and recording approval.
 
-See [verification](docs/verification.md), [provenance](NOTICE.md) and [MIT license](LICENSE).
+See [verification](docs/verification.md), [research and inspirations](docs/inspirations.md) and [MIT license](LICENSE).
