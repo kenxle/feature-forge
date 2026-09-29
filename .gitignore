@@ -2,3 +2,8 @@
 .claude-commit*
 node_modules/
 __pycache__/
+
+.Codex-commit
+__pycache__/
+*.pyc
+examples/**/*.html

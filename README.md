@@ -1,49 +1,79 @@
 # Feature Forge
 
-**A full feature lifecycle for coding agents: crucible, brief, wireframe, architecture, plan, TDD build loop, adversarial review, ship. Docs are the source of truth, sub-agents do the work, and a human reviews at three gates.**
+A feature development process for developers working with coding agents:
+clarify, brief, design, plan, build coherent slices, independently verify,
+ship, and learn. Modular Markdown sources compose into a comprehensive human
+dossier. Small understood changes use the Whetstone short route.
 
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Status: coming soon](https://img.shields.io/badge/status-coming%20soon-orange.svg)](#status)
-[![Agents: Claude Code](https://img.shields.io/badge/agents-Claude%20Code-8A7CFF.svg)](#status)
+Claude Code is the supported installation target. The process is host neutral;
+other hosts have not been tested. No hosted service or telemetry is included.
 
-## Status
+## Install in a project
 
-**Coming soon.** Watch this repo if you want to know when the code lands.
+Requires Python 3.10 or later. From this clone:
 
-## Why
+```sh
+python3 scripts/install.py /absolute/path/to/your-project --dry-run
+python3 scripts/install.py /absolute/path/to/your-project
+```
 
-Agents are good at writing code and bad at deciding what to write. Handed a one-line feature request, an agent will start editing files inside of a minute, and you find out three hours later that it built the wrong thing, or built the right thing with no tests, or quietly rewrote a module nobody asked it to touch.
+The installer checks every destination before copying five skills into the
+project's `.claude/skills/`. It refuses existing destinations and never edits
+project instructions. Review and move old copies yourself before updating.
+Start Claude Code in that project and invoke `/feature-forge`, `/brief`,
+`/architecture`, `/plan` or `/whetstone`. Commit installed skills for team use.
+Read the consuming project's instructions and use its actual verification
+commands, branch conventions and approval policy.
 
-The Feature Forge puts the thinking before the typing. A feature moves through phases, and each phase produces a document that the next phase has to answer to. Different sub-agents read those documents from different angles: a PM challenges the brief, a security reviewer challenges the architecture, an engineering manager challenges the plan, and an adversary reads everyone else's findings and goes looking for what they all missed.
+## Process
 
-The human reads a compiled HTML page at three gates and comments in the browser. Everything else runs on its own.
+1. Establish scope and an isolated branch/worktree; clarify uncertainties.
+2. Brief context, solution, requirements, analytics and rollout. Retain useful PM review.
+3. Design from reconnaissance and preserve alternatives. Select architecture/security perspectives by need. Skip wireframes.
+4. Plan coherent slices, dependencies, contracts and one verification table. Retain an independent testing checkpoint.
+5. Present the complete dossier for consolidated human document approval.
+6. Build with targeted tests; integrate and check seams, then run one final independent walk of changed user flows before PR.
+7. Before PR, an independent reviewer verifies integrated implementation against requirements and acceptance using evidence. Resolve gaps.
+8. Prepare PR, follow human merge/deployment approval policy, verify release and record lessons.
 
-## The lifecycle
+Choose delegation, models, reuse and reviewer grouping judiciously. One independent
+owner per check; agents, workstreams and PRs need not map one to one. Do not
+repeat the documentation pipeline per slice. Browser automation is an option
+for browser apps, not a requirement for other projects.
 
-0. **Setup.** Branch and worktree first, so no doc and no commit ever lands on the shared tree.
-1. **Crucible.** Challenge the idea before writing anything down. Is this worth building?
-2. **Brief.** What we're building and why. Problem, user, requirements, success criteria. No architecture.
-3. **Wireframe.** Interactive wireframes for anything a person looks at. *Human gate.*
-4. **Architecture.** The technical design, with alternatives considered. No step-by-step plan.
-5. **Plan.** Ordered, dispatchable tasks with a test list and acceptance criteria. *Human gate.*
-6. **Implement.** A loop: dispatch parallel builders into their own worktrees, merge, run the app, score against the acceptance criteria, repeat until green. Built with TDD.
-7. **Review.** Code review, security, testing, a cross-model pass, then an adversary fed everyone else's findings. Anything red goes back to phase 6.
-8. **Ship and land.** Readiness pass, open the PR, *human gate*, merge, watch the deploy, smoke test in production.
-9. **Cleanup.** Update the docs, review the outcome, write down what the process should have caught.
+## Example and optional HTML
 
-## What's in the box
+[The non-Rails CSV example](examples/csv-export/README.md) demonstrates sources,
+slices and an explicitly illustrative completion review. No application is
+claimed to have been shipped.
 
-This repo will hold:
+Markdown needs no renderer dependencies. Optional HTML requires separately
+installed [Pandoc](https://pandoc.org/installing.html):
 
-- The `feature-forge` orchestration skill and its phase skills: crucible, brief, architecture, plan.
-- The reviewer sub-agents: PM, architect, security, engineering manager, code lead, testing, adversary, and a clarity reader that catches unreadable prose before a human has to.
-- The reference material the agents actually read: document templates, a code review checklist, a doc review checklist, a TDD guide, a post-deploy checklist.
-- The build script that compiles the markdown docs into the HTML pages a human reviews.
+```sh
+python3 skills/feature-forge/scripts/build_feature_docs.py examples/csv-export
+python3 -m unittest discover -s tests -v
+```
 
-## Related
+The renderer bundles CSS, expands modular includes and review siblings, rewrites
+local document links and adds navigation. It uses no CDN or browser scripts.
+Mermaid remains readable code, not rendered diagrams. Raw HTML is supported for
+trusted local authoring; do not render untrusted documents. Edit Markdown and rebuild.
 
-- [Live Agentic HTML Editor (Lahe)](https://github.com/kenxle/live-agentic-html-editor) — the review layer the human gates run on. Select a passage in the built page, comment on it, and the agent edits the underlying markdown.
+Capture a project's real verification command without caching or overwriting
+prior evidence (choose a new evidence directory per run):
 
-## License
+```sh
+python3 skills/feature-forge/scripts/forge_support.py --repo /path/to/project --evidence /path/to/new-evidence -- python3 -m unittest discover
+```
 
-MIT
+The helper records actual output, exit status, command, time and Git revision.
+It does not fingerprint uncommitted/external state or establish spec completion.
+Progress remains directly authored Markdown; automatic progress mutation and
+evidence reuse are intentionally outside this portable package.
+
+[LAHE pairing](docs/lahe.md) uses the separate
+[Live Agentic HTML Editor](https://github.com/kenxle/live-agentic-html-editor).
+Human gates also work by sharing Markdown or local HTML and recording approval.
+
+See [verification](docs/verification.md), [provenance](NOTICE.md) and [MIT license](LICENSE).
