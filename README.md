@@ -68,7 +68,7 @@ commands, branch conventions and approval policy.
 3. **Brief.** Context, user, requirements, analytics, and rollout.
 4. **Architecture.** Explore the codebase. Explore the internet. Explore alternatives. Write a thorough architecture without any code, and spawn optional reviewers for security and architecture.
 5. **Plan.** Create coherent slices of work that consider the needs of implementation agents.
-5. Present the complete dossier for consolidated human document approval.
+6. **Review.** Present the complete dossier for consolidated human document approval.
 6. Build with targeted tests; integrate and check seams, then run one final independent walk of changed user flows before PR.
 7. Before PR, an independent reviewer verifies integrated implementation against requirements and acceptance using evidence. Resolve gaps.
 8. Prepare PR, follow human merge/deployment approval policy, verify release and record lessons.
