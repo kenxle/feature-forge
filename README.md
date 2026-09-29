@@ -39,7 +39,7 @@ including [gstack](https://github.com/garrytan/gstack),
 [pstack](https://cursor.com/marketplace/cursor/pstack),
 [Superpowers](https://github.com/obra/superpowers), and
 [Paweł Huryn's PM Skills](https://github.com/phuryn/pm-skills), alongside practical iteration
-in a number of projects over N months. Ideas are not exclusive to this project,
+in a number of projects since February 2026. Ideas are not exclusive to this project,
 merely assembled in a new way.
 
 The wider research also includes Jason Liu, Daniel Hnyk, Shrivu Shankar,
