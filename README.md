@@ -48,7 +48,7 @@ The wider research also includes Jason Liu, Daniel Hnyk, Shrivu Shankar,
 Addy Osmani, Harper Reed, Simon Willison, Kieran Klaassen, and other practitioners.
 See the [full research and inspirations list](docs/inspirations.md), including
 the earlier subagent coding research, system prompt architecture teardown,
-and other workflows compared.
+code orchestration alternatives, and other workflows compared.
 
 ## Install in a project
 

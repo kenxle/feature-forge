@@ -44,6 +44,19 @@ It was studied as a structural artifact, not treated as a verified Anthropic
 release. The companion research compared it with
 [Anthropic's context engineering guidance](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents).
 
+## Code orchestration alternatives
+
+The June Feature Forge orchestration research compared prose skills with more
+explicit workflow engines, including:
+
+- [LangGraph](https://docs.langchain.com/oss/python/langgraph/overview)
+- [Claude Agent SDK](https://platform.claude.com/docs/en/agent-sdk/overview)
+- [CrewAI](https://github.com/crewAIInc/crewAI)
+- [Temporal](https://temporal.io/solutions/ai)
+- Plain scripts and direct API calls as the baseline without a framework.
+
+These were evaluated as possible migration paths, not installed as Forge dependencies.
+
 ## Other systems compared
 
 - [GitHub Spec Kit](https://github.com/github/spec-kit)
@@ -54,7 +67,8 @@ release. The companion research compared it with
 - [Anthropic: Claude Code best practices](https://code.claude.com/docs/en/best-practices) and [multi-agent research](https://www.anthropic.com/engineering/multi-agent-research-system)
 
 This inventory draws on the February skills research, March subagent coding
-research, June system prompt architecture research, July workflow comparison, September pstack research, and the owner's
+research, June system prompt architecture and code orchestration research,
+July workflow comparison, September pstack research, and the owner's
 identification of PM Skills. It records research history rather than claiming
 that every recommendation in those earlier reports remains part of Forge.
 See [provenance](../NOTICE.md) for material included in this repository.
