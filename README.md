@@ -23,8 +23,9 @@ Its emphasis is the continuity between those stages:
 - **Two reading surfaces:** Agents read MD. Humans read HTML.
   The Lahe editor or the orchestrator coordinates between the two so that each
   stakeholder has the optimal surface and context.
-- **Coherent implementation slices:** dependencies, ownership, integration, and
-  safe landings are explicit without equating agents, tasks, and PRs.
+- **Plan for agent implementation:** break a feature into slices that an agent
+  or subagent can own, test, and ship. Make each slice's outcome, dependencies,
+  and integration with the rest of the feature clear before building.
 - **Independent completion:** someone other than the builder or orchestrator
   checks the integrated implementation against the specification.
 - **Compounding knowledge:** cleanup records useful findings and proposes updates
