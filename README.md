@@ -8,7 +8,7 @@ No hosted service or telemetry is included.
 
 Knows how to use the Lahe editor for documentation review.
 
-## What Forge brings together
+## What the Feature Forge brings together
 
 Forge carries a feature from product thinking through specification,
 implementation, independent verification, and compounding knowledge. The brief
