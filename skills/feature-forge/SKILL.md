@@ -45,6 +45,7 @@ and reviewer selection judiciously, within host capabilities and user policy.
 No fixed cap, prescribed pool or automatic roster.
 
 Run targeted tests while building and seam tests after integrating workstreams.
+Follow the [test-first build loop](references/build-loop.md) for behavioral changes.
 Run appropriate final verification and one final independent changed-user-flow walk before PR.
 Playwright or another browser tool is an option for browser workflows.
 

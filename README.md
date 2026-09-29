@@ -41,6 +41,9 @@ owner per check; agents, workstreams and PRs need not map one to one. Do not
 repeat the documentation pipeline per slice. Browser automation is an option
 for browser apps, not a requirement for other projects.
 
+Behavior changes follow red/green/refactor using project tools, with practical
+verification choices for reconnaissance, UI exploration and vendor material.
+
 ## Example and optional HTML
 
 [The non-Rails CSV example](examples/csv-export/README.md) demonstrates sources,

@@ -9,3 +9,20 @@ Pandoc checks skip explicitly when the optional executable is unavailable.
 The worked feature is illustrative, not an implemented application. Its
 acceptance is pending; package smoke checks do not establish feature completion.
 No browser review, non-Claude host installation, PR, merge or release is claimed.
+
+## Local extraction verification
+
+Package tests passed locally, including Pandoc rendering. A fresh temporary clone
+of the committed package also passed the suite, installed into a new temporary
+consumer project, rendered the dossier through the installed renderer, and
+resolved every generated local HTML navigation link. The installer refused a
+second install and preserved a deliberately edited local skill. Evidence capture
+recorded a deliberately failing command's actual output and nonzero status and
+refused reuse of its evidence directory.
+
+Private-reference scan found no machine paths or private skill dependencies in
+the package; the sole shared-assets mention is its exclusion in provenance.
+The existing LICENSE was inspected and retained. Old renderer/header dependencies
+were inspected rather than copied; no vendor assets are included. Tests verify
+files and helper behavior, not Claude Code's runtime skill selection or an actual
+LAHE review session. The package has not been published or pushed.

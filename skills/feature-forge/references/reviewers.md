@@ -1,5 +1,17 @@
 # Focused reviewer perspectives
 
+## Dispatch instruction for a fresh reviewer
+
+Give the reviewer its assigned perspective and criteria, authoritative source
+headings, integrated revision/worktree, relevant evidence and permission to inspect
+code or run checks. Ask it to investigate rather than rubber-stamp builder claims.
+Require concrete findings with severity, source location, requirement affected,
+observed behavior, recommended correction and evidence limits. It may read adjacent
+sources where needed. It must not edit outside assigned authority or ship code.
+The reviewer returns pass/fail/unverified per assigned criterion; the orchestrator
+integrates dispositions and assigns rechecks. These are generic agent instructions,
+not dependencies on named private agents or plugins.
+
 Select reviewers by need; each check has one owner independent of its builder.
 A delegated lead may own checks explicitly; parents reuse evidence rather than
 dispatching overlapping rosters. Choose supported models by ambiguity and quality.
