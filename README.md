@@ -63,7 +63,7 @@ commands, branch conventions and approval policy.
 
 ## Process
 
-1. Think through the product problem, establish scope and clarify uncertainties.
+1. **Product thinking.** Think through the product problem, establish scope and clarify uncertainties. Push back on whether you should be spending your limited time and resources on this.
 2. Set up an isolated branch/worktree and the feature's working files.
 2. Brief context, solution, requirements, analytics and rollout.
 3. Design from reconnaissance and preserve alternatives. Select architecture/security perspectives by need.
