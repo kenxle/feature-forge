@@ -36,8 +36,9 @@ The process is built around:
 
 This process has been shaped by studying and using other agent workflows,
 including [gstack](https://github.com/garrytan/gstack),
-[pstack](https://cursor.com/marketplace/cursor/pstack), and
-[Superpowers](https://github.com/obra/superpowers), alongside practical iteration
+[pstack](https://cursor.com/marketplace/cursor/pstack),
+[Superpowers](https://github.com/obra/superpowers), and
+[Paweł Huryn's PM Skills](https://github.com/phuryn/pm-skills), alongside practical iteration
 on real features. Forge's emphasis above describes the process assembled here;
 it does not claim those ideas are exclusive to this project. See
 [provenance](NOTICE.md) for the distinction between process influences and
@@ -55,14 +56,15 @@ python3 scripts/install.py /absolute/path/to/your-project
 The installer checks every destination before copying five skills into the
 project's `.claude/skills/`. It refuses existing destinations and never edits
 project instructions. Review and move old copies yourself before updating.
-Start Claude Code in that project and invoke `/feature-forge`, `/brief`,
-`/architecture`, `/plan` or `/whetstone`. Commit installed skills for team use.
+
+Start Claude Code in that project and invoke `/feature-forge` or `/whetstone`. Commit installed skills for team use.
 Read the consuming project's instructions and use its actual verification
 commands, branch conventions and approval policy.
 
 ## Process
 
-1. Establish scope and an isolated branch/worktree; clarify uncertainties.
+1. Think through the product problem, establish scope and clarify uncertainties.
+2. Set up an isolated branch/worktree and the feature's working files.
 2. Brief context, solution, requirements, analytics and rollout.
 3. Design from reconnaissance and preserve alternatives. Select architecture/security perspectives by need.
 4. Plan coherent slices, dependencies, contracts and one verification table. Retain an independent testing checkpoint.

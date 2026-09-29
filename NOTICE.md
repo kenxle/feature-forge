@@ -7,8 +7,9 @@ configuration history, logs or review records are included.
 
 The methodology has also been informed by studying
 [gstack](https://github.com/garrytan/gstack),
-[pstack](https://cursor.com/marketplace/cursor/pstack), and
-[Superpowers](https://github.com/obra/superpowers).
+[pstack](https://cursor.com/marketplace/cursor/pstack),
+[Superpowers](https://github.com/obra/superpowers), and
+[Paweł Huryn's PM Skills](https://github.com/phuryn/pm-skills).
 These are acknowledged process influences, not bundled dependencies or a claim
 that their code is included. This repository packages its own process guidance
 and the newly authored tools described below.
