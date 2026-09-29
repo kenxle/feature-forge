@@ -37,9 +37,15 @@ The process is built around:
 This process has been shaped by studying and using other agent workflows,
 including [gstack](https://github.com/garrytan/gstack),
 [pstack](https://cursor.com/marketplace/cursor/pstack),
-[Superpowers](https://github.com/obra/superpowers), and
-[Paweł Huryn's PM Skills](https://github.com/phuryn/pm-skills), alongside practical iteration
-in a number of projects since February 2026. Ideas are not exclusive to this project,
+[Superpowers](https://github.com/obra/superpowers),
+[Paweł Huryn's PM Skills](https://github.com/phuryn/pm-skills),
+[GitHub Spec Kit](https://github.com/github/spec-kit),
+[BMAD](https://github.com/bmad-code-org/BMAD-METHOD),
+[Agent OS](https://github.com/buildermethods/agent-os),
+[SuperClaude](https://github.com/SuperClaude-Org/SuperClaude_Framework),
+[claude-flow](https://github.com/ruvnet/ruflo), and
+[Anthropic: Claude Code best practices](https://code.claude.com/docs/en/best-practices)  
+alongside practical iteration in a number of projects since February 2026. Ideas are not exclusive to this project,
 merely assembled in a new way.
 
 The wider research also includes a Fable 5 system prompt architecture teardown,
