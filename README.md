@@ -26,8 +26,9 @@ The process is built around:
 - **Plan for agent implementation:** break a feature into slices that an agent
   or subagent can own, test, and ship. Make each slice's outcome, dependencies,
   and integration with the rest of the feature clear before building.
-- **Independent completion:** someone other than the builder or orchestrator
-  checks the integrated implementation against the specification.
+- **Persona-based reviews:** optional subagents bring product, architecture,
+  security, testing, and other perspectives to a review. Choose the personas
+  that can catch problems in the feature rather than running every reviewer.
 - **Compounding knowledge:** cleanup records useful findings and proposes updates
   to project guidance so later work can use what the feature taught.
 
