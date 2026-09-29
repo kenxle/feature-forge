@@ -16,7 +16,7 @@ states what matters; the architecture preserves choices and alternatives; the
 plan connects requirements to agent-aware implementation planning and testing.
 A clean-up process feeds lessons back into durable project guidance for the next feature.
 
-Its emphasis is the continuity between those stages:
+The process is built around:
 
 - **One accountable feature record:** decisions, questions, acceptance, evidence,
   and lessons stay connected from the initial premise through release.
