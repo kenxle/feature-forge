@@ -1,9 +1,7 @@
 # Feature Forge
 
-A feature development process for coding agents:
-clarify, brief, design, plan, build coherent slices, independently verify,
-ship, and learn. Modular Markdown sources compose into a comprehensive human
-dossier. Small understood changes use the Whetstone short route.
+A feature development process for coding agents: clarify, brief, plan, build,
+verify, ship, and learn. Small understood changes use the Whetstone short route.
 
 Claude Code is the supported installation target. The process is model agnostic.
 No hosted service or telemetry is included.
