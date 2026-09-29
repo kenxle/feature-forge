@@ -6,6 +6,8 @@ verify, ship, and learn. Small understood changes use the Whetstone short route.
 Claude Code is the supported installation target. The process is model agnostic.
 No hosted service or telemetry is included.
 
+Knows how to use the Lahe editor for documentation review.
+
 ## What Forge brings together
 
 Forge carries a feature from product thinking through specification,
