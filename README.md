@@ -76,9 +76,6 @@ commands, branch conventions and approval policy.
 
 Multiple reviewer personas are available for subagent review. To preserve tokens and prevent context poisoning, the orchestrator is given the judgment to choose which reviewers are invoked during the documentation process. Implementation always gets code review, completion review, and browser walkthrough. [Available reviewer perspectives](skills/feature-forge/references/reviewers.md) include product management, architecture, security, testing, code quality, completion evaluation, cross-model review, and design judgment.
 
-Behavior changes follow red/green/refactor using project tools, with practical
-verification choices for reconnaissance, UI exploration and vendor material.
-
 ## Example and optional HTML
 
 [The non-Rails CSV example](examples/csv-export/README.md) demonstrates sources,
