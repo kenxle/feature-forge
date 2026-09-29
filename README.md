@@ -74,10 +74,7 @@ commands, branch conventions and approval policy.
 9. **Ship and land.** Prepare PR, follow human merge/deployment approval policy, verify release in prod.
 10. **Cleanup.** Update durable project documentation, record lessons and propose improvements to project guidance. Close out the feature record and remove owned temporary resources with authorization.
 
-[Available reviewer perspectives](skills/feature-forge/references/reviewers.md)
-include product management, architecture, security, testing, code quality,
-completion evaluation, cross-model review, and design judgment. Select the
-perspectives the feature needs rather than dispatching the entire roster.
+Multiple reviewer personas are available for subagent review. To preserve tokens and prevent context poisoning, the orchestrator is given the judgment to choose which reviewers are invoked during the documentation process. Implementation always gets code review, completion review, and browser walkthrough. [Available reviewer perspectives](skills/feature-forge/references/reviewers.md) include product management, architecture, security, testing, code quality, completion evaluation, cross-model review, and design judgment.
 
 Behavior changes follow red/green/refactor using project tools, with practical
 verification choices for reconnaissance, UI exploration and vendor material.
