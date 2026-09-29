@@ -44,7 +44,7 @@ including [gstack](https://github.com/garrytan/gstack),
 [Agent OS](https://github.com/buildermethods/agent-os),
 [SuperClaude](https://github.com/SuperClaude-Org/SuperClaude_Framework),
 [claude-flow](https://github.com/ruvnet/ruflo), and
-[Anthropic: Claude Code best practices](https://code.claude.com/docs/en/best-practices)  
+[Anthropic's Claude Code best practices](https://code.claude.com/docs/en/best-practices),
 alongside practical iteration in a number of projects since February 2026. Ideas are not exclusive to this project,
 merely assembled in a new way.
 
