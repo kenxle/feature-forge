@@ -1,6 +1,6 @@
 # Feature Forge
 
-A feature development process for developers working with coding agents:
+A feature development process for coding agents:
 clarify, brief, design, plan, build coherent slices, independently verify,
 ship, and learn. Modular Markdown sources compose into a comprehensive human
 dossier. Small understood changes use the Whetstone short route.
