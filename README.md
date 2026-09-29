@@ -13,7 +13,7 @@ Knows how to use the Lahe editor for documentation review.
 The Feature Forge carries a feature from product thinking through specification,
 implementation, independent verification, and compounding knowledge. The brief
 states what matters; the architecture preserves choices and alternatives; the
-plan connects requirements to implementation slices and proof. Release findings
+plan connects requirements to agent-aware implementation planning and testing. Release findings
 and lessons feed back into durable project guidance for the next feature.
 
 Its emphasis is the continuity between those stages:
