@@ -49,7 +49,7 @@ alongside practical iteration in a number of projects since February 2026. Ideas
 merely assembled in a new way.
 
 The wider research also includes a Fable 5 system prompt architecture teardown,
-agent orchestration frameworks like LangGraph, subagent guidance, and work by
+agent orchestration frameworks like LangGraph, and work by
 Jason Liu, Daniel Hnyk, Shrivu Shankar, Addy Osmani, Harper Reed, Simon Willison,
 Kieran Klaassen, and other practitioners. See the
 [full research and inspirations list](docs/inspirations.md).
