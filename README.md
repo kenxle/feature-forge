@@ -46,7 +46,7 @@ including [gstack](https://github.com/garrytan/gstack),
 [claude-flow](https://github.com/ruvnet/ruflo), and
 [Anthropic's Claude Code best practices](https://code.claude.com/docs/en/best-practices),
 alongside practical iteration in a number of projects since February 2026. Ideas are not exclusive to this project,
-merely assembled in a new way.
+merely assembled in a different way.
 
 The wider research also includes a Fable 5 system prompt architecture teardown,
 agent orchestration frameworks like LangGraph, and work by
