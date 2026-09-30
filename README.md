@@ -100,7 +100,7 @@ python3 -m unittest discover -s tests -v
 
 The renderer bundles CSS, expands modular includes and review siblings, rewrites
 local document links and adds navigation. It uses no CDN or browser scripts.
-Mermaid remains readable code, not rendered diagrams. Raw HTML is supported for
+Raw HTML is supported for
 trusted local authoring; do not render untrusted documents. Edit Markdown and rebuild.
 
 Capture a project's real verification command without caching or overwriting
