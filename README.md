@@ -90,7 +90,7 @@ Multiple reviewer personas are available for subagent review. To preserve tokens
 
 The included renderer combines a feature's Markdown documents into an HTML
 dossier for human review. Markdown remains the source for agents and edits.
-You can use this renderer or let LAHE render Markdown directly; the bundled
+You can use this renderer or let the Lahe skills invoke the renderer; the bundled
 renderer requires separately installed [Pandoc](https://pandoc.org/installing.html):
 
 ```sh
