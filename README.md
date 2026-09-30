@@ -56,7 +56,13 @@ Kieran Klaassen, and other practitioners. See the
 
 ## Install in a project
 
-Requires Python 3.10 or later. From this clone:
+Requires Python 3.10 or later. Clone this repository first:
+
+```sh
+git clone https://github.com/kenxle/feature-forge.git
+```
+
+From the cloned repository:
 
 ```sh
 python3 scripts/install.py /absolute/path/to/your-project --dry-run

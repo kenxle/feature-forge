@@ -77,7 +77,7 @@ class PackageTest(unittest.TestCase):
     def test_dossier_composition(self):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp) / 'example'
-            shutil.copytree(ROOT / 'examples/csv-export', root)
+            shutil.copytree(ROOT / 'tests/fixtures/csv-export', root)
             pages = renderer.build(root)
             brief = (root / '01_brief_csv-export.html').read_text()
             self.assertIn('CSV quoting', brief)

@@ -6,9 +6,9 @@ installed renderer assets, include cycle/escape/missing-source rejection, and
 Pandoc dossier composition with review history and offline navigation.
 Pandoc checks skip explicitly when the optional executable is unavailable.
 
-The worked feature is illustrative, not an implemented application. Its
-acceptance is pending; package smoke checks do not establish feature completion.
-No browser review, non-Claude host installation, PR, merge or release is claimed.
+The CSV dossier under `tests/fixtures/` is renderer test data, not an implemented
+application. Package checks do not establish completion of a consumer's feature.
+Non-Claude host installation has not been tested.
 
 ## Local extraction verification
 
@@ -21,8 +21,8 @@ recorded a deliberately failing command's actual output and nonzero status and
 refused reuse of its evidence directory.
 
 Private-reference scan found no machine paths or private skill dependencies in
-the package; the sole shared-assets mention is its exclusion in provenance.
+the package; the sole shared-assets mention is its exclusion in the research credits.
 The existing LICENSE was inspected and retained. Old renderer/header dependencies
 were inspected rather than copied; no vendor assets are included. Tests verify
 files and helper behavior, not Claude Code's runtime skill selection or an actual
-LAHE review session. The package has not been published or pushed.
+LAHE review session in a consumer project.
