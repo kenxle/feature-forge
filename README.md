@@ -103,18 +103,6 @@ local document links and adds navigation. It uses no CDN or browser scripts.
 Raw HTML is supported for
 trusted local authoring; do not render untrusted documents. Edit Markdown and rebuild.
 
-Capture a project's real verification command without caching or overwriting
-prior evidence (choose a new evidence directory per run):
-
-```sh
-python3 skills/feature-forge/scripts/forge_support.py --repo /path/to/project --evidence /path/to/new-evidence -- python3 -m unittest discover
-```
-
-The helper records actual output, exit status, command, time and Git revision.
-It does not fingerprint uncommitted/external state or establish spec completion.
-Progress remains directly authored Markdown; automatic progress mutation and
-evidence reuse are intentionally outside this portable package.
-
 [LAHE pairing](docs/lahe.md) uses the separate
 [Live Agentic HTML Editor](https://github.com/kenxle/live-agentic-html-editor).
 Human gates also work by sharing Markdown or local HTML and recording approval.
