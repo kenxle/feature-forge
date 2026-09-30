@@ -21,12 +21,12 @@ history for the human. Give builders relevant authoritative sections, allowing
 necessary further investigation.
 
 Brief preserves context, solution outline, requirements, scope, analytics/logging,
-rollout/flags and question history. Retain useful PM review for substantial briefs.
+rollout/flags and question history. Select optional PM review by need.
 Architecture preserves reconnaissance, affected components, flows, failure modes
 and meaningful alternatives. Choose architecture/security perspectives by need.
 Skip wireframes. Plan owns the single verification table mapping requirements to
-measurable acceptance, failure variants, proof, owner and evidence. Retain the
-independent Plan testing checkpoint. The writer owns consistency/readability;
+measurable acceptance, failure variants, proof, owner and evidence. Select an
+optional independent Plan testing perspective when useful. The writer owns consistency/readability;
 do not add automatic clarity-reader or Plan code-lead/EM/design chains.
 
 Integrate findings into source bodies and record dispositions and rationale.
@@ -46,7 +46,7 @@ No fixed cap, prescribed pool or automatic roster.
 
 Run targeted tests while building and seam tests after integrating workstreams.
 Follow the [test-first build loop](references/build-loop.md) for behavioral changes.
-Run appropriate final verification and one final independent changed-user-flow walk before PR.
+Run independent code review, completion review and one final independent changed-user-flow walk before PR.
 Playwright or another browser tool is an option for browser workflows.
 
 Before PR, assign an independent reviewer/evaluator to check integrated code and

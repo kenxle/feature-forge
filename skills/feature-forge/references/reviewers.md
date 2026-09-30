@@ -21,10 +21,10 @@ dispatching overlapping rosters. Choose supported models by ambiguity and qualit
 | Product management | Substantial brief: user need, scope, outcomes, missing behavior and rollout |
 | Architecture | Consequential/uncertain design: recon, contracts, alternatives and failure modes |
 | Security | Changed trust boundaries, authorization, sensitive state, abuse and privacy |
-| Testing | Plan checkpoint: measurable acceptance, variants, seams and release coverage |
+| Testing | Optional Plan perspective: measurable acceptance, variants, seams and release coverage |
 | Staff design | Actual UI judgment when useful: interaction, hierarchy, accessibility and existing design conventions |
 | Cross-model | Independent alternative-model judgment when useful for consequential code or ambiguous decisions |
-| Code quality | Integrated code correctness, maintainability and conventions |
+| Code quality | Required before PR: integrated code correctness, maintainability and conventions |
 | Completion evaluator | Required before PR: integrated implementation vs requirements and Plan acceptance |
 
 One suitable independent reviewer may own both code quality and completion.
