@@ -19,8 +19,6 @@ The installer copies files. A skill running from a project's `.claude/skills/` o
 
 ## Rules for the skills
 
-- **Feature docs read correctly as plain Markdown.** People review them as raw Markdown, as HTML from the renderer, or served live by LAHE. LAHE serves the `.md` as-is. Anything only the renderer understands, such as Pandoc `:::` fenced divs, shows up there as literal text. Use plain Markdown, or HTML blocks where a styled component is needed.
-- **The renderer is optional.** It needs Pandoc. No skill may require it.
 - **Keep the package portable.** Nothing in this repo may name a person's machine, home folder, private repo or private tool. That includes skill text, examples, tests and commit messages.
 - **Write skill text plainly.** Use one idea per sentence and common words. Spell out what the agent should do and who does it. Agents follow plain instructions more reliably than compressed ones.
 - **Links between skills are relative.** The `feature-forge` skill's references are linked from the sibling skills as `../feature-forge/references/...`. A test checks that every local Markdown link resolves.
