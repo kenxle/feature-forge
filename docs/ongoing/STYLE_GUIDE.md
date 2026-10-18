@@ -25,7 +25,7 @@ Preserve existing document conventions when changing rendering. Repair compatibi
 
 ## Bundled visual rules
 
-The stylesheet uses system sans-serif type, dark text on white, blue links and pale gray code blocks. It limits the reading width and lets navigation wrap. Tables span the reading column with thin gray borders. Requirement callouts, question callouts and cross-references share a blue left rule. Print output hides navigation and removes the reading-width limit. Consult the linked asset for exact CSS values.
+Feature output follows the [bundled stylesheet](../../skills/feature-forge/assets/header.html). Consult that asset for exact CSS values.
 
 ## Review surfaces
 
