@@ -15,7 +15,7 @@ First draft by Seneschal.
 
 ## Scope
 
-This describes the package's bundled dossier output. It does not establish a new visual system for a consuming project or replace a review tool's own styles.
+This describes the package's bundled dossier output. It does not establish a new visual system for a consuming project or replace a review tool's own styles. The projects that the Forge creates feature for should have their own style guides.
 
 ## Source and layout
 
