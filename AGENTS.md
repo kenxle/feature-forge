@@ -45,3 +45,13 @@ Every hit should be a deliberate generic example, such as the `~/.claude/skills/
 
 - Keep commits small and focused. Separate wording changes from behavior changes.
 - `*.local.md` files are local working notes. They are excluded from git and are not part of the package.
+
+
+## Documents
+
+Read these when the task touches them. Seneschal keeps the table current.
+
+<!-- seneschal:doc-table -->
+| Document | Read when |
+|---|---|
+<!-- /seneschal:doc-table -->

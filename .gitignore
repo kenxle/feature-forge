@@ -7,3 +7,5 @@ __pycache__/
 __pycache__/
 *.pyc
 examples/**/*.html
+docs/reports/seneschal/
+*.local.md

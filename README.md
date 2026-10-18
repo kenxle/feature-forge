@@ -54,6 +54,12 @@ Jason Liu, Daniel Hnyk, Shrivu Shankar, Addy Osmani, Harper Reed, Simon Willison
 Kieran Klaassen, and other practitioners. See the
 [full research and inspirations list](docs/inspirations.md).
 
+## Maintainer documents
+
+Read the [project document index](docs/README.md) for the current product brief,
+architecture, testing guidance and public writing conventions before changing
+the package. The [board](docs/BOARD.md) tracks future work.
+
 ## Install in a project
 
 Requires Python 3.10 or later. Clone this repository first:
