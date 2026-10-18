@@ -37,7 +37,7 @@ One-shot prototypes aren't so difficult to build, but working on the same codeba
 
 ## What it does
 
-The installer copies the packaged skills into a consuming project. Feature Forge coordinates the full route. Brief, Architecture, and Plan provide document guidance. Whetstone covers small changes. The optional renderer turns trusted Markdown feature records into offline HTML. The evidence helper records actual verification output and command status.
+Feature Forge provides a series of skills and reference documentation for creating great documentation, and building great software. It creates documentation dossiers that may include a Brief, Architecture, Plan, and Progress. It relies on test driven development (TDD) and verification to create software that always works reliably.
 
 ## What it is not
 
