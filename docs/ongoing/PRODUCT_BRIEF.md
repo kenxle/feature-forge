@@ -19,7 +19,7 @@ People using coding agents to develop software, and the agents carrying out that
 
 ## The problem
 
-Agents can start building before the problem, scope and acceptance are clear. Decisions then scatter across chat and code. A working test suite alone cannot establish that a feature meets its user's needs.
+One-shot prototypes aren't so difficult to build, but working on the same codebase over extended periods of time remains quite difficult.
 
 ## The jobs to be done
 
