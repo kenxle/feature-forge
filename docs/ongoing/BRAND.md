@@ -2,7 +2,7 @@
 
 ## Charter
 
-**What belongs:** How the product talks: tone, word choice and positioning. How we describe the product. Words we use and words we avoid. Key claims and where each came from.
+**What belongs:** How the product talks: tone, word choice, and positioning. How we describe the product. Words we use and words we avoid. Key claims and where each came from.
 
 **What does not:** Anything visual (STYLE_GUIDE.md). What the product does (PRODUCT_BRIEF.md).
 
@@ -21,10 +21,10 @@ Describe Feature Forge as a feature development process for coding agents. Descr
 - Tell the agent who acts and what outcome matters.
 - Distinguish required outcomes from suggested methods.
 - Explain a constraint when the reason helps the agent use judgment.
-- Keep machine names, private services and personal working conventions out of the public package.
+- Keep machine names, private services, and personal working conventions out of the public package.
 
 ## Claims
 
-The package includes skills, an installer, a dossier renderer and a verification capture helper. It includes no hosted service or telemetry. The [product brief](PRODUCT_BRIEF.md) records intended outcomes, not measured performance claims. The [research credits](../inspirations.md) acknowledge influences; they do not validate effectiveness.
+The package includes skills, an installer, a dossier renderer, and a verification capture helper. It includes no hosted service or telemetry. The [product brief](PRODUCT_BRIEF.md) records intended outcomes, not measured performance claims. The [research credits](../inspirations.md) acknowledge influences; they do not validate effectiveness.
 
-Do not promise automatic review quality, host compatibility or a measured improvement without evidence. Run `research-report` before changing audience or adding claims that need outside support.
+Do not promise automatic review quality, host compatibility, or a measured improvement without evidence. Run `research-report` before changing audience or adding claims that need outside support.

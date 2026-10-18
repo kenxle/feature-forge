@@ -4,8 +4,8 @@ Read the [product brief](ongoing/PRODUCT_BRIEF.md) first, then [architecture](on
 
 | Document | Read when |
 |---|---|
-| [Product brief](ongoing/PRODUCT_BRIEF.md) | Checking purpose, audience, scope and commitments |
-| [Architecture](ongoing/ARCHITECTURE.md) | Changing skill boundaries, installation, rendering or evidence capture |
+| [Product brief](ongoing/PRODUCT_BRIEF.md) | Checking purpose, audience, scope, and commitments |
+| [Architecture](ongoing/ARCHITECTURE.md) | Changing skill boundaries, installation, rendering, or evidence capture |
 | [Testing](ongoing/TESTING.md) | Running checks or assessing what evidence proves |
 | [Style guide](ongoing/STYLE_GUIDE.md) | Changing document presentation |
 | [Brand](ongoing/BRAND.md) | Changing public wording or claims |

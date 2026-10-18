@@ -2,7 +2,7 @@
 
 ## Charter
 
-**What belongs:** How testing works: what runs, how to run it and what counts as green. The commands for each test layer. What the CI gate runs. Setup a new builder needs.
+**What belongs:** How testing works: what runs, how to run it, and what counts as green. The commands for each test layer. What the CI gate runs. Setup a new builder needs.
 
 **What does not:** Why a feature was built a certain way. Test cases for one feature.
 
@@ -29,12 +29,12 @@ The [CSV fixture](../../tests/fixtures/csv-export/README.md) is synthetic render
 
 ## What counts as green
 
-Run the full suite after changing skills, helpers or tests. Resolve failures. Report optional skips explicitly. Before pushing, scan tracked content for private paths and dependencies using the command in [repository instructions](../../AGENTS.md). Inspect each hit rather than treating an empty test log as proof of portability.
+Run the full suite after changing skills, helpers, or tests. Resolve failures. Report optional skips explicitly. Before pushing, scan tracked content for private paths and dependencies using the command in [repository instructions](../../AGENTS.md). Inspect each hit rather than treating an empty test log as proof of portability.
 
 The repository currently has no checked-in CI workflow. The command above is the local verification gate; branch protection and remote checks are not established by these files.
 
 ## Limits and change-specific checks
 
-The suite does not prove agent compliance, review independence, consumer feature completion, Lahe runtime integration, non-Claude installation, browser behavior or deployment success. Follow the consuming project's own checks for those outcomes. A process refactor needs observed use of the changed workflow in addition to package tests. Do not present a prose instruction as an enforced runtime guarantee.
+The suite does not prove agent compliance, review independence, consumer feature completion, Lahe runtime integration, non-Claude installation, browser behavior, or deployment success. Follow the consuming project's own checks for those outcomes. A process refactor needs observed use of the changed workflow in addition to package tests. Do not present a prose instruction as an enforced runtime guarantee.
 
 See [verification scope](../verification.md) for the earlier extraction checks. Keep historical observations separate from a new run's evidence.

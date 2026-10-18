@@ -23,18 +23,18 @@ One-shot prototypes aren't so difficult to build, but working on the same codeba
 
 ## The jobs to be done
 
-- Define the problem, scope and acceptance before implementation.
+- Define the problem, scope, and acceptance before implementation.
 - Give each implementation owner the relevant source and a clear outcome.
-- Preserve decisions, alternatives, review findings and observed proof.
+- Preserve decisions, alternatives, review findings, and observed proof.
 - Obtain required human approvals and carry lessons into later work.
 
 ## What it does
 
-The installer copies the packaged skills into a consuming project. Feature Forge coordinates the full route. Brief, Architecture and Plan provide document guidance. Whetstone covers small changes. The optional renderer turns trusted Markdown feature records into offline HTML. The evidence helper records actual verification output and command status.
+The installer copies the packaged skills into a consuming project. Feature Forge coordinates the full route. Brief, Architecture, and Plan provide document guidance. Whetstone covers small changes. The optional renderer turns trusted Markdown feature records into offline HTML. The evidence helper records actual verification output and command status.
 
 ## What it is not
 
-It is not a hosted agent runtime, deployment service, telemetry system or application framework. It does not bundle Lahe, Pandoc, a browser driver, a research service or the separate cleanup skill. The fixture dossier is test data.
+It is not a hosted agent runtime, deployment service, telemetry system, or application framework. It does not bundle Lahe, Pandoc, a browser driver, a research service, or the separate cleanup skill. The fixture dossier is test data.
 
 ## The principles for choosing methods
 
@@ -46,7 +46,7 @@ It is not a hosted agent runtime, deployment service, telemetry system or applic
 
 ## Commitments
 
-- Follow the consuming project's instructions, verification commands and approval policy.
+- Follow the consuming project's instructions, verification commands, and approval policy.
 - Record explicit document approval before building through the full route.
 - Keep the Plan's verification table authoritative for acceptance and evidence.
 - Require independent checks of integrated work before PR.
@@ -57,4 +57,4 @@ It is not a hosted agent runtime, deployment service, telemetry system or applic
 
 [Testing](TESTING.md) explains the package checks and their limits. Passing them establishes installer and helper behavior, not the quality of a real agent-led feature. Evaluate process changes in consuming projects against their approved acceptance and observed evidence. No measured productivity or quality improvement is claimed here.
 
-The [research credits](../inspirations.md) identify influences, not a product validation study. If a refactor changes the audience, problem or claims, run `research-report` and retain its sources before rewriting those commitments.
+The [research credits](../inspirations.md) identify influences, not a product validation study. If a refactor changes the audience, problem, or claims, run `research-report` and retain its sources before rewriting those commitments.

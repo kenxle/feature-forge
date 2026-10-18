@@ -2,7 +2,7 @@
 
 ## Charter
 
-**What belongs:** How the product looks: color, type, spacing and the reusable components. Tokens and the rules for using them. Each component and when to use it.
+**What belongs:** How the product looks: color, type, spacing, and the reusable components. Tokens and the rules for using them. Each component and when to use it.
 
 **What does not:** Voice and word choice (BRAND.md). How a screen works.
 
@@ -19,7 +19,7 @@ This describes Feature Forge's document review styles and bundled dossier output
 
 ## Source and layout
 
-Use Lahe's default styles for human document review. The [header asset](../../skills/feature-forge/assets/header.html) defines the bundled renderer's fallback styles. Pandoc supplies document structure. The [renderer](../../skills/feature-forge/scripts/build_feature_docs.py) inserts shared dossier navigation. Use semantic headings, paragraphs, lists and tables in Markdown. Keep source leaves readable for agents.
+Use Lahe's default styles for human document review. The [header asset](../../skills/feature-forge/assets/header.html) defines the bundled renderer's fallback styles. Pandoc supplies document structure. The [renderer](../../skills/feature-forge/scripts/build_feature_docs.py) inserts shared dossier navigation. Use semantic headings, paragraphs, lists, and tables in Markdown. Keep source leaves readable for agents.
 
 Preserve existing document conventions when changing rendering. Repair compatibility in the renderer rather than rewriting source documents merely to suit a tool.
 

@@ -57,7 +57,7 @@ Kieran Klaassen, and other practitioners. See the
 ## Maintainer documents
 
 Read the [project document index](docs/README.md) for the current product brief,
-architecture, testing guidance and public writing conventions before changing
+architecture, testing guidance, and public writing conventions before changing
 the package. The [board](docs/BOARD.md) tracks future work.
 
 ## Install in a project
@@ -81,12 +81,12 @@ project instructions. Review and move old copies yourself before updating.
 
 Start Claude Code in that project and invoke `/feature-forge` or `/whetstone`. Commit installed skills for team use.
 Read the consuming project's instructions and use its actual verification
-commands, branch conventions and approval policy.
+commands, branch conventions, and approval policy.
 
 ## Process
 
 1. **Dev hygiene.** Set up an isolated branch/worktree and the feature's working files.
-2. **Product thinking.** Think through the product problem, establish scope and clarify uncertainties. Push back on whether you should be spending your limited time and resources on this.
+2. **Product thinking.** Think through the product problem, establish scope, and clarify uncertainties. Push back on whether you should be spending your limited time and resources on this.
 3. **Brief.** Context, user, requirements, analytics, and rollout.
 4. **Architecture.** Explore the codebase. Explore the internet. Explore alternatives. Write a thorough architecture without any code, and spawn optional reviewers for security and architecture.
 5. **Plan.** Create coherent slices of work that consider the needs of implementation agents.
@@ -94,7 +94,7 @@ commands, branch conventions and approval policy.
 7. **Implement.** Build with TDD, unit tests, playwright tests, and an agent browser walkthrough before PR.
 8. **Verify.** Before PR, an independent reviewer verifies integrated implementation against requirements and acceptance using evidence. Resolve gaps.
 9. **Ship and land.** Prepare PR, follow human merge/deployment approval policy, verify release in prod.
-10. **Cleanup.** Update durable project documentation, record lessons and propose improvements to project guidance. Close out the feature record and remove owned temporary resources with authorization.
+10. **Cleanup.** Update durable project documentation, record lessons, and propose improvements to project guidance. Close out the feature record and remove owned temporary resources with authorization.
 
 Multiple reviewer personas are available for subagent review. To preserve tokens and prevent context poisoning, the orchestrator is given the judgment to choose which reviewers are invoked during the documentation process. Implementation always gets code review, completion review, and browser walkthrough. [Available reviewer perspectives](skills/feature-forge/references/reviewers.md) include product management, architecture, security, testing, code quality, completion evaluation, cross-model review, and design judgment.
 
@@ -119,4 +119,4 @@ trusted local authoring; do not render untrusted documents. Edit Markdown and re
 [Live Agentic HTML Editor](https://github.com/kenxle/live-agentic-html-editor).
 Human gates also work by sharing Markdown or local HTML and recording approval.
 
-See [verification](docs/verification.md), [research and inspirations](docs/inspirations.md) and [MIT license](LICENSE).
+See [verification](docs/verification.md), [research and inspirations](docs/inspirations.md), and [MIT license](LICENSE).
