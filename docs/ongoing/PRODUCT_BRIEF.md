@@ -23,10 +23,17 @@ One-shot prototypes aren't so difficult to build, but working on the same codeba
 
 ## The jobs to be done
 
-- Define the problem, scope, and acceptance before implementation.
-- Give each implementation owner the relevant source and a clear outcome.
+- Build great software that is reliable, secure, and that users love.
+
+- Increase development velocity.
+
+- Maintain software over time.
+
+- Reduce bugs in production.
+
 - Preserve decisions, alternatives, review findings, and observed proof.
-- Obtain required human approvals and carry lessons into later work.
+
+- Carry lessons into later work.
 
 ## What it does
 
