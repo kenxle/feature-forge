@@ -25,4 +25,3 @@ Describe Feature Forge as a feature development process for coding agents, with 
 ## Claims
 
 The package includes skills, an installer, a dossier renderer, and a verification capture helper. It includes no hosted service or telemetry. The [product brief](PRODUCT_BRIEF.md) records intended outcomes, not measured performance claims. The [research credits](../inspirations.md) acknowledge influences; they do not validate effectiveness.
-
