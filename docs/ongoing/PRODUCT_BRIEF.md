@@ -60,9 +60,7 @@ It is not a hosted agent runtime, deployment service, telemetry system, or appli
 ## Commitments
 
 - Follow the consuming project's instructions, verification commands, and approval policy.
-- Record explicit document approval before building through the full route.
 - Keep the Plan's verification table authoritative for acceptance and evidence.
-- Require independent checks of integrated work before PR.
 - Preserve local installed edits. The installer refuses existing destinations.
 - Keep durable documentation and lessons current when closing work.
 
