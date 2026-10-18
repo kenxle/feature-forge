@@ -54,4 +54,18 @@ Read these when the task touches them. Seneschal keeps the table current.
 <!-- seneschal:doc-table -->
 | Document | Read when |
 |---|---|
+| [AGENTS.md](AGENTS.md) | Working in this repository |
+| [.claude/guardrails.md](.claude/guardrails.md) | Preparing verification or shipping |
+| [docs/README.md](docs/README.md) | Finding project documents before a refactor |
+| [docs/STANDARD.md](docs/STANDARD.md) | Maintaining the project documentation set |
+| [docs/BOARD.md](docs/BOARD.md) | Finding future work and open decisions |
+| [docs/ongoing/PRODUCT_BRIEF.md](docs/ongoing/PRODUCT_BRIEF.md) | Checking purpose, scope and commitments |
+| [docs/ongoing/ARCHITECTURE.md](docs/ongoing/ARCHITECTURE.md) | Changing package structure or helper behavior |
+| [docs/ongoing/STYLE_GUIDE.md](docs/ongoing/STYLE_GUIDE.md) | Changing the visual style of dossier output |
+| [docs/ongoing/BRAND.md](docs/ongoing/BRAND.md) | Writing public descriptions or claims |
+| [docs/ongoing/TESTING.md](docs/ongoing/TESTING.md) | Running tests or assessing verification limits |
+| [docs/ongoing/diagrams/INDEX.md](docs/ongoing/diagrams/INDEX.md) | Finding maintained flow diagrams |
+| [docs/lahe.md](docs/lahe.md) | Pairing the package with live human review |
+| [docs/verification.md](docs/verification.md) | Reading historical extraction verification |
+| [docs/inspirations.md](docs/inspirations.md) | Tracing research influences and credits |
 <!-- /seneschal:doc-table -->
