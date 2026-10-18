@@ -11,9 +11,7 @@
 **Sources:** [package overview](../../README.md), [orchestrator](../../skills/feature-forge/SKILL.md), [Whetstone](../../skills/whetstone/SKILL.md), [research credits](../inspirations.md). No product validation report is present; see How we know it works.
 ## What it is
 
-Feature Forge is a portable skills package for coding agents. It connects product thinking, feature documents, implementation, independent verification, shipping and lessons. Whetstone gives small, understood changes a shorter route.
-
-This document records the current package's intent. It does not approve a refactor or promise new behavior.
+Feature Forge is a portable skills package that improves agentic software engineering. It connects product thinking, feature documents, implementation, verification, shipping, and compounding knowledge.
 
 ## Who it is for
 
