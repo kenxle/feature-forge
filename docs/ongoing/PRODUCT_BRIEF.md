@@ -45,10 +45,16 @@ It is not a hosted agent runtime, deployment service, telemetry system, or appli
 
 ## The principles for choosing methods
 
+- Ship as often as possible while maintaining software quality and reliability. Increase development velocity.
+
 - Leave agents room to exercise judgment.
-- Preserve both the full route and Whetstone.
+
+- Support multiple routes/runbooks depending on the use case.
+
+- Provide robust verification so that agents can know that they are shipping good work.
+
 - Give humans the complete record and agents the context relevant to their work.
-- Choose reviews for concrete risks. Keep reviewers independent of builders.
+
 - Keep each PR coherent and independently verifiable.
 
 ## Commitments
