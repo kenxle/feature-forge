@@ -41,7 +41,7 @@ Feature Forge provides a series of skills and reference documentation for creati
 
 ## What it is not
 
-It is not a hosted agent runtime, deployment service, telemetry system, or application framework. It does not bundle Lahe, Pandoc, a browser driver, a research service, or the separate cleanup skill. The fixture dossier is test data.
+It is not a hosted agent runtime, deployment service, telemetry system, or application framework. It does not bundle Lahe, Pandoc, a browser driver, a research service, or the separate cleanup skill.
 
 ## The principles for choosing methods
 
