@@ -13,7 +13,7 @@ First draft by Seneschal.
 
 ## Positioning
 
-Describe Feature Forge as a feature development process for coding agents. Describe Whetstone as the shorter route for small, understood changes. Say which capabilities are packaged and which tools the consuming project supplies.
+Describe Feature Forge as a feature development process for coding agents, with multiple runbooks for different use cases. Say which capabilities are packaged and which tools the consuming project supplies.
 
 ## Voice
 
