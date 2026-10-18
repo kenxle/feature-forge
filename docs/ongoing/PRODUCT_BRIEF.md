@@ -45,7 +45,7 @@ It is not a hosted agent runtime, deployment service, telemetry system, or appli
 
 ## The principles for choosing methods
 
-- Keep instructions plain and leave agents room to exercise judgment.
+- Leave agents room to exercise judgment.
 - Preserve both the full route and Whetstone.
 - Give humans the complete record and agents the context relevant to their work.
 - Choose reviews for concrete risks. Keep reviewers independent of builders.
