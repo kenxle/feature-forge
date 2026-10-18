@@ -35,6 +35,6 @@ The repository currently has no checked-in CI workflow. The command above is the
 
 ## Limits and change-specific checks
 
-The suite does not prove agent compliance, review independence, consumer feature completion, LAHE runtime integration, non-Claude installation, browser behavior or deployment success. Follow the consuming project's own checks for those outcomes. A process refactor needs observed use of the changed workflow in addition to package tests. Do not present a prose instruction as an enforced runtime guarantee.
+The suite does not prove agent compliance, review independence, consumer feature completion, Lahe runtime integration, non-Claude installation, browser behavior or deployment success. Follow the consuming project's own checks for those outcomes. A process refactor needs observed use of the changed workflow in addition to package tests. Do not present a prose instruction as an enforced runtime guarantee.
 
 See [verification scope](../verification.md) for the earlier extraction checks. Keep historical observations separate from a new run's evidence.

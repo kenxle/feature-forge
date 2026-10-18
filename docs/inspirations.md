@@ -90,5 +90,5 @@ this does not make claims about unrelated installed skills.
 
 Pandoc is an optional external executable, not vendored. Consult
 [Pandoc's license](https://github.com/jgm/pandoc/blob/main/COPYING.md) when
-installing/redistributing it separately. LAHE is linked as a separate optional
-project; no LAHE code or assets are incorporated.
+installing/redistributing it separately. Lahe is linked as a separate optional
+project; no Lahe code or assets are incorporated.

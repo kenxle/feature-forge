@@ -47,7 +47,7 @@ The evidence helper runs an argument list in the specified repository. It saves 
 
 ## Outside tools
 
-Python runs the helpers and tests. Pandoc is optional for HTML and rendering tests. Git supplies revision metadata. LAHE is an optional separately installed review tool; the package does not contain its state or lifecycle implementation. Browser automation and deployment tools come from the consuming project.
+Python runs the helpers and tests. Pandoc is optional for HTML and rendering tests. Git supplies revision metadata. Lahe is an optional separately installed review tool; the package does not contain its state or lifecycle implementation. Browser automation and deployment tools come from the consuming project.
 
 ## Refactor boundaries
 

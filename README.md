@@ -115,7 +115,7 @@ local document links and adds navigation. It uses no CDN or browser scripts.
 Raw HTML is supported for
 trusted local authoring; do not render untrusted documents. Edit Markdown and rebuild.
 
-[LAHE pairing](docs/lahe.md) uses the separate
+[Lahe pairing](docs/lahe.md) uses the separate
 [Live Agentic HTML Editor](https://github.com/kenxle/live-agentic-html-editor).
 Human gates also work by sharing Markdown or local HTML and recording approval.
 

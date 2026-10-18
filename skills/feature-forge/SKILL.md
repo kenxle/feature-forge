@@ -32,7 +32,7 @@ do not add automatic clarity-reader or Plan code-lead/EM/design chains.
 Integrate findings into source bodies and record dispositions and rationale.
 Present one comprehensive dossier for consolidated human approval before build.
 Use Markdown, optional HTML via `scripts/build_feature_docs.py <feature-folder>`
-(requires Pandoc), or LAHE following its installed skill and session contract.
+(requires Pandoc), or Lahe following its installed skill and session contract.
 Record explicit approval and unresolved questions; silence is not approval.
 
 ## Build, independently verify and ship

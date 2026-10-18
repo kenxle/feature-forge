@@ -25,4 +25,4 @@ the package; the sole shared-assets mention is its exclusion in the research cre
 The existing LICENSE was inspected and retained. Old renderer/header dependencies
 were inspected rather than copied; no vendor assets are included. Tests verify
 files and helper behavior, not Claude Code's runtime skill selection or an actual
-LAHE review session in a consumer project.
+Lahe review session in a consumer project.

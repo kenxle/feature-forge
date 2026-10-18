@@ -7,7 +7,7 @@ This repo is the source of the Feature Forge skills package. It holds the skills
 - `skills/`: the five skills that get installed: `feature-forge`, `brief`, `architecture`, `plan` and `whetstone`. Each has a `SKILL.md`. The `feature-forge` skill also carries `references/`, `scripts/` (the dossier renderer) and `assets/`.
 - `scripts/install.py`: copies the skills into a project's `.claude/skills/`. It refuses to overwrite existing copies.
 - `tests/`: the package tests. `tests/fixtures/csv-export/` is a sample feature folder used to test the renderer. It is test data, not a real feature.
-- `docs/`: notes on LAHE pairing, verification and research credits, plus `BOARD.md`, the backlog.
+- `docs/`: notes on Lahe pairing, verification and research credits, plus `BOARD.md`, the backlog.
 
 ## Installed copies do not update from here
 

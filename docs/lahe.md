@@ -1,9 +1,9 @@
-# LAHE companion review
+# Lahe companion review
 
-Install LAHE separately using its
+Install Lahe separately using its
 [installation guide](https://github.com/kenxle/live-agentic-html-editor/blob/main/docs/INSTALL.md).
-No LAHE code, state or credentials are bundled here. The following interface was
-checked against the local LAHE skill; installed help and runtime contracts govern
+No Lahe code, state or credentials are bundled here. The following interface was
+checked against the local Lahe skill; installed help and runtime contracts govern
 if the tool changes.
 
 Run `lahe review <target>` for Markdown or generated HTML. It prints an open URL,
@@ -19,5 +19,5 @@ through the installed tool's interface. Generated HTML is not canonical source.
 
 Keep review open until explicit human approval, record decisions, and use the
 printed close command when finished. Keep review state outside version control.
-Without LAHE, share Markdown or local HTML, gather feedback through the user's
+Without Lahe, share Markdown or local HTML, gather feedback through the user's
 chosen channel, update source and record the same explicit approval.

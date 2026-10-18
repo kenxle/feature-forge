@@ -12,7 +12,7 @@ Read the [product brief](ongoing/PRODUCT_BRIEF.md) first, then [architecture](on
 | [Diagram index](ongoing/diagrams/INDEX.md) | Finding maintained flow diagrams |
 | [Board](BOARD.md) | Finding future project work |
 | [Documentation standard](STANDARD.md) | Maintaining this document set |
-| [LAHE pairing](lahe.md) | Using optional live human review |
+| [Lahe pairing](lahe.md) | Using optional live human review |
 | [Verification scope](verification.md) | Reading historical extraction checks and limits |
 | [Research credits](inspirations.md) | Tracing influences |
 
