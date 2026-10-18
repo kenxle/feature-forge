@@ -17,7 +17,6 @@ Describe Feature Forge as a feature development process for coding agents, with 
 
 ## Voice
 
-- Use plain words and one idea per sentence.
 - Tell the agent who acts and what outcome matters.
 - Distinguish required outcomes from suggested methods.
 - Explain a constraint when the reason helps the agent use judgment.
