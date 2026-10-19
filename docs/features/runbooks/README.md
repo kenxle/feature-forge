@@ -15,7 +15,7 @@ No decision is needed to start the package refactor. Additional pstack files can
 - Use the prototype conversation to settle scope and record how far the agent may proceed. Documents then develop from that agreement and the agent continues through verified implementation and authorized shipping.
 - Small understood work can begin from an existing request or board item. The agent writes and maintains its spec, decisions, and evidence without waiting for the human to read and approve those documents before authorized shipping.
 - Keep the full dossier route for work that benefits from it or when the human explicitly wants it.
-- Keep acceptance evidence and independent review. Remove repeated approvals, fixed reviewer chains, and development prescriptions that do not improve those outcomes.
+- Keep acceptance evidence and independent review. Remove human approvals and instead use confidence based auto-releases. No fixed reviewer chains, use judgment. Development prescriptions should become runbooks that allow agency and judgment.
 
 The [product brief](../../ongoing/PRODUCT_BRIEF.md) already establishes velocity, agent judgment, multiple runbooks, and robust verification as goals. The [current orchestrator](../../../skills/feature-forge/SKILL.md) requires human dossier approval before implementation. The [current Whetstone skill](../../../skills/whetstone/SKILL.md) couples its compact spec with required human approval. Separate document production from human approval gates: agents keep the records complete while proceeding under existing authority.
 
@@ -23,9 +23,9 @@ The [product brief](../../ongoing/PRODUCT_BRIEF.md) already establishes velocity
 
 | Runbook | When to use it | Minimum record | Human involvement |
 |---|---|---|---|
-| Direct change | Understood fixes, maintenance, and small behavior changes | Compact spec linked to the request or board item, decisions, acceptance, evidence, and outcome | No routine document approval; only unresolved product decisions or approval the project actually requires |
-| Prototype first | A new or substantially changed user experience | Prototype decision, brief, architecture, Plan, and concise progress | Early alignment and hands-on prototype review; return only for material changes or required shipping permission |
-| Full dossier | Consequential or ambiguous work, or an explicit request for the existing process | Existing comprehensive dossier and review history | Consolidated dossier review before build |
+| Direct change | Understood fixes, maintenance, and small behavior changes | Compact spec linked to the request or board item, decisions, acceptance, evidence, and outcome | Confidence-based automatic release under standing project authority; unresolved product decisions return to the human |
+| Prototype first | A new or substantially changed user experience | Prototype decision, brief, architecture, Plan, and concise progress | Early alignment and hands-on prototype review, followed by confidence-based automatic release; return for material product changes |
+| Full dossier | Consequential or ambiguous work, or an explicit request for the existing process | Existing comprehensive dossier and review history | Human dossier approval only when explicitly selected; document depth alone does not require a gate |
 | Board automation | A cloud or local runner picks up eligible work without a person present | Claimed board item, scope and authority, linked implementation record, evidence, and outcome | Eligibility and shipping policy established ahead of the run; unresolved items return to the board |
 
 Board automation is an execution wrapper. It uses the direct-change route or resumes an already agreed feature. It cannot invent approval for a new product experience just because the task is on the board.
@@ -57,7 +57,7 @@ Use one acceptance and evidence record. The Plan owns it when a Plan exists. Oth
 - Record the revision, relevant environment, commands or observations, and pass/fail/unverified status. Reuse evidence only when the code and conditions still match.
 - If a required check cannot run, report the gap and stop at the permitted boundary. Do not turn missing verification into a passing result.
 
-Allow the agent to choose implementation order, tools, delegation, and refactoring approach within project constraints. Preserve valued PM review for substantial briefs and the Plan testing checkpoint; select their scope to answer actual uncertainties.
+Allow the agent to choose implementation order, tools, delegation, and refactoring approach within project constraints. Keep PM and testing perspectives available and select them when they can resolve actual uncertainties. Do not turn those perspectives into a fixed sequence of reviewers or mandatory handoffs.
 
 ## Less code and less maintenance
 
@@ -68,6 +68,10 @@ Reducing lines is a useful direction, not a quota. Do not trade clarity, tests, 
 Apply the same standard to the skills themselves. Put shared rules in one place, avoid duplicated approval instructions, and load only the relevant runbook. Keep detailed alternatives in source leaves for later inspection.
 
 ## Unattended work and shipping
+
+Make confidence-based automatic release the default under the consuming project's standing authority. Feature Forge should not add a per-release human approval gate. Record the release decision with evidence: acceptance results, independent review findings, remaining uncertainty, affected systems, and recovery options. Confidence must follow that evidence, rather than an unsupported score.
+
+When confidence is insufficient, investigate, improve the implementation, or strengthen verification. Release when the evidence supports it. If a genuine product decision, missing permission, or unavailable prerequisite remains, record that specific blocker. Do not routinely send completed work to the human for approval. Existing project restrictions still apply until that project deliberately changes them.
 
 Read the existing project board instead of adding a competing task system. Define the smallest eligibility contract that the runner needs:
 
@@ -113,7 +117,7 @@ Each slice should leave the package usable. Reuse this plan across slices rather
 | Routing and compatibility | Make the Feature Forge entry point a router. Add direct-change and full-dossier runbooks. Make Whetstone a compatible entry point. Keep shared verification and shipping rules authoritative. | Package suite and independent scenario review of route selection and existing behavior |
 | Prototype-first development | Add the prototype runbook. Update brief, architecture, Plan, and templates so the agreed route determines approval timing. Record prototype decisions and reusable-code status. | Walk a representative new UI request through alignment, prototype, documents, and build authorization |
 | Verification and maintainability | Revise the build loop and reviewer guidance around outcomes. Add selected pstack references and practical simplification guidance. Preserve independent acceptance checks. | Review a small fix, a nonvisual change, and a consequential change for adequate proof without redundant process |
-| Unattended board contract | Add the board runbook, eligibility and claim requirements, resumable outcomes, shipping boundaries, and flag records. Keep scheduler implementation outside the package. | Dry-run eligible, ambiguous, already-claimed, interrupted, and verification-blocked tasks against a representative project |
+| Unattended board contract | Add the board runbook, eligibility and claim requirements, resumable outcomes, confidence-based automatic release decisions, and flag records. Keep scheduler implementation outside the package. | Dry-run eligible, ambiguous, already-claimed, interrupted, and verification-blocked tasks against a representative project; demonstrate automatic release under standing authority |
 | Consumer pilot | Compare installed copies before updating one chosen project. Exercise the routes with that project's real tools. Record friction and revise the package first. | Observed end-to-end work and honest limits; no velocity claim based only on package tests |
 
 Update the [overview](../../../README.md), [product brief](../../ongoing/PRODUCT_BRIEF.md), [architecture](../../ongoing/ARCHITECTURE.md), [testing guidance](../../ongoing/TESTING.md), and [Lahe pairing guidance](../../lahe.md) with the slices that change their claims. Keep the installer and renderer unchanged unless an actual runbook need requires code changes.
@@ -128,8 +132,9 @@ This is the authoritative verification table for the refactor. Evidence remains 
 |---|---|---|---|---|
 | Match process to work | A small understood fix retains its spec, decisions, and evidence while proceeding without routine human document approval; ambiguous work gets appropriate discovery | Independent route scenarios using the actual revised skills | Independent acceptance reviewer | Pending |
 | Prototype before detailed specification | A new UI request uses a brief seed with target users and context, then reaches a clickable high-fidelity prototype before detailed requirements; simulated behavior is disclosed | Representative prototype-first walkthrough | Independent acceptance reviewer | Pending |
-| Preserve the full route | Explicit full-dossier requests still receive comprehensive records and consolidated review | Full-route scenario and package tests | Independent acceptance reviewer | Pending |
+| Preserve the full route | Full-dossier requests retain comprehensive records; consolidated human approval remains available when explicitly selected | Full-route scenario and package tests | Independent acceptance reviewer | Pending |
 | Continue under existing authority | Agreed work proceeds without repeated gates; material changes and forbidden shipping actions stop at the correct boundary | Authorization scenarios for each route | Independent acceptance reviewer | Pending |
+| Release on evidence-based confidence | Sufficiently verified work releases automatically under standing authority; missing proof prompts further work or a specific blocker, not a routine human approval request | Release scenarios with strong evidence, failed checks, unresolved uncertainty, and restricted authority | Independent acceptance reviewer | Pending |
 | Retain meaningful proof | Changed behavior has real evidence and independent review; unavailable required checks remain unverified | Inspect an integrated example and its acceptance record | Independent acceptance reviewer | Pending |
 | Keep unattended ownership safe | Concurrent or resumed runs do not duplicate ownership, PRs, or side effects | Consumer adapter tests or serialized-run demonstration | Consumer runner owner | Pending; package prose cannot enforce this |
 | Separate landing from activation | Disabled flags preserve current behavior; activation follows recorded authority | Consumer flag and release checks | Consumer release owner | Pending |
