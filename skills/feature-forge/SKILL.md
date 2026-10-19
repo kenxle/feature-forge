@@ -13,6 +13,8 @@ questions for product decisions or authority the available evidence cannot settl
 
 ## Choose the route
 
+Use judgment to select the appropriate documents, document components, and reviewers. You are aiming to create reliable, secure software that users love.
+
 - New or changed user experience: use [prototype first](references/runbooks/prototype-first.md).
 - Small understood change: use [Whetstone](../whetstone/SKILL.md), retaining its compact spec and evidence.
 - Explicit request for the comprehensive pre-build document review: use [full dossier](references/runbooks/full-dossier.md).
