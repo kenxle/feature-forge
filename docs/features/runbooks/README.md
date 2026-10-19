@@ -110,6 +110,16 @@ Start with references and narrowly adapted principles. Do not import pstack's wh
 
 Use the [complete pstack source index](pstack-index.md) to mark any additional files for consideration.
 
+## Selected pstack material and updates
+
+The maintainer selected [Comment Sicko](selected/pstack/agents/comment-sicko.md) for import exactly as written. The saved file is byte-for-byte identical to the upstream agent at revision `6b78e9f4e46c75d1697d837e51f07c2692e60b24`. Its [MIT license](selected/pstack/LICENSE) is preserved alongside it. This is the selected source for later integration; it has not been installed or invoked.
+
+Recommendation: keep selected upstream files in Forge with their source revision recorded, rather than requiring the entire pstack plugin. Preserve each selected original unchanged. Put Forge's routing and integration guidance beside it so updates remain easy to compare.
+
+During implementation, add an upstream update check that compares each selected file and its license against the recorded revision. Report changed files with their diffs for review. Apply accepted updates in a focused commit and advance the recorded revision. A scheduled check can open an update PR when the project's automation is configured; it should not silently replace the agent's instructions. Consumers receive accepted updates through Forge's normal copy-and-compare installation process.
+
+Comment Sicko calls the pstack `/how` and `/why` skills. Resolve those dependencies before invoking the unchanged agent. Their supporting files must be considered during integration; selecting this agent does not automatically select the whole plugin. Keep reviewer selection based on judgment rather than making this agent a compulsory gate.
+
 ## Implementation slices
 
 Each slice should leave the package usable. Reuse this plan across slices rather than restarting the documentation process.
