@@ -23,8 +23,9 @@ not require an arena workflow or parallel model competition.
 
 Retain the project's existing voice-of-customer persona judges where available.
 Use relevant personas to assess the prototype and later user-facing experience,
-following the [reviewer guidance](../reviewers.md). Their findings inform the
-product decision and complement the human's hands-on prototype review.
+following the [reviewer guidance](../reviewers.md). Their findings are not to be
+followed blindly, but evaluated, and they may inform the product decision and
+complement the human's hands-on prototype review.
 
 The prototype may be throwaway or become the implementation. Record that choice.
 Retained code still needs production checks. For nonvisual work, use a concrete
