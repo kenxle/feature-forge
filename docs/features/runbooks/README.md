@@ -1,17 +1,17 @@
 # Better Feature Forge runbooks
 
-Plan for the next implementation session. Make prototype-first work the normal route for new user experiences, automate well-understood board work, and retain the full dossier review route as an option. Agents still write and maintain the documents. The main change is that the human need not read and approve them before authorized work ships. Keep verification strong while giving agents more freedom over how they build.
+Plan for the next implementation session. Use this feature sequence: short brief, prototype, PRD, architecture, Plan, TDD, verification, ship, and land. Automate well-understood board work and retain the full dossier review route as an option. Agents still write and maintain the documents. The human need not read and approve them before authorized work ships.
 
 ## Current status
 
 Planning only. No packaged skills or installed copies have changed. The product direction below comes from the maintainer's request. The implementation details are recommendations, not an approved shipping policy for consuming projects.
 
-No decision is needed to start the package refactor. Additional pstack files can be evaluated when supplied. Cloud scheduling, project credentials, board adapters, and permission to merge belong to each consuming project and require separate setup.
+Next, the maintainer intends to try pstack on real features. Capture the resulting observations before integrating the selected material into Forge. The [pstack selection record](PSTACK_SELECTIONS.md) preserves the review decisions and copied sources. Implementation remains pending. Cloud scheduling, project credentials, board adapters, and permission to merge belong to each consuming project and require separate setup.
 
 ## What changes
 
 - Feature Forge becomes a small router that loads the runbook relevant to the work.
-- For a new user experience, capture the brief fields that guide the prototype: target users, their context, the problem, and the desired outcome. Then build a clickable high-fidelity prototype. Write detailed requirements and implementation specifics after exploring it. Skip wireframes.
+- For a new user experience, write a short brief with target users, their context, the problem, and the desired outcome. Then build a clickable high-fidelity prototype. Derive the PRD's detailed requirements from the agreed experience. Skip wireframes.
 - Use the prototype conversation to settle scope and record how far the agent may proceed. Documents then develop from that agreement and the agent continues through verified implementation and authorized shipping.
 - Small understood work can begin from an existing request or board item. The agent writes and maintains its spec, decisions, and evidence without waiting for the human to read and approve those documents before authorized shipping.
 - Keep the full dossier route for work that benefits from it or when the human explicitly wants it.
@@ -24,7 +24,7 @@ The [product brief](../../ongoing/PRODUCT_BRIEF.md) already establishes velocity
 | Runbook | When to use it | Minimum record | Human involvement |
 |---|---|---|---|
 | Direct change | Understood fixes, maintenance, and small behavior changes | Compact spec linked to the request or board item, decisions, acceptance, evidence, and outcome | Confidence-based automatic release under standing project authority; unresolved product decisions return to the human |
-| Prototype first | A new or substantially changed user experience | Prototype decision, brief, architecture, Plan, and concise progress | Early alignment and hands-on prototype review, followed by confidence-based automatic release; return for material product changes |
+| Prototype first | A new or substantially changed user experience | Short brief, prototype decision, PRD, architecture, Plan, and concise progress | Early alignment and hands-on prototype review, followed by confidence-based automatic release; return for material product changes |
 | Full dossier | Consequential or ambiguous work, or an explicit request for the existing process | Existing comprehensive dossier and review history | Human dossier approval only when explicitly selected; document depth alone does not require a gate |
 | Board automation | A cloud or local runner picks up eligible work without a person present | Claimed board item, scope and authority, linked implementation record, evidence, and outcome | Eligibility and shipping policy established ahead of the run; unresolved items return to the board |
 
@@ -34,7 +34,7 @@ Keep `/whetstone` as a compatible entry point to the direct-change runbook. Pres
 
 Nonvisual work does not need a decorative prototype. Use a concrete example, executable spike, API interaction, or the dossier route when that better exposes the decision.
 
-## Prototype first, then documents
+## Short brief, prototype, then detailed documents
 
 Start with a short crucible conversation and a lightweight brief seed: target users, their context, the problem, desired outcome, and the decision the prototype must resolve. Include known constraints that would materially change the experience. Reuse what the request already answers. This seed supplies enough direction to prototype; detailed requirements, acceptance criteria, and implementation specifics come afterward.
 
@@ -42,16 +42,18 @@ Build the main flow with realistic content and the project's design language. In
 
 Record the chosen behavior and any unresolved questions. Label simulated data and interactions. State whether the prototype will be discarded or developed into production code. Reusing it does not exempt it from production checks.
 
-Expand the brief seed from the agreed experience, retaining its user and context sections and adding detailed requirements and failure cases. Use architecture to resolve implementation choices and hidden risks. Use the Plan to define coherent slices and own the verification table. Documents should preserve useful reasoning without repeating the prototype narrative in every file.
+Keep the short brief as the initial orientation. Write the PRD from the agreed experience, adding detailed requirements and failure cases while linking back to user context. Do not add a second comprehensive brief that repeats the PRD. Reuse the current brief skill's detailed product guidance for the PRD while preserving existing entry points and records.
 
-Continue without a second document gate when the existing agreement and project policy authorize it. Write and maintain the brief, architecture, Plan, and progress as the work develops so the human can inspect them whenever useful. Their completion does not create a new requirement for the human to read or approve them. Ask again only when new evidence changes a material product choice, scope, risk, or shipping authority. A prototype establishes the intended experience; it does not establish backend correctness or release safety.
+Use architecture to resolve implementation choices and hidden risks. Use the Plan to define coherent slices and own the verification table. Its implementation strategy includes the throughput checkpoint: blocking prerequisites, independent workstreams, shared writable state, and the smallest safe decomposition. Progress records changes and links to that strategy. This does not add another document or approval gate.
+
+Continue without a second document gate when the existing agreement and project policy authorize it. Write and maintain the short brief, PRD, architecture, Plan, and progress as the work develops so the human can inspect them whenever useful. Their completion does not create a new requirement for the human to read or approve them. Build behavior changes with TDD, verify the integrated result, ship under standing authority, and follow through to landing and release evidence. Ask again only when new evidence changes a material product choice, scope, risk, or shipping authority. A prototype establishes the intended experience; it does not establish backend correctness or release safety.
 
 ## Verification is the common foundation
 
 Use one acceptance and evidence record. The Plan owns it when a Plan exists. Otherwise it lives with the compact task record. Link to existing project verification instructions instead of reproducing them.
 
 - Verify observable behavior through the real interface, including meaningful failure cases and side effects.
-- Use focused tests during development and the project's required integrated checks before shipping. Prefer test-first work when it helps establish the contract; do not manufacture tests for prose or trivial reversible changes.
+- Use TDD for behavior changes, focused checks during development, and the project's required integrated checks before shipping. Do not manufacture tests for prose or trivial reversible changes.
 - Keep independent code review and acceptance review for behavior changes. A suitable reviewer can own both. Choose other specialist reviews for concrete risks, rather than a fixed roster.
 - Walk changed user flows before PR. Use browser tools for browser flows and the appropriate real interface for CLI, API, or library work.
 - Record the revision, relevant environment, commands or observations, and pass/fail/unverified status. Reuse evidence only when the code and conditions still match.
@@ -120,6 +122,8 @@ During implementation, add an upstream update check that compares each selected 
 
 Comment Sicko calls the pstack `/how` and `/why` skills. Resolve those dependencies before invoking the unchanged agent. Their supporting files must be considered during integration; selecting this agent does not automatically select the whole plugin. Keep reviewer selection based on judgment rather than making this agent a compulsory gate.
 
+The subsequent review selected the complete principles and Autonomy section, supporting skills, and a smaller runbook set. See the [selection record](PSTACK_SELECTIONS.md) for what to keep unchanged, adapt, or leave out. Original source copies are preserved there; these selections do not install the whole pstack orchestrator.
+
 ## Implementation slices
 
 Each slice should leave the package usable. Reuse this plan across slices rather than restarting the documentation process.
@@ -127,7 +131,7 @@ Each slice should leave the package usable. Reuse this plan across slices rather
 | Slice | Change | Completion evidence |
 |---|---|---|
 | Routing and compatibility | Make the Feature Forge entry point a router. Add direct-change and full-dossier runbooks. Make Whetstone a compatible entry point. Keep shared verification and shipping rules authoritative. | Package suite and independent scenario review of route selection and existing behavior |
-| Prototype-first development | Add the prototype runbook. Update brief, architecture, Plan, and templates so the agreed route determines approval timing. Record prototype decisions and reusable-code status. | Walk a representative new UI request through alignment, prototype, documents, and build authorization |
+| Prototype-first development | Add the short brief, prototype, PRD, architecture, Plan, TDD, verification, ship, and land sequence. Update skills and templates so the agreed route determines approval timing. Put the throughput checkpoint in the Plan. | Walk a representative new UI request through the complete sequence without routine document approval |
 | Verification and maintainability | Revise the build loop and reviewer guidance around outcomes. Add selected pstack references and practical simplification guidance. Preserve independent acceptance checks. | Review a small fix, a nonvisual change, and a consequential change for adequate proof without redundant process |
 | Unattended board contract | Add the board runbook, eligibility and claim requirements, resumable outcomes, confidence-based automatic release decisions, and flag records. Keep scheduler implementation outside the package. | Dry-run eligible, ambiguous, already-claimed, interrupted, and verification-blocked tasks against a representative project; demonstrate automatic release under standing authority |
 | Consumer pilot | Compare installed copies before updating one chosen project. Exercise the routes with that project's real tools. Record friction and revise the package first. | Observed end-to-end work and honest limits; no velocity claim based only on package tests |
@@ -143,7 +147,7 @@ This is the authoritative verification table for the refactor. Evidence remains 
 | Requirement | Acceptance and failure case | Check | Owner | Evidence/status |
 |---|---|---|---|---|
 | Match process to work | A small understood fix retains its spec, decisions, and evidence while proceeding without routine human document approval; ambiguous work gets appropriate discovery | Independent route scenarios using the actual revised skills | Independent acceptance reviewer | Pending |
-| Prototype before detailed specification | A new UI request uses a brief seed with target users and context, then reaches a clickable high-fidelity prototype before detailed requirements; simulated behavior is disclosed | Representative prototype-first walkthrough | Independent acceptance reviewer | Pending |
+| Prototype before detailed specification | A new UI request uses a short brief with target users and context, then reaches a clickable high-fidelity prototype before the PRD; architecture and Plan follow, then TDD, verification, ship, and land | Representative feature walkthrough | Independent acceptance reviewer | Pending |
 | Preserve the full route | Full-dossier requests retain comprehensive records; consolidated human approval remains available when explicitly selected | Full-route scenario and package tests | Independent acceptance reviewer | Pending |
 | Continue under existing authority | Agreed work proceeds without repeated gates; material changes and forbidden shipping actions stop at the correct boundary | Authorization scenarios for each route | Independent acceptance reviewer | Pending |
 | Release on evidence-based confidence | Sufficiently verified work releases automatically under standing authority; missing proof prompts further work or a specific blocker, not a routine human approval request | Release scenarios with strong evidence, failed checks, unresolved uncertainty, and restricted authority | Independent acceptance reviewer | Pending |
@@ -155,6 +159,6 @@ This is the authoritative verification table for the refactor. Evidence remains 
 
 ## Resume here
 
-Read this plan and the repository instructions. Check current work and fetch remotes before choosing the implementation branch. Begin with routing and compatibility. Inspect any additional pstack materials the maintainer has supplied. Keep installed copies unchanged until their local differences have been compared.
+Read this plan, the [selection record](PSTACK_SELECTIONS.md), and the repository instructions. Review observations from the maintainer's pstack pilot when available. Check current work and fetch remotes before choosing the implementation branch. Begin with routing and compatibility. Keep installed copies unchanged until their local differences have been compared.
 
 The planning branch is `runbooks`. This record is the handoff, not a claim that the new workflows or overnight runner are implemented.
