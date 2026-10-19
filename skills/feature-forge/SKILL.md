@@ -1,6 +1,6 @@
 ---
 name: feature-forge
-description: Develop features through a short brief, prototype, PRD, architecture, Plan, TDD, verification, shipping and landing. Keep the full dossier review route available.
+description: Develop features through a short brief, prototype, PRD, architecture, Plan, TDD, verification, shipping and landing.
 user-invocable: true
 ---
 
