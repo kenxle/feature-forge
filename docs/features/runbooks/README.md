@@ -1,4 +1,4 @@
-# Lighter Feature Forge runbooks
+# Better Feature Forge runbooks
 
 Plan for the next implementation session. Make prototype-first work the normal route for new user experiences, automate well-understood board work, and retain the full dossier as an option. Keep verification strong while giving agents more freedom over how they build.
 
