@@ -1,39 +1,35 @@
 # Forge MVP alongside the pstack trial
 
-The MVP is on main, and the local Claude and Codex development skills are updated. For Claude Code cloud sessions, install and commit the package in each project repository, as described below. The local update alone does not reach the cloud. The pstack trial can run in parallel.
+The MVP is on main, and the local Claude and Codex development skills are updated. Claude supports symlinked skill folders. For cloud sessions, provision a Forge checkout in the cloud VM and link the skills there, or commit installed copies in the project. The pstack trial can run in parallel.
 
 The default feature route is short brief, prototype, PRD, architecture, Plan, TDD, verification, ship, and land. Agents adapt their path to the actual task. The package includes the selected principles, writing guidance, and scoped comment review, and keeps the documentation record without routine human document approval.
 
 ## Use in Claude Code cloud sessions
 
-I recommend committing the installed package in each project that uses it. Cloud sessions load the cloned repository's `.claude/skills/` and cannot read the skills installed only on your laptop. [Anthropic's cloud skill guidance](https://code.claude.com/docs/en/skills#use-skills-in-cowork-and-cloud-sessions) confirms this distinction.
+Claude supports symlinked skill folders. My earlier recommendation was too restrictive. A symlink works when its target exists in the session's filesystem. A laptop-only target is unavailable in a cloud VM. [Anthropic's symlink support](https://code.claude.com/docs/en/skills#choose-where-skills-load) and [cloud filesystem guidance](https://code.claude.com/docs/en/cloud-environments#what-carries-over-from-your-setup).
 
-Use project copies and automate their updates. A symlink to your local Forge checkout cannot resolve in a cloud clone. Keep this repository as the source of truth, and treat the project copies as installed dependencies.
+For maintaining one source, I recommend a shared Forge checkout with symlinks:
 
-When you accept a Forge update, a shared update command should refresh the selected projects and global installs, record the source revision, and commit the project changes. It should detect local edits before replacing files and leave conflicts for review. Each cloud run then gets the version committed on its branch. Projects can stay on a known working version until their next update.
+- Locally, link the skill folders to the shared Forge checkout. Updating that checkout updates what those links expose.
+- In the cloud, bootstrap a separate checkout of the same Forge revision inside the VM and create the equivalent skill links there. Keep all sibling skills and supporting files together so their relative links resolve.
+- Record the chosen revision. Refresh it when adopting an update, and keep it stable during a development run.
 
-Local and cloud sessions can otherwise diverge because Claude gives personal skills precedence over project skills with the same name. Keep those versions aligned. [Anthropic's skill precedence rules](https://code.claude.com/docs/en/skills#resolve-skills-that-share-a-name).
+A cloud environment setup script can provision the checkout before Claude starts. Setup scripts can be cached, so they do not guarantee a fetch on every session. [Cloud setup scripts and caching](https://code.claude.com/docs/en/cloud-environments#environment-caching).
 
-The current installer handles fresh installs only. The repeatable updater is [recorded on the board](../../BOARD.md) as follow-up work. I recommend that over fetching the latest Forge code every time a session starts.
+For refreshes at session start, use a repository SessionStart hook. If that hook creates or updates skills, return `reloadSkills: true` so Claude re-scans after the hook completes. Anthropic documents this exact shared-skills pattern. [Reload skills that a hook installs](https://code.claude.com/docs/en/hooks#reload-skills-that-a-hook-installs). Repository hooks in Anthropic-hosted sessions apply only to sessions with one repository. [Cloud hook limitations](https://code.claude.com/docs/en/cloud-environments#limitations-in-cloud-sessions).
 
-From your up-to-date Feature Forge checkout, run the [installer](../../../scripts/install.py) against the target project. Replace the example path with that project's actual path:
+Committed project copies remain an alternative when a project should carry its Forge version without a startup fetch. For that route, run the [existing installer](../../../scripts/install.py) from the Forge checkout. Replace the example path with the target project's actual path:
 
 ```sh
 python3 scripts/install.py /absolute/path/to/your-project --dry-run
 python3 scripts/install.py /absolute/path/to/your-project
 ```
 
-Then complete the setup in that project:
-
-- Commit and push the installed `feature-forge`, `brief`, `architecture`, `plan`, and `whetstone` folders under `.claude/skills/`. Keep their supporting files, including vendored sources and license. The installer refuses existing destinations, so compare and preserve older copies before updating.
-- Check that Git tracks those folders. Use real committed files rather than links to folders on your laptop.
-- Start a new cloud session on the branch containing that commit. Ask Claude to read `.claude/skills/feature-forge/SKILL.md` to confirm the installed version, then invoke `/feature-forge` or `/whetstone`. Cloud sessions launched from the terminal clone the remote branch, so push first. [Anthropic's cloud launch guidance](https://code.claude.com/docs/en/claude-code-on-the-web#start-a-cloud-session-from-your-terminal).
+Commit and push all installed skill folders and supporting files under `.claude/skills/`, then start the cloud session on that branch. The installer refuses existing destinations, so compare and preserve older copies before updating. [Anthropic's repository skill guidance](https://code.claude.com/docs/en/skills#use-skills-in-cowork-and-cloud-sessions).
 
 The skill instructions need no separate Forge service. For the optional HTML renderer, make Pandoc available in the cloud environment. Configure the project's build tools and test services there too. Cloud environment setup scripts install missing tools before Claude starts. [Cloud environment configuration](https://code.claude.com/docs/en/cloud-environments#setup-scripts).
 
-Account-wide skills enabled through claude.ai are another supported distribution route. For this linked package, I recommend repository copies first so each project records its chosen version. [Anthropic's account skill guidance](https://code.claude.com/docs/en/skills#use-skills-in-cowork-and-cloud-sessions).
-
-This explains the setup. No consuming project's cloud installation has been changed yet, and no cloud run has been verified.
+The [shared bootstrap and update tool](../../BOARD.md) is follow-up work. The current installer copies files. The local installs have not been converted to shared-checkout links, and no cloud bootstrap or cloud run has been verified.
 
 ## What is ready
 
