@@ -6,11 +6,11 @@ authority. Writing a document does not create a human approval gate.
 This is the default feature route, not a required path for every task. Adapt the
 work to the question while preserving the requested experience and verification.
 
-## Short brief and prototype
+## Brief to prototype
 
 Create a feature folder under `docs/features/`. Capture target users, their
 context, the problem, desired outcome, and known constraints that affect the
-experience. Use a short conversation to resolve the premise. Leave detailed
+experience. Use a document to resolve the premise. Leave detailed
 requirements and implementation choices for after the prototype.
 
 Build a clickable high-fidelity prototype using the project's design language
