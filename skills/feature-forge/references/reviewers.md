@@ -34,6 +34,7 @@ strengthen a finding, but a defect proven by one reviewer still needs attention.
 | Security | Changed trust boundaries, authorization, sensitive state, abuse and privacy |
 | Testing | Optional Plan perspective: measurable acceptance, variants, seams and release coverage |
 | Staff design | Actual UI judgment when useful: interaction, hierarchy, accessibility and existing design conventions |
+| Customer persona judges | Retain the project's existing voice-of-customer persona agents for prototype and user-facing review: task fit, comprehension, language, and workflow friction |
 | Cross-model | Independent alternative-model judgment when useful for consequential code or ambiguous decisions |
 | Code quality | Required before PR: integrated code correctness, maintainability and conventions |
 | Completion evaluator | Required before PR: integrated implementation vs requirements and Plan acceptance |
@@ -44,6 +45,24 @@ tests alone do not establish full implementation. Map each criterion to evidence
 and pass/fail/unverified; resolve required gaps and recheck affected behavior.
 Record inspected revision, commands, findings, disposition and limits. Never
 fabricate reviewers, approval or execution evidence.
+
+## Voice-of-customer persona review
+
+Use the consuming project's existing customer persona agents and their supporting
+research for user-facing work. Keep their definitions intact. Select the personas
+relevant to the target users and give them the actual prototype or running flow,
+user context, and the behavior being evaluated. They can inform early prototype
+choices and assess the integrated experience before release. Recheck affected
+findings after changes without repeating unchanged reviews.
+
+These judges bring the intended users' perspective alongside professional design
+and engineering review. Ask for specific friction and its effect on the user's
+task. Separate findings grounded in persona research from agent inference. Their
+output is simulated judgment, not new customer testimony or evidence that the
+feature works. It complements independent acceptance and changed-flow proof.
+
+Persona definitions stay with the consuming project. This package does not invent
+customer profiles when none exist or copy a project's private research.
 
 Changed user workflows receive one final independent flow walk before PR. It may
 share an explicitly assigned completion owner. Use tool/browser proof during

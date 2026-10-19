@@ -21,6 +21,11 @@ observable questions by trying them rather than sending them back to the human.
 Compare prototype variants when they can resolve a real design choice. This does
 not require an arena workflow or parallel model competition.
 
+Retain the project's existing voice-of-customer persona judges where available.
+Use relevant personas to assess the prototype and later user-facing experience,
+following the [reviewer guidance](../reviewers.md). Their findings inform the
+product decision and complement the human's hands-on prototype review.
+
 The prototype may be throwaway or become the implementation. Record that choice.
 Retained code still needs production checks. For nonvisual work, use a concrete
 interface example or spike when it helps; do not add a decorative prototype.

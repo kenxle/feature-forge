@@ -120,7 +120,13 @@ choices and verification. Delegated agents receive the same principles index.
 [comment review](skills/feature-forge/references/comment-review.md) guidance load
 when useful. The package does not depend on the complete pstack plugin or arena.
 
-Multiple reviewer personas are available for subagent review. To preserve tokens and prevent context poisoning, the orchestrator is given the judgment to choose which reviewers are invoked during the documentation process. Implementation always gets code review, completion review, and browser walkthrough. [Available reviewer perspectives](skills/feature-forge/references/reviewers.md) include product management, architecture, security, testing, code quality, completion evaluation, cross-model review, and design judgment.
+Specialist reviewers cover product management, architecture, security, testing,
+code quality, completion, cross-model review, and design judgment. The project's
+existing voice-of-customer persona judges are also retained for prototypes and
+user-facing changes. Use their actual persona definitions and research to judge
+the experience from the intended users' perspective. The orchestrator selects
+relevant perspectives; independent code review, acceptance review, and changed-flow
+proof remain required. See the [reviewer guidance](skills/feature-forge/references/reviewers.md).
 
 ## HTML for human review
 

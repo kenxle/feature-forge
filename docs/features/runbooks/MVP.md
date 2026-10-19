@@ -11,6 +11,7 @@ The default feature route is short brief, prototype, PRD, architecture, Plan, TD
 - [Verification and release](../../../skills/feature-forge/references/verification-and-release.md) retains TDD, independent code and acceptance review, real changed-flow evidence, and release under existing authority.
 - The [principles index](../../../skills/feature-forge/references/principles.md) loads the vendored pstack leaves. Their [source record and license](../../../skills/feature-forge/vendor/pstack/UPSTREAM.md) preserve provenance. The optional benchmark checklist points upstream instead of becoming a dependency.
 - Delegated agents receive the same principles index through [work contracts](../../../skills/feature-forge/references/contracts-and-slices.md). The [reviewer guidance](../../../skills/feature-forge/references/reviewers.md) incorporates intent, evidence, synthesis, disagreements, and reasoned dispositions.
+- The consuming project's existing voice-of-customer persona judges remain available for prototype and user-facing review alongside specialist reviewers. Their own persona definitions and research stay with the project.
 - [Writing guidance](../../../skills/feature-forge/references/writing.md) loads technical-writing and unslop. The [comment adapter](../../../skills/feature-forge/references/comment-review.md) dispatches the unchanged Comment Sicko prompt and supplies narrow how/why investigations. Its upstream no-comments source is preserved.
 
 ## Verification

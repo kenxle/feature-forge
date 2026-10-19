@@ -19,6 +19,10 @@ independent check. Missing required review, failed checks, or unverified require
 acceptance blocks release readiness. Record the gap rather than inventing proof;
 confidence cannot waive a required check.
 
+Retain the project's existing voice-of-customer persona judges for relevant
+user-facing changes. Their review complements staff design judgment and the
+independent flow walk; it does not substitute for acceptance evidence.
+
 The Plan owns the verification table; Whetstone uses its compact spec instead.
 Record pass/fail/unverified, the inspected revision, commands or observations,
 evidence, and limits. Resolve required findings. Recheck what a change invalidates
