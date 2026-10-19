@@ -1,7 +1,6 @@
 ---
 name: feature-forge
 description: Develop features through a short brief, prototype, PRD, architecture, Plan, TDD, verification, shipping and landing.
-user-invocable: true
 ---
 
 # Feature Forge
@@ -54,4 +53,6 @@ landing. Do not repeat the document pipeline for each slice.
 Every route follows [verification and release](references/verification-and-release.md):
 TDD for behavior changes, independent review of the integrated result, real
 acceptance evidence, and release decisions under the project's existing authority.
+Shipping requires a passing full test suite with no failures or errors. Pre-existing,
+unrelated, and environment/setup failures still block shipping.
 Keep progress, durable documents, and lessons current through landing.

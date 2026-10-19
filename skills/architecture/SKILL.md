@@ -1,7 +1,6 @@
 ---
 name: architecture
 description: Design from the feature PRD or detailed brief and repository reconnaissance.
-user-invocable: true
 ---
 
 # Architecture

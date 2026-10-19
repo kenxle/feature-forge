@@ -3,6 +3,20 @@
 Every route retains documents, independent review, and evidence. The agent chooses
 methods that establish the required behavior using the consuming project's tools.
 
+## Hard shipping rule
+
+Do not ship, merge, deploy, or enable a feature while any test failure, test error,
+or required verification error remains. The full project test suite must pass.
+This includes failures that predate the change, reproduce on the base branch,
+appear unrelated to the diff, or come from missing keys or environment setup.
+The cause explains what needs fixing; it does not make a failure nonblocking.
+
+Fix the code or setup and rerun the full suite in the corrected environment.
+If a required key, service, or other prerequisite is unavailable, report shipping
+blocked and name what is missing. Do not skip, suppress, or exclude failing tests
+to claim a pass. A partial run, feature flag, or confidence judgment cannot waive
+this rule. Preserve the actual results as evidence.
+
 ## Build and verify
 
 Use the [test-first loop](build-loop.md) for behavior changes. Run targeted checks

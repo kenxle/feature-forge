@@ -33,7 +33,7 @@ The reviewer identified the renderer's filename limit and ambiguous missing-revi
 
 These checks establish package behavior and instruction coherence. They do not establish real consumer feature quality, adapter execution, cloud execution, deployed behavior, remote source authenticity, or productivity improvement.
 
-The generic OpenAI skill validator rejects the existing Claude-specific user-invocable frontmatter. That result is recorded as a host compatibility limit, not a passing validation.
+At the initial MVP revision, the generic OpenAI skill validator rejected the Claude-specific user-invocable frontmatter. That result was recorded as a host compatibility limit, not a passing validation. It was resolved during the hard shipping rule correction below.
 
 ## Landing and local adoption
 
@@ -42,3 +42,13 @@ The MVP landed on main at revision `a638fd36fda4fba158a6cfe0e2f9c3f7372d3585`. T
 Global Claude and Codex installations were compared with source. Previous copies and their local additions were preserved in backups outside skill discovery before replacement. The installed Feature Forge, brief, architecture, Plan, and Whetstone files match the landed source. Codex's user-skill aliases resolve to its updated copies. A workspace scan found no project-local copies that would shadow them. The local cleanup skill's template link was repaired.
 
 Both installed renderers successfully built the sample dossier. Content identity and those smoke checks establish the local installation, not host discovery in an already running session or successful execution of a consumer feature. A fresh development session should load the updated skills.
+
+## Hard shipping rule correction
+
+The package now explicitly blocks shipping, merging, deployment, and flag activation while any test failure, test error, or required verification error remains. The full project suite must pass. Base-branch failures, unrelated failures, and missing setup keys do not qualify for an exception. The rule is visible from both entry points and shared release guidance.
+
+The package suite passed with Pandoc and no optional skips after this change. Source inspection confirmed that the maintained skills contain no exception for pre-existing failures. Local Claude and Codex copies were compared with their prior source before updating and match the corrected source. The local global instruction source was updated, and a contrary exception in the local shipping skill was removed. Originals were backed up outside skill discovery.
+
+The generic skill validator initially failed on the existing `user-invocable: true` field. Removing that redundant field resolved the failure while retaining [Claude's default invocation behavior](https://code.claude.com/docs/en/skills#frontmatter-reference). The source entry points, local Claude and Codex copies, and user-skill aliases now pass that validator. The full package suite passed again after the correction.
+
+These are instruction and package checks. No live cloud rollout or technical CI enforcement was performed, and the instructions used by the reported cloud agent were not inspected.

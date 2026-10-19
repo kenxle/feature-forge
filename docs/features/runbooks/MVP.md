@@ -1,8 +1,16 @@
 # Forge MVP alongside the pstack trial
 
-The MVP is on main, and the local Claude and Codex development skills are updated. Keep the current global setup locally. For cloud sessions, install Forge globally inside the VM through its environment setup. The project needs no Forge files or links. The pstack trial can run in parallel.
+The MVP is on main. The package and local Claude/Codex instructions now have a hard shipping rule: the full suite must pass with no test failures or errors, including pre-existing and setup failures. Existing cloud sessions still need the updated rule delivered or loaded. Keep the current global setup locally; cloud environment setup installs Forge globally inside the VM.
 
 The default feature route is short brief, prototype, PRD, architecture, Plan, TDD, verification, ship, and land. Agents adapt their path to the actual task. The package includes the selected principles, writing guidance, and scoped comment review, and keeps the documentation record without routine human document approval.
+
+## Hard shipping rule
+
+Do not ship, merge, deploy, or enable a feature while any test failure, test error, or required verification error remains. The full project test suite must pass. Pre-existing failures, unrelated failures, and missing setup keys all block shipping. Fix the code or setup and rerun the full suite. If a prerequisite is unavailable, report shipping blocked. Do not skip or suppress failing tests to claim a pass. Feature flags and confidence cannot waive this rule.
+
+This rule is in the [shared release guidance](../../../skills/feature-forge/references/verification-and-release.md#hard-shipping-rule), Feature Forge, Whetstone, and their local installed copies. It is also in the global instruction source shared by the local Claude and Codex setups. The local shipping skill had an explicit exception for failures reproduced on the base branch; that exception has been removed. This does not establish which instructions the cloud agent used.
+
+The package suite passes with Pandoc and no optional skips. Installed files were compared before updating, previous files were backed up, and the updated copies match source. This changes agent instructions; it is not a new technical CI gate. Already-running cloud sessions have not been updated from here. Give them this rule directly or have them load the updated package before further shipping.
 
 ## Use in Claude Code cloud sessions
 
@@ -44,7 +52,7 @@ The full package suite passes, including the Pandoc renderer check. Fresh instal
 
 Independent instruction review found and resolved the renderer's previous filename limit: Plan and Progress are now retained in the longer dossier. The new regression test failed before that fix and passes afterward. Missing required review or evidence now explicitly blocks release readiness. The reviewer also passed the writing/comment adapter by inspection. No blocking findings remain. See the [verification record](MVP_REVIEW.md). Consumer use, adapter execution, cloud execution, real deployment, and productivity improvement remain unverified.
 
-The OpenAI generic skill validator rejects the existing Claude-specific user-invocable frontmatter on all entry points. That host compatibility limitation is unchanged; it is not reported as a passing validation. The package's own installation, link, evidence, and rendering checks pass.
+The source and installed entry points now pass the generic skill validator too. Final validation exposed the earlier incompatibility with the explicit `user-invocable: true` field. That redundant field was removed. Direct invocation remains enabled because [Claude's documented default is true](https://code.claude.com/docs/en/skills#frontmatter-reference). The package's installation, link, evidence, and rendering checks pass.
 
 ## Follow-up scope
 

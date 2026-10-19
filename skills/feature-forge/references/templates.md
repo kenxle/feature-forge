@@ -40,6 +40,7 @@ Testing findings/dispositions; rollout and final verification actions; release
 authority and readiness evidence. Record human dossier approval only when the
 chosen route or project requires it. Tasks reference acceptance rows instead of
 repeating requirements.
+Release readiness follows the [hard shipping rule](verification-and-release.md#hard-shipping-rule).
 
 ## Progress
 

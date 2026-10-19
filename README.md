@@ -112,6 +112,8 @@ when a comprehensive human document review before build is explicitly wanted.
 The default route releases on evidence-based confidence under the project's
 standing authority. Forge adds no routine document or per-release human approval
 request. Project restrictions and new material product decisions still matter.
+Shipping requires a passing full project test suite with no failures or errors.
+Pre-existing, unrelated, and environment/setup failures still block release.
 See [verification and release](skills/feature-forge/references/verification-and-release.md).
 
 Agents can adapt or combine routes for the task while preserving explicit user

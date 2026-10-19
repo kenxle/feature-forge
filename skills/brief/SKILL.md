@@ -1,7 +1,6 @@
 ---
 name: brief
 description: Write the short brief before prototyping, or the detailed PRD after the experience is agreed. Preserve detailed briefs for the full dossier route.
-user-invocable: true
 ---
 
 # Brief

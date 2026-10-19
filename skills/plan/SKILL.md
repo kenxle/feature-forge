@@ -1,7 +1,6 @@
 ---
 name: plan
 description: Plan coherent slices, implementation throughput and acceptance evidence for the selected development route.
-user-invocable: true
 ---
 
 # Plan

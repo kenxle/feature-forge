@@ -11,6 +11,9 @@ Do not edit third-party code to meet the loop. Prove behavior and failure cases,
 not tests that mirror implementation.
 
 Run targeted checks while building, seam tests after integration, and appropriate
-final project verification. Before PR, finish one independent walk of changed user
+final project verification, including the full test suite. Apply the
+[hard shipping rule](verification-and-release.md#hard-shipping-rule) to every
+failure or error, including setup and pre-existing failures.
+Before PR, finish one independent walk of changed user
 flows, using browser tooling when useful. Resolve required failures and recheck
 affected criteria without duplicating unchanged reviews.
