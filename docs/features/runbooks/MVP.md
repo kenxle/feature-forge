@@ -8,6 +8,14 @@ The default feature route is short brief, prototype, PRD, architecture, Plan, TD
 
 I recommend committing the installed package in each project that uses it. Cloud sessions load the cloned repository's `.claude/skills/` and cannot read the skills installed only on your laptop. [Anthropic's cloud skill guidance](https://code.claude.com/docs/en/skills#use-skills-in-cowork-and-cloud-sessions) confirms this distinction.
 
+Use project copies and automate their updates. A symlink to your local Forge checkout cannot resolve in a cloud clone. Keep this repository as the source of truth, and treat the project copies as installed dependencies.
+
+When you accept a Forge update, a shared update command should refresh the selected projects and global installs, record the source revision, and commit the project changes. It should detect local edits before replacing files and leave conflicts for review. Each cloud run then gets the version committed on its branch. Projects can stay on a known working version until their next update.
+
+Local and cloud sessions can otherwise diverge because Claude gives personal skills precedence over project skills with the same name. Keep those versions aligned. [Anthropic's skill precedence rules](https://code.claude.com/docs/en/skills#resolve-skills-that-share-a-name).
+
+The current installer handles fresh installs only. The repeatable updater is [recorded on the board](../../BOARD.md) as follow-up work. I recommend that over fetching the latest Forge code every time a session starts.
+
 From your up-to-date Feature Forge checkout, run the [installer](../../../scripts/install.py) against the target project. Replace the example path with that project's actual path:
 
 ```sh
