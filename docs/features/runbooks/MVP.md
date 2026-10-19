@@ -1,6 +1,8 @@
 # Forge MVP alongside the pstack trial
 
-Implemented in the working branch. The default feature route is short brief, prototype, PRD, architecture, Plan, TDD, verification, ship, and land. Agents adapt their path to the actual task. The package includes the selected principles, writing guidance, and scoped comment review, and keeps the documentation record without routine human document approval. The pstack trial can run in parallel.
+Nothing is needed from you now. The MVP is implemented and pushed on the runbooks branch, with no product decisions waiting. Keep adding comments or share observations from real use whenever useful. The pstack trial can run in parallel.
+
+The default feature route is short brief, prototype, PRD, architecture, Plan, TDD, verification, ship, and land. Agents adapt their path to the actual task. The package includes the selected principles, writing guidance, and scoped comment review, and keeps the documentation record without routine human document approval.
 
 ## What is ready
 
