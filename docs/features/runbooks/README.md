@@ -11,7 +11,7 @@ No decision is needed to start the package refactor. Additional pstack files can
 ## What changes
 
 - Feature Forge becomes a small router that loads the runbook relevant to the work.
-- For a new user experience, clarify the idea briefly, then build a clickable high-fidelity prototype before writing the brief. Skip wireframes.
+- For a new user experience, capture the brief fields that guide the prototype: target users, their context, the problem, and the desired outcome. Then build a clickable high-fidelity prototype. Write detailed requirements and implementation specifics after exploring it. Skip wireframes.
 - Use the prototype conversation to settle scope and record how far the agent may proceed. Documents then develop from that agreement and the agent continues through verified implementation and authorized shipping.
 - Small understood work can begin from an existing request or board item. It should not require a new Whetstone spec that repeats the same information.
 - Keep the full dossier route for work that benefits from it or when the human explicitly wants it.
@@ -36,13 +36,13 @@ Nonvisual work does not need a decorative prototype. Use a concrete example, exe
 
 ## Prototype first, then documents
 
-Start with a short crucible conversation: the problem, intended user, desired outcome, constraints, and the decision the prototype must resolve. Reuse what the request already answers.
+Start with a short crucible conversation and a lightweight brief seed: target users, their context, the problem, desired outcome, and the decision the prototype must resolve. Include known constraints that would materially change the experience. Reuse what the request already answers. This seed supplies enough direction to prototype; detailed requirements, acceptance criteria, and implementation specifics come afterward.
 
 Build the main flow with realistic content and the project's design language. Include the states that matter to the decision, such as an empty result, error, or permission boundary. Let the human click through it. Explore alternatives when there is a real choice, without making a fixed set of variants compulsory.
 
 Record the chosen behavior and any unresolved questions. Label simulated data and interactions. State whether the prototype will be discarded or developed into production code. Reusing it does not exempt it from production checks.
 
-From the agreed experience, derive the brief's requirements. Use architecture to resolve implementation choices and hidden risks. Use the Plan to define coherent slices and own the verification table. Documents should preserve useful reasoning without repeating the prototype narrative in every file.
+Expand the brief seed from the agreed experience, retaining its user and context sections and adding detailed requirements and failure cases. Use architecture to resolve implementation choices and hidden risks. Use the Plan to define coherent slices and own the verification table. Documents should preserve useful reasoning without repeating the prototype narrative in every file.
 
 Continue without a second document gate when the existing agreement and project policy authorize it. Ask again only when new evidence changes a material product choice, scope, risk, or shipping authority. A prototype establishes the intended experience; it does not establish backend correctness or release safety.
 
@@ -127,7 +127,7 @@ This is the authoritative verification table for the refactor. Evidence remains 
 | Requirement | Acceptance and failure case | Check | Owner | Evidence/status |
 |---|---|---|---|---|
 | Match process to work | A small understood fix proceeds without a redundant dossier; ambiguous work gets appropriate discovery | Independent route scenarios using the actual revised skills | Independent acceptance reviewer | Pending |
-| Prototype before documents | A new UI request reaches a clickable high-fidelity prototype before its brief; simulated behavior is disclosed | Representative prototype-first walkthrough | Independent acceptance reviewer | Pending |
+| Prototype before detailed specification | A new UI request uses a brief seed with target users and context, then reaches a clickable high-fidelity prototype before detailed requirements; simulated behavior is disclosed | Representative prototype-first walkthrough | Independent acceptance reviewer | Pending |
 | Preserve the full route | Explicit full-dossier requests still receive comprehensive records and consolidated review | Full-route scenario and package tests | Independent acceptance reviewer | Pending |
 | Continue under existing authority | Agreed work proceeds without repeated gates; material changes and forbidden shipping actions stop at the correct boundary | Authorization scenarios for each route | Independent acceptance reviewer | Pending |
 | Retain meaningful proof | Changed behavior has real evidence and independent review; unavailable required checks remain unverified | Inspect an integrated example and its acceptance record | Independent acceptance reviewer | Pending |
