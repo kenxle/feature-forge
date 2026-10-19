@@ -23,7 +23,9 @@ No Python third-party dependencies are needed. Install Pandoc to exercise HTML c
 
 ## What the suite covers
 
-The [package tests](../../tests/test_package.py) check fresh and dry-run installation, conflict refusal preserving edits, installed renderer assets, local Markdown link targets, include escape/cycle/missing-source rejection, dossier composition with review history and navigation, and evidence failure reporting with prior-run preservation.
+The [package tests](../../tests/test_package.py) check fresh and dry-run installation, conflict refusal preserving edits, installed renderer assets and principles/license, local Markdown link targets, include escape/cycle/missing-source rejection, both dossier routes with review history and navigation, and evidence failure reporting with prior-run preservation. The prototype-first case verifies that the later Plan and Progress pages are included and PRD links are rewritten.
+
+Source archives under docs may carry a `.source-archive` marker. The link check skips those preserved upstream snapshots because they can contain template placeholders and links to unselected material. Package files under skills receive no such exemption. Local review copies are archives too. Verify source-copy integrity separately when importing upstream material.
 
 The [CSV fixture](../../tests/fixtures/csv-export/README.md) is synthetic renderer input. It is not evidence of an implemented consumer application.
 

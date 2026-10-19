@@ -18,10 +18,12 @@ This repository publishes instructions and local command-line helpers. It has no
 | Area | Responsibility | Source |
 |---|---|---|
 | Installation | Copy a fixed skill set into a project's skill folder; refuse conflicts before copying | [installer](../../scripts/install.py) |
-| Full route | Coordinate documents, implementation slices, review, and shipping | [Feature Forge](../../skills/feature-forge/SKILL.md) |
+| Route selection | Default to prototype-first features, retain full dossier review by explicit choice, and use Whetstone for small changes | [Feature Forge](../../skills/feature-forge/SKILL.md), [runbooks](../../skills/feature-forge/references/runbooks/) |
 | Document guidance | Define the content of each feature document | [Brief](../../skills/brief/SKILL.md), [Architecture](../../skills/architecture/SKILL.md), [Plan](../../skills/plan/SKILL.md) |
 | Short route | Keep small changes compact while retaining independent verification and cleanup | [Whetstone](../../skills/whetstone/SKILL.md) |
 | Shared guidance | Templates, reviewer perspectives, work contracts, and build loop | [references](../../skills/feature-forge/references/) |
+| Engineering principles | Load applicable pstack leaves with upstream provenance and license | [index](../../skills/feature-forge/references/principles.md), [source record](../../skills/feature-forge/vendor/pstack/UPSTREAM.md) |
+| Writing and comments | Use vendored prose guidance and the unchanged Comment Sicko prompt through local host adapters | [writing](../../skills/feature-forge/references/writing.md), [comment review](../../skills/feature-forge/references/comment-review.md) |
 | Dossier rendering | Expand Markdown sources, invoke Pandoc and write local HTML | [renderer](../../skills/feature-forge/scripts/build_feature_docs.py), [header](../../skills/feature-forge/assets/header.html) |
 | Verification capture | Run a supplied command and record its output, status, and revision | [evidence helper](../../skills/feature-forge/scripts/forge_support.py) |
 
@@ -33,7 +35,9 @@ Installed copies do not track this checkout. Fix package problems here, compare 
 
 ## Feature records and approval
 
-The full route uses a feature folder containing brief, architecture, plan, and progress Markdown. Optional leaves hold detailed context and alternatives. Review siblings preserve findings. The Plan owns the verification table. A consolidated dossier supplies the human approval surface; implementation owners receive relevant source sections. These are instruction contracts, not schemas enforced by a runtime.
+The default route uses a short brief, prototype decision, PRD, architecture, Plan, and Progress. The prototype precedes detailed requirements. The full review route retains the established brief/architecture/Plan/Progress organization. Optional leaves preserve details and review history. The renderer accepts filenames starting with a numeric prefix of at least two digits and an underscore, including the longer new route. Historical records need no renaming.
+
+The Plan owns acceptance evidence and the throughput checkpoint. Whetstone uses its compact spec's table. Default document production does not add an approval gate. The explicit full review route retains consolidated human approval before build. Shared verification and release guidance covers independent review, evidence, confidence, and existing project authority. These are instruction contracts rather than runtime enforcement.
 
 ## Renderer flow
 
@@ -51,4 +55,4 @@ Python runs the helpers and tests. Pandoc is optional for HTML and rendering tes
 
 ## Refactor boundaries
 
-Preserve installer conflict refusal, relative skill links, Markdown authority, include containment, review history, truthful command status, and project approval rules. Preserve both development routes. Change these contracts deliberately with related proof. The [board](../BOARD.md) records future work; it is not a description of current behavior.
+Preserve installer conflict refusal, relative skill links, Markdown authority, include containment, review history, truthful command status, and project authority. Preserve Whetstone and the full review route alongside the default feature flow. The bundled principles are reference material; the full pstack plugin and its architect skill are not runtime dependencies. The [board](../BOARD.md) records future work, including cloud board runners and further pstack integrations.

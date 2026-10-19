@@ -37,7 +37,7 @@ One-shot prototypes aren't so difficult to build, but working on the same codeba
 
 ## What it does
 
-Feature Forge provides a series of skills and reference documentation for creating great documentation, and building great software. It creates documentation dossiers that may include a Brief, Architecture, Plan, and Progress. It relies on test driven development (TDD) and verification to create software that always works reliably.
+Feature Forge provides skills and reference guidance for documenting, building, verifying, and landing software. The default feature route uses a short brief, high-fidelity prototype, PRD, architecture, Plan, TDD, verification, ship, and land. Agents keep the documents while proceeding without routine human document approval. Whetstone keeps small changes compact, and the full pre-build dossier review remains an explicit option. Selected pstack principles guide engineering judgment.
 
 ## What it is not
 
@@ -60,7 +60,8 @@ It is not a hosted agent runtime, deployment service, telemetry system, or appli
 ## Commitments
 
 - Follow the consuming project's instructions, verification commands, and approval policy.
-- Keep the Plan's verification table authoritative for acceptance and evidence.
+- Keep the Plan's verification table authoritative for acceptance and evidence; Whetstone uses its compact spec's table.
+- Base automatic release decisions on evidence and existing project authority.
 - Preserve local installed edits. The installer refuses existing destinations.
 - Keep durable documentation and lessons current when closing work.
 

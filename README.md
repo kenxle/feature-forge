@@ -1,7 +1,8 @@
 # Feature Forge
 
-A feature development process for coding agents: clarify, brief, plan, build,
-verify, ship, and learn. Small understood changes use the Whetstone short route.
+A feature development process for coding agents: short brief, prototype, PRD,
+architecture, Plan, TDD, verification, ship, and land. Small understood changes
+use Whetstone. The comprehensive pre-build dossier review remains available.
 
 The process is model agnostic, but designed mostly on Claude Code, with some
 Codex as well. No hosted service or telemetry is included.
@@ -11,9 +12,11 @@ Knows how to use the Lahe editor for documentation review.
 ## What the Feature Forge brings together
 
 The Feature Forge carries a feature from product thinking through specification,
-implementation, independent verification, and compounding knowledge. The brief
-states what matters; the architecture preserves choices and alternatives; the
-plan connects requirements to agent-aware implementation planning and testing.
+implementation, independent verification, and compounding knowledge. A short
+brief guides the prototype; the PRD captures the agreed behavior; architecture
+preserves choices and alternatives; the Plan connects requirements to implementation
+and testing. Agents write and maintain these documents without routine human
+reading or approval gates.
 A clean-up process feeds lessons back into durable project guidance for the next feature.
 
 The process is built around:
@@ -31,6 +34,9 @@ The process is built around:
   that can catch problems in the feature rather than running every reviewer.
 - **Compounding knowledge:** cleanup records useful findings and proposes updates
   to project guidance so later work can use what the feature taught.
+- **Engineering principles:** the package includes selected pstack principles
+  with their license and source revision. Agents load applicable leaves through
+  the [principles index](skills/feature-forge/references/principles.md).
 
 ## Inspirations
 
@@ -85,16 +91,34 @@ commands, branch conventions, and approval policy.
 
 ## Process
 
-1. **Dev hygiene.** Set up an isolated branch/worktree and the feature's working files.
-2. **Product thinking.** Think through the product problem, establish scope, and clarify uncertainties. Push back on whether you should be spending your limited time and resources on this.
-3. **Brief.** Context, user, requirements, analytics, and rollout.
-4. **Architecture.** Explore the codebase. Explore the internet. Explore alternatives. Write a thorough architecture without any code, and spawn optional reviewers for security and architecture.
-5. **Plan.** Create coherent slices of work that consider the needs of implementation agents.
-6. **Review.** Present the complete dossier for consolidated human document approval.
-7. **Implement.** Build with TDD, unit tests, playwright tests, and an agent browser walkthrough before PR.
-8. **Verify.** Before PR, an independent reviewer verifies integrated implementation against requirements and acceptance using evidence. Resolve gaps.
-9. **Ship and land.** Prepare PR, follow human merge/deployment approval policy, verify release in prod.
-10. **Cleanup.** Update durable project documentation, record lessons, and propose improvements to project guidance. Close out the feature record and remove owned temporary resources with authorization.
+Read the project's instructions, fetch before choosing a base, and work in an
+isolated branch/worktree. The default route for a new user experience is:
+
+1. **Short brief.** Target users, context, problem, desired outcome, and constraints.
+2. **Prototype.** Build a clickable high-fidelity experience, let the human explore it, and record the chosen behavior. Skip wireframes. Keep or discard the code deliberately.
+3. **PRD.** Derive detailed requirements, failures, scope, analytics, and rollout from the agreed experience.
+4. **Architecture.** Investigate the codebase, choose data shapes, and preserve design alternatives and risks.
+5. **Plan.** Define coherent slices, the throughput checkpoint, and the authoritative verification table.
+6. **TDD.** Build changed behavior with focused failing tests, implementation, and refactoring.
+7. **Verify.** Check the integrated result against acceptance with independent review and a real walk of changed flows. Resolve required gaps.
+8. **Ship.** Prepare coherent PRs with proof and rollout, then follow checks and review findings through readiness.
+9. **Land.** Merge and deploy when evidence and existing authority permit. Verify the actual release, update durable documentation and lessons, and close the record.
+
+For nonvisual work, use a concrete interface example or spike when useful rather
+than manufacturing a UI. [Whetstone](skills/whetstone/SKILL.md) retains a compact
+spec for small changes. Choose the [full dossier route](skills/feature-forge/references/runbooks/full-dossier.md)
+when a comprehensive human document review before build is explicitly wanted.
+
+The default route releases on evidence-based confidence under the project's
+standing authority. Forge adds no routine document or per-release human approval
+request. Project restrictions and new material product decisions still matter.
+See [verification and release](skills/feature-forge/references/verification-and-release.md).
+
+Agents can adapt or combine routes for the task while preserving explicit user
+choices and verification. Delegated agents receive the same principles index.
+[Writing](skills/feature-forge/references/writing.md) and
+[comment review](skills/feature-forge/references/comment-review.md) guidance load
+when useful. The package does not depend on the complete pstack plugin or arena.
 
 Multiple reviewer personas are available for subagent review. To preserve tokens and prevent context poisoning, the orchestrator is given the judgment to choose which reviewers are invoked during the documentation process. Implementation always gets code review, completion review, and browser walkthrough. [Available reviewer perspectives](skills/feature-forge/references/reviewers.md) include product management, architecture, security, testing, code quality, completion evaluation, cross-model review, and design judgment.
 
@@ -117,6 +141,7 @@ trusted local authoring; do not render untrusted documents. Edit Markdown and re
 
 [Lahe pairing](docs/lahe.md) uses the separate
 [Live Agentic HTML Editor](https://github.com/kenxle/live-agentic-html-editor).
-Human gates also work by sharing Markdown or local HTML and recording approval.
+The optional full dossier review also works by sharing Markdown or local HTML
+and recording the requested approval.
 
 See [verification](docs/verification.md), [research and inspirations](docs/inspirations.md), and [MIT license](LICENSE).

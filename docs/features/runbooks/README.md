@@ -4,9 +4,9 @@ Plan for the next implementation session. Use this feature sequence: short brief
 
 ## Current status
 
-Planning only. No packaged skills or installed copies have changed. The product direction below comes from the maintainer's request. The implementation details are recommendations, not an approved shipping policy for consuming projects.
+The MVP is implemented on the branch: principles, the revised default feature flow, adaptable routes, writing/comment guidance, and shared verification/release. Package checks pass and independent instruction review has no blockers. See the [MVP status](MVP.md) and [verification record](MVP_REVIEW.md). Installed consumer copies have not been replaced.
 
-Next, the maintainer intends to try pstack on real features. Capture the resulting observations before integrating the selected material into Forge. The [pstack selection record](PSTACK_SELECTIONS.md) preserves the review decisions and copied sources. Implementation remains pending. Cloud scheduling, project credentials, board adapters, and permission to merge belong to each consuming project and require separate setup.
+Develop and use the Forge MVP in parallel with the maintainer's pstack trial. The [selection record](PSTACK_SELECTIONS.md) preserves the chosen sources and adaptations. The external architect skill is outside the MVP. Cloud board runners, other selected helper integrations, and update automation remain follow-up work. Consuming projects supply their own release authority and tools.
 
 ## What changes
 
@@ -146,19 +146,19 @@ This is the authoritative verification table for the refactor. Evidence remains 
 
 | Requirement | Acceptance and failure case | Check | Owner | Evidence/status |
 |---|---|---|---|---|
-| Match process to work | A small understood fix retains its spec, decisions, and evidence while proceeding without routine human document approval; ambiguous work gets appropriate discovery | Independent route scenarios using the actual revised skills | Independent acceptance reviewer | Pending |
-| Prototype before detailed specification | A new UI request uses a short brief with target users and context, then reaches a clickable high-fidelity prototype before the PRD; architecture and Plan follow, then TDD, verification, ship, and land | Representative feature walkthrough | Independent acceptance reviewer | Pending |
-| Preserve the full route | Full-dossier requests retain comprehensive records; consolidated human approval remains available when explicitly selected | Full-route scenario and package tests | Independent acceptance reviewer | Pending |
-| Continue under existing authority | Agreed work proceeds without repeated gates; material changes and forbidden shipping actions stop at the correct boundary | Authorization scenarios for each route | Independent acceptance reviewer | Pending |
-| Release on evidence-based confidence | Sufficiently verified work releases automatically under standing authority; missing proof prompts further work or a specific blocker, not a routine human approval request | Release scenarios with strong evidence, failed checks, unresolved uncertainty, and restricted authority | Independent acceptance reviewer | Pending |
-| Retain meaningful proof | Changed behavior has real evidence and independent review; unavailable required checks remain unverified | Inspect an integrated example and its acceptance record | Independent acceptance reviewer | Pending |
-| Keep unattended ownership safe | Concurrent or resumed runs do not duplicate ownership, PRs, or side effects | Consumer adapter tests or serialized-run demonstration | Consumer runner owner | Pending; package prose cannot enforce this |
-| Separate landing from activation | Disabled flags preserve current behavior; activation follows recorded authority | Consumer flag and release checks | Consumer release owner | Pending |
-| Keep the package portable | Relative links resolve, installation preserves local changes, private references are absent | Full package suite and private-reference scan | Implementer | Pending |
+| Match process to work | A small understood fix retains its spec, decisions, and evidence while proceeding without routine human document approval; ambiguous work gets appropriate discovery | Independent route scenarios using the actual revised skills | Independent acceptance reviewer | Instruction review passed; [record](MVP_REVIEW.md) |
+| Prototype before detailed specification | A new UI request uses a short brief with target users and context, then reaches a clickable high-fidelity prototype before the PRD; architecture and Plan follow, then TDD, verification, ship, and land | Representative feature walkthrough | Independent acceptance reviewer | Instructions reviewed and dossier rendering passes; actual consumer walkthrough unverified |
+| Preserve the full route | Full-dossier requests retain comprehensive records; consolidated human approval remains available when explicitly selected | Full-route scenario and package tests | Independent acceptance reviewer | Instruction review and existing dossier fixture pass |
+| Continue under existing authority | Agreed work proceeds without repeated gates; material changes and forbidden shipping actions stop at the correct boundary | Authorization scenarios for each route | Independent acceptance reviewer | Instruction review passed; actual consumer execution unverified |
+| Release on evidence-based confidence | Sufficiently verified work releases automatically under standing authority; missing proof prompts further work or a specific blocker, not a routine human approval request | Release scenarios with strong evidence, failed checks, unresolved uncertainty, and restricted authority | Independent acceptance reviewer | Instruction review passed; actual consumer merge/deploy unverified |
+| Retain meaningful proof | Changed behavior has real evidence and independent review; unavailable required checks remain unverified | Inspect an integrated example and its acceptance record | Independent acceptance reviewer | Package red/green and independent review recorded; consumer feature proof unverified |
+| Keep unattended ownership safe | Concurrent or resumed runs do not duplicate ownership, PRs, or side effects | Consumer adapter tests or serialized-run demonstration | Consumer runner owner | Deferred beyond MVP; no runner implemented |
+| Separate landing from activation | Disabled flags preserve current behavior; activation follows recorded authority | Consumer flag and release checks | Consumer release owner | Shared instructions present; consumer verification pending |
+| Keep the package portable | Relative links resolve, installation preserves local changes, private references are absent | Full package suite and private-reference scan | Implementer | Passed; [verification record](MVP_REVIEW.md) |
 | Reduce process burden | Representative work shows which human reading and approval interruptions were avoided, while documents remain complete and quality outcomes are recorded | Record pilot actions and evidence; compute any counts from saved run data | Pilot owner | Pending; no measured improvement claimed |
 
 ## Resume here
 
 Read this plan, the [selection record](PSTACK_SELECTIONS.md), and the repository instructions. Review observations from the maintainer's pstack pilot when available. Check current work and fetch remotes before choosing the implementation branch. Begin with routing and compatibility. Keep installed copies unchanged until their local differences have been compared.
 
-The planning branch is `runbooks`. This record is the handoff, not a claim that the new workflows or overnight runner are implemented.
+The branch is `runbooks`. The [MVP status](MVP.md) describes implemented scope and proof. The broader plan remains the handoff for subsequent integrations and the overnight runner.
