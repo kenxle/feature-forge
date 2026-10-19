@@ -1,0 +1,795 @@
+{
+  "before_revision": "c36397fada796364db125ba4a8f4c079df0f6435",
+  "current_revision": "93c35d19a60fbcfb4e210d69210e3125d091f32f",
+  "sources": [
+    {
+      "baseline": "pre-runbook-package",
+      "path": "skills/architecture/SKILL.md",
+      "sha256": "cf2499ff9a31ed9470e21c1824341fc357366187b64376347aa3496a688e8cde",
+      "headings": [
+        "# Architecture"
+      ]
+    },
+    {
+      "baseline": "pre-runbook-package",
+      "path": "skills/brief/SKILL.md",
+      "sha256": "3f723bd5ea115f16c12614d04299f98de1f99459f817d0bc002ece21e0a6e74c",
+      "headings": [
+        "# Brief"
+      ]
+    },
+    {
+      "baseline": "pre-runbook-package",
+      "path": "skills/feature-forge/SKILL.md",
+      "sha256": "090dc75f97a34840d3ff230014d6e62f2e82fe82413daf7c33ae0c25d3942e00",
+      "headings": [
+        "# Feature Forge",
+        "## Document and approve",
+        "## Build, independently verify and ship"
+      ]
+    },
+    {
+      "baseline": "pre-runbook-package",
+      "path": "skills/feature-forge/assets/header.html",
+      "sha256": "79e3616bf4755b05dca606bdb4da628b53bed59419712c6b34f4dee0bd0607d1",
+      "headings": []
+    },
+    {
+      "baseline": "pre-runbook-package",
+      "path": "skills/feature-forge/references/build-loop.md",
+      "sha256": "070273c882e2a509ca150ad64bbed3b3296805196d0c87098dc216c1d33fd204",
+      "headings": [
+        "# Test-first build loop"
+      ]
+    },
+    {
+      "baseline": "pre-runbook-package",
+      "path": "skills/feature-forge/references/contracts-and-slices.md",
+      "sha256": "752373ee5ae54a7dc45221795d969e336769969ba64c7bf2e3db6e773a78e321",
+      "headings": [
+        "# Contracts and slices"
+      ]
+    },
+    {
+      "baseline": "pre-runbook-package",
+      "path": "skills/feature-forge/references/reviewers.md",
+      "sha256": "5055c336dba3c6e3b73081b1f2355514a6e9a52aa42fd28d62c322b5e4e8fd59",
+      "headings": [
+        "# Focused reviewer perspectives",
+        "## Dispatch instruction for a fresh reviewer"
+      ]
+    },
+    {
+      "baseline": "pre-runbook-package",
+      "path": "skills/feature-forge/references/templates.md",
+      "sha256": "fc8e33ede90da546b8613145644dc0bec46e1b0771c6d92db58a3e32229bc6f6",
+      "headings": [
+        "# Modular dossier templates",
+        "## Brief",
+        "## Architecture",
+        "## Plan",
+        "## Progress"
+      ]
+    },
+    {
+      "baseline": "pre-runbook-package",
+      "path": "skills/feature-forge/scripts/build_feature_docs.py",
+      "sha256": "b80be850abdfd668874031b08bf766b7cbb15e202a12b6a94c9ffe1eb42c8a05",
+      "headings": []
+    },
+    {
+      "baseline": "pre-runbook-package",
+      "path": "skills/feature-forge/scripts/forge_support.py",
+      "sha256": "a8edb62efbf1fae422f4f3e17375a50d0d1c7bee19ba488a14312bdd47239c2c",
+      "headings": []
+    },
+    {
+      "baseline": "pre-runbook-package",
+      "path": "skills/plan/SKILL.md",
+      "sha256": "0988715118b48106a28c34fa96eb54a279a95909645b9f5e24f57317366368a4",
+      "headings": [
+        "# Plan"
+      ]
+    },
+    {
+      "baseline": "pre-runbook-package",
+      "path": "skills/whetstone/SKILL.md",
+      "sha256": "4ca5f2e6048eb22d32bf0127efb7483b526fc26f340b74ddcf0f6b41e038f885",
+      "headings": [
+        "# Whetstone"
+      ]
+    },
+    {
+      "baseline": "current-package",
+      "path": "skills/architecture/SKILL.md",
+      "sha256": "470cf943e3ceaa783d4eab5f8f995f7ae22c13bf6c3481ed9cd37334ed8eb43e",
+      "headings": [
+        "# Architecture"
+      ]
+    },
+    {
+      "baseline": "current-package",
+      "path": "skills/brief/SKILL.md",
+      "sha256": "4da017fe324c630cc15b6e8ebfb03410a3b90841b8ded9c99f5aac39195629a3",
+      "headings": [
+        "# Brief"
+      ]
+    },
+    {
+      "baseline": "current-package",
+      "path": "skills/feature-forge/SKILL.md",
+      "sha256": "a82b8d4d336ab69a0dbb27f8a2370cf681c20ea984be329ed05cc2b6b13b71d4",
+      "headings": [
+        "# Feature Forge",
+        "## Choose the route",
+        "## Shared guidance"
+      ]
+    },
+    {
+      "baseline": "current-package",
+      "path": "skills/feature-forge/assets/header.html",
+      "sha256": "79e3616bf4755b05dca606bdb4da628b53bed59419712c6b34f4dee0bd0607d1",
+      "headings": []
+    },
+    {
+      "baseline": "current-package",
+      "path": "skills/feature-forge/references/build-loop.md",
+      "sha256": "a7ce7c1bdbf7f670ea25a58c78fd53c26e69b338ab72b790ec676f8ffcffba92",
+      "headings": [
+        "# Test-first build loop"
+      ]
+    },
+    {
+      "baseline": "current-package",
+      "path": "skills/feature-forge/references/comment-review.md",
+      "sha256": "1e40f1f9c963b9d362f5249269c302c5c9ba234dee2a6c987e0e3459a2632634",
+      "headings": [
+        "# Scoped comment review"
+      ]
+    },
+    {
+      "baseline": "current-package",
+      "path": "skills/feature-forge/references/contracts-and-slices.md",
+      "sha256": "4a7d825fe557239333f4da2863812595d0e64dc9b73666dfcdc335094c865553",
+      "headings": [
+        "# Contracts and slices"
+      ]
+    },
+    {
+      "baseline": "current-package",
+      "path": "skills/feature-forge/references/principles.md",
+      "sha256": "3b478fec1e1d6dcfb4a2b586998de8a24a1627df79baf8d81b07e274e3fef4fc",
+      "headings": [
+        "# Principles for development"
+      ]
+    },
+    {
+      "baseline": "current-package",
+      "path": "skills/feature-forge/references/reviewers.md",
+      "sha256": "fb45b1554aa2657870431b6828774bc9ec2726e968eb3fa64955487cf39098fc",
+      "headings": [
+        "# Focused reviewer perspectives",
+        "## Dispatch instruction for a fresh reviewer",
+        "## Voice-of-customer persona review"
+      ]
+    },
+    {
+      "baseline": "current-package",
+      "path": "skills/feature-forge/references/runbooks/full-dossier.md",
+      "sha256": "f27a69bc0dd859554d471c48012833a38e914f9fd148ecea032ad553d49904d9",
+      "headings": [
+        "# Full dossier review"
+      ]
+    },
+    {
+      "baseline": "current-package",
+      "path": "skills/feature-forge/references/runbooks/prototype-first.md",
+      "sha256": "a899932a271c32919ca9c68793f457dbc1ae0f93356e3548d72b5a4db2459c6e",
+      "headings": [
+        "# Prototype-first feature",
+        "## Brief to prototype",
+        "## PRD, Architecture, and Plan",
+        "## TDD, verification, ship, and land"
+      ]
+    },
+    {
+      "baseline": "current-package",
+      "path": "skills/feature-forge/references/templates.md",
+      "sha256": "5fbeb49b0f162696fbd04818593c2650e0e96db471f376aab09cf447be17c44f",
+      "headings": [
+        "# Modular dossier templates",
+        "## Short brief",
+        "## PRD, or detailed brief in the full review route",
+        "## Architecture",
+        "## Plan",
+        "## Progress",
+        "## File organization"
+      ]
+    },
+    {
+      "baseline": "current-package",
+      "path": "skills/feature-forge/references/verification-and-release.md",
+      "sha256": "b816d8b823552574a6115fd4c88745b9e98ce1c69aaa18f89c8cf2d8e699c486",
+      "headings": [
+        "# Verification and release",
+        "## Hard shipping rule",
+        "## Build and verify",
+        "## Ship and land"
+      ]
+    },
+    {
+      "baseline": "current-package",
+      "path": "skills/feature-forge/references/writing.md",
+      "sha256": "2356481da4094add20d959df3775dc17ff9847ebb4e23f1ae29f868545258b7b",
+      "headings": [
+        "# Writing guidance"
+      ]
+    },
+    {
+      "baseline": "current-package",
+      "path": "skills/feature-forge/scripts/build_feature_docs.py",
+      "sha256": "8312fa2a30fedc63b199c82f48a0272e7657de83b6381e88d67d57ba944b5942",
+      "headings": []
+    },
+    {
+      "baseline": "current-package",
+      "path": "skills/feature-forge/scripts/forge_support.py",
+      "sha256": "a8edb62efbf1fae422f4f3e17375a50d0d1c7bee19ba488a14312bdd47239c2c",
+      "headings": []
+    },
+    {
+      "baseline": "current-package",
+      "path": "skills/plan/SKILL.md",
+      "sha256": "50440ed8dd31b8660703ff3ae644953510432c818b6ee741acd6ef82712aa3b0",
+      "headings": [
+        "# Plan"
+      ]
+    },
+    {
+      "baseline": "current-package",
+      "path": "skills/whetstone/SKILL.md",
+      "sha256": "495c8de86d65b0589d7a843fa17c527b20bf597de8b956bdacd69be57c05b7f6",
+      "headings": [
+        "# Whetstone"
+      ]
+    },
+    {
+      "baseline": "pre-update-installed-claude",
+      "path": "architecture/SKILL.md",
+      "sha256": "a546361ad93c63fd89d8c3ced00f08f199a8ba7d32ba13646c40175ae456962e",
+      "headings": [
+        "# Architecture",
+        "## Architecture Template (`02_architecture_[name].md`)",
+        "# Architecture: [Feature Name]",
+        "## Summary",
+        "## Analysis of Existing Structure",
+        "## Components / Modules Touched",
+        "## Data / State Changes",
+        "## Key Flows",
+        "## Alternatives Considered *",
+        "## Failure Modes / Edge Cases",
+        "## Security & Privacy Notes",
+        "## Test Strategy",
+        "## Open Questions",
+        "## Architect Review",
+        "## Security Review"
+      ]
+    },
+    {
+      "baseline": "pre-update-installed-claude",
+      "path": "brief/SKILL.md",
+      "sha256": "131eebe90f535c15367499900cb175831402bbca7064d3467a6ee1fadc5da1e3",
+      "headings": [
+        "# Brief",
+        "## Brief Template (`01_brief_[name].md`)",
+        "# Feature Brief: [Feature Name]",
+        "## Summary *",
+        "## Problem, User, and Context *",
+        "## Non-Goals *",
+        "## Solution Outline",
+        "## Requirements *",
+        "## UX Notes",
+        "## Analytics / Logging",
+        "## Rollout / Flags",
+        "## Questions and Decisions *",
+        "## PM Review"
+      ]
+    },
+    {
+      "baseline": "pre-update-installed-claude",
+      "path": "feature-forge/SKILL.html",
+      "sha256": "d343d307b7f3f3b31069da5e17c65203d8d49923359f8021aafab8e959933dba",
+      "headings": []
+    },
+    {
+      "baseline": "pre-update-installed-claude",
+      "path": "feature-forge/SKILL.md",
+      "sha256": "bfc4c6a8eb057ead47791cb7f262df69167407e7f56c2708938a6d23a824daee",
+      "headings": [
+        "# Feature Forge",
+        "## Table of Contents",
+        "## 1. When to Use and When Not to Use",
+        "## 2. Phases summary",
+        "## 3. Reviews summary",
+        "## 4. Workflow map",
+        "## 5. Phases Details (Phases 0 through 9)",
+        "### Phase 0: Setup",
+        "### Phase 1: Crucible",
+        "### Phase 2: Brief",
+        "### Phase 3: Architecture",
+        "### Phase 4: Plan",
+        "### Phase 5: Human review",
+        "### Phase 6: Implement",
+        "#### Setup",
+        "#### The passes",
+        "### Phase 7: Verify",
+        "### Phase 8: Ship and land",
+        "### Phase 9: Cleanup",
+        "## 6. Sub-Agents, Reviews, and Personas",
+        "## 7. Project Layout and Document Composition",
+        "### Project Layout",
+        "### Two Surfaces: Markdown for Agents, HTML for the Human",
+        "### Modular Markdown, composed HTML",
+        "### Document Length Discipline (mandatory)",
+        "#### Rule 1: One source of truth per decision",
+        "#### Rule 2: Review citations live in summary tables, not in the body",
+        "#### Rule 3: Integrate, don't append",
+        "#### Rule 4: Document only what isn't obvious",
+        "#### Rule 5: Open Questions are questions",
+        "### Diagramming Style",
+        "## 8. Interacting with the User"
+      ]
+    },
+    {
+      "baseline": "pre-update-installed-claude",
+      "path": "feature-forge/assets/feature_pandoc_header.html",
+      "sha256": "34104766a90ac388f8f5e57e6f0d275102cdc5c6f548786e5bc4c7dc813e831e",
+      "headings": []
+    },
+    {
+      "baseline": "pre-update-installed-claude",
+      "path": "feature-forge/references/agent-contracts.md",
+      "sha256": "0a82bd874c6577f46275f9057f401c35a234635262611cff3c1b3a7b1be7acdc",
+      "headings": [
+        "# Documents and contracts for agents",
+        "## Be judicious in choosing reviewers, subagents, and models",
+        "## Your Role: Orchestrator",
+        "### Anti-Patterns",
+        "## Sub-Agent Dispatch (mandatory)",
+        "## A dispatch packet",
+        "## Sub-agent prompt template",
+        "## Follow-up agents",
+        "## No `rm` Mid-Feature (mandatory, no exceptions)",
+        "## Reviews",
+        "## Verification evidence",
+        "## Test scope and accounting",
+        "## TDD Integration",
+        "## Subagent judgment and PR scope",
+        "## Slicing larger features for implementation",
+        "## Independent verification against the spec",
+        "## Phase 7 reviewers"
+      ]
+    },
+    {
+      "baseline": "pre-update-installed-claude",
+      "path": "feature-forge/references/code-review-checklist.html",
+      "sha256": "e4f08b3c96be2ca70e66cdbc43740c0935824ba4044edb834d8d0ae646f7775d",
+      "headings": []
+    },
+    {
+      "baseline": "pre-update-installed-claude",
+      "path": "feature-forge/references/code-review-checklist.md",
+      "sha256": "ee5f64d9b45282d8d59e76b20b4bd7ad1061e9778eddf7775aec1ab66bc9bff3",
+      "headings": [
+        "# Code Review Checklist",
+        "## How to Use",
+        "## The Checklist",
+        "### Architecture Conformance",
+        "### Naming and Readability",
+        "### Security",
+        "### API Contract Stability",
+        "### Test Quality",
+        "### Operational Readiness",
+        "## Cost of writes"
+      ]
+    },
+    {
+      "baseline": "pre-update-installed-claude",
+      "path": "feature-forge/references/document-templates.html",
+      "sha256": "f06440f88ee190f6f9118ac077283e6831ca9594261c5d337e2902e0b6393ab7",
+      "headings": []
+    },
+    {
+      "baseline": "pre-update-installed-claude",
+      "path": "feature-forge/references/document-templates.md",
+      "sha256": "7ed9bcd0f5e58c9ed712cd902432a3e10b637a34811fc1cf86cedc3c319ecfa2",
+      "headings": [
+        "# Feature Document Authoring Conventions",
+        "### Two surfaces: Markdown for agents, HTML for the human",
+        "## Modular source leaves",
+        "## File set per feature",
+        "## HTML Output & Authoring Conventions",
+        "### The top of every spec doc",
+        "### Components for spec content",
+        "### Diagrams (Mermaid)",
+        "### Building",
+        "## Reviews File Template (`0N_[type]_[name]_reviews.md`)",
+        "# Reviews \u2014 [Doc Type]: [Feature Name]",
+        "## [Persona] Review (Round 1)",
+        "## [Persona] Review (Round 2)",
+        "## Progress Index Template (`04_progress_[name].md`)",
+        "### What each section holds",
+        "### Update events",
+        "### Empty states",
+        "### The filled page",
+        "# Progress: Roster invites",
+        "## Needs your attention",
+        "## Currently working on",
+        "## Phases",
+        "## The record",
+        "### Task index",
+        "### Passes",
+        "### Changes from plan",
+        "### Follow-ups",
+        "### Cleanup queue",
+        "### Test results",
+        "### Ship",
+        "## Log",
+        "## Per-Workstream Detail Template (`progress/phaseN_workstream_[shortname].md`)",
+        "# Step N, Task M: [Short Name]",
+        "## What I built",
+        "## Files changed",
+        "## Tests",
+        "## Deviations from the plan",
+        "## Surprises",
+        "## Follow-ups",
+        "## Cleanup needed"
+      ]
+    },
+    {
+      "baseline": "pre-update-installed-claude",
+      "path": "feature-forge/references/implementation-slices.md",
+      "sha256": "c0f3ef1027a8b76fe5372cf3315336ecd898f018e5725d031fd1f7b2416dbcb3",
+      "headings": [
+        "# Break a large feature into implementation slices",
+        "## Choose the slices",
+        "## Plan the order and ownership",
+        "## Decide when to open a PR",
+        "## Example: sample texts before signup"
+      ]
+    },
+    {
+      "baseline": "pre-update-installed-claude",
+      "path": "feature-forge/references/post-deploy-checklist.html",
+      "sha256": "6e32b09a4a634995f52898d89423691d093d4f1aae0b5803271dd319366f026f",
+      "headings": []
+    },
+    {
+      "baseline": "pre-update-installed-claude",
+      "path": "feature-forge/references/post-deploy-checklist.md",
+      "sha256": "f7d55b21194b6ec8534b29f988674659430988afbe68a4b706e53e759989f39c",
+      "headings": [
+        "# Post-Deploy Checklist",
+        "## Post-Deploy Checklist"
+      ]
+    },
+    {
+      "baseline": "pre-update-installed-claude",
+      "path": "feature-forge/references/principles.md",
+      "sha256": "f16eff2a5293a55a7731222147e60ef1497adec0492c416e57a8295a30582729",
+      "headings": [
+        "# Engineering principles",
+        "## Core",
+        "### Laziness Protocol",
+        "### Foundational Thinking",
+        "### Redesign From First Principles",
+        "### Attack the Premise",
+        "### Subtract Before You Add",
+        "### Minimize Reader Load",
+        "### Outcome-Oriented Execution",
+        "### Experience First",
+        "### Exhaust the Design Space",
+        "### Build the Lever",
+        "## Architecture",
+        "### Model the Domain",
+        "### Boundary Discipline",
+        "### Type System Discipline",
+        "### Make Operations Idempotent",
+        "### Migrate Callers Then Delete Legacy APIs",
+        "### Separate Before Serializing Shared State",
+        "## Verification",
+        "### Prove It Works",
+        "#### Script the check when you can",
+        "### Fix Root Causes",
+        "### Sequence work into verifiable units",
+        "### Test Behavior, Not Implementation",
+        "## Delegation",
+        "### Guard the Context Window",
+        "### Never Block on the Human",
+        "## Meta",
+        "### Encode Lessons in Structure",
+        "## Ours",
+        "## License notice"
+      ]
+    },
+    {
+      "baseline": "pre-update-installed-claude",
+      "path": "feature-forge/scripts/build_feature_docs.py",
+      "sha256": "6d45a3b90f6b60925f17b0e53ba2a47ef0bbcdfd5d3dd719df52f2301ade3fff",
+      "headings": [
+        "# The cross-build document fixes and the style loader have ONE source, in the",
+        "# sibling shared-assets skill folder. The header carries a <!-- SHARED_ASSETS -->",
+        "# and a <!-- STCLAIR_DOC_STYLE --> placeholder; resolve_header() returns a",
+        "# temporary header with both filled in.",
+        "# (filename prefix, nav label). Order is the nav order.",
+        "# Set by main(): which SPECS prefixes exist in this folder (so the nav never",
+        "# links a doc the feature does not have), and the",
+        "# crucible's built file name (00_crucible.md or 00_crucible_<feature>.md).",
+        "# Set by main(): the style CSS read once per build, and whether to number",
+        "# sections (the default; --plain turns it off).",
+        "# The pandoc template. It gives the page nothing of pandoc's own default",
+        "# styles; the build assembles <main> from the three marked pieces.",
+        "# (insight classes, label). None means no tint: the label and the content",
+        "# only, as quiet labelled prose. A requirement is a spec fact, not a point to",
+        "# carry forward, so it does not get a panel.",
+        "# Verdict word -> the style's status-dot colour.",
+        "# Finding identifiers used in disposition tables and review prose (RF1, S2, C1,",
+        "# Q3, K1, ...). The `#` column of a disposition table links down to the matching",
+        "# verbatim entry in the merged reviews so the human can jump spec \u2192 detail.",
+        "# Block containers an <h2> can sit inside. Only an <h2> outside all of them",
+        "# opens a section; one inside a callout, a list item or a quote stays put.",
+        "# An authored links row. The source carries one so the page served live by",
+        "# `lahe review` has it; the build draws its own, linked to the built pages.",
+        "# A link to a sibling spec doc by its Markdown name. The source links .md so",
+        "# the live page works; the built dossier links the built page instead."
+      ]
+    },
+    {
+      "baseline": "pre-update-installed-claude",
+      "path": "feature-forge/scripts/convert_fenced_divs.py",
+      "sha256": "2ababbb47579780a8a8a919be7008bd82220ea4215963d4aa7922907d02290b4",
+      "headings": []
+    },
+    {
+      "baseline": "pre-update-installed-claude",
+      "path": "feature-forge/scripts/forge_support.py",
+      "sha256": "425c7075fb625d468fd2a8e63e0aea330154a7a90a7877de2d125fb30c291579",
+      "headings": []
+    },
+    {
+      "baseline": "pre-update-installed-claude",
+      "path": "plan/SKILL.md",
+      "sha256": "3181c516e8d0876cea1c1336d9428f2136d4ef8b59c9eaa5e82033459986a8f6",
+      "headings": [
+        "# Plan",
+        "## Plan Template (`03_plan_[name].md`)",
+        "# Plan: [Feature Name]",
+        "## Step 1: [Name]",
+        "### Task 1.1 \u2014 [short name]",
+        "### Task 1.2 \u2014 [short name]",
+        "## Step 2: [Name]",
+        "## Workstreams and PRs",
+        "## Test List *",
+        "## Acceptance Criteria *",
+        "## Plan Review"
+      ]
+    },
+    {
+      "baseline": "pre-update-installed-claude",
+      "path": "whetstone/SKILL.md",
+      "sha256": "21e3c05efd025062b1b0302b7f799ac6efdabbdcc5a6bd2fb18c5291bdff5201",
+      "headings": [
+        "# Whetstone",
+        "## Contracts and review ownership",
+        "## Map of this skill",
+        "## Everything Ken looks at is served",
+        "## When NOT to use",
+        "## Step 0: Size it, out loud",
+        "## Step 1: Worktree, before the spec",
+        "## Step 2: One spec doc",
+        "## Step 3: Select reviewers for the spec",
+        "## Step 4: Human gate",
+        "## Step 5: Build",
+        "## Step 6: Code review on the diff, then verify",
+        "## Step 7: Ship and land",
+        "## Step 8: Close out",
+        "## Escalation",
+        "## Subagent judgment and PR scope",
+        "## Independent verification against the spec"
+      ]
+    },
+    {
+      "baseline": "pre-update-installed-codex",
+      "path": "feature-forge/SKILL.md",
+      "sha256": "e5f9bb7d08bb772407d763e2b28439f18ac729241949a0af46e93615f8bd2cc5",
+      "headings": [
+        "# Feature Forge",
+        "## When NOT to Use",
+        "## Your Role: Orchestrator",
+        "### Anti-Patterns",
+        "## Phases",
+        "## Phase 1: Brief",
+        "## Phase 2: Architecture",
+        "## Phase 3: Plan",
+        "## Phase 4: Implement",
+        "### Setup",
+        "### Dispatch Planning and Implementation",
+        "#### Dispatch Planning and Context",
+        "#### Implementation Loop",
+        "### Test Scope and Accounting",
+        "### Sub-agent prompt template",
+        "### Follow-up agents",
+        "### TDD Integration",
+        "## Phase 5: Review",
+        "## Phase 6: Push",
+        "## Phase 7: Cleanup",
+        "## Additional Rules",
+        "## Diagramming Style",
+        "## No `rm` Mid-Feature (mandatory, no exceptions)",
+        "## Sub-Agent Dispatch (mandatory)",
+        "## Progress Doc Split Pattern (mandatory)",
+        "## Project Layout",
+        "## Persona Reviews",
+        "## Document Length Discipline (mandatory)",
+        "### Rule 1: One source of truth per decision",
+        "### Rule 2: Review citations live in disposition tables, not in the body",
+        "### Rule 3: Integrate, don't append",
+        "### Rule 4: Document only what isn't obvious",
+        "### Rule 5: Open Questions are questions"
+      ]
+    },
+    {
+      "baseline": "pre-update-installed-codex",
+      "path": "feature-forge/references/code-review-checklist.md",
+      "sha256": "6a7b44f7dd485a124fb1cbd9fe41a86b7c2511eb35e8b1d091d4f6ededd58c25",
+      "headings": [
+        "# Code Review Checklist",
+        "## How to Use",
+        "## The Checklist",
+        "### Architecture Conformance",
+        "### Naming and Readability",
+        "### Security",
+        "### API Contract Stability",
+        "### Test Quality",
+        "### Operational Readiness"
+      ]
+    },
+    {
+      "baseline": "pre-update-installed-codex",
+      "path": "feature-forge/references/doc-review-checklist.md",
+      "sha256": "c3cf48d3831c1c0d77dd003228fa4169575eb69c3e501b69e8827b078da37641",
+      "headings": [
+        "# Documentation Review Checklist",
+        "## How to Use",
+        "## The Checklist",
+        "### Completeness",
+        "### Consistency Across Documents",
+        "### Feasibility",
+        "### Risk & Edge Cases",
+        "### Scope Discipline",
+        "### Orchestration & Integration"
+      ]
+    },
+    {
+      "baseline": "pre-update-installed-codex",
+      "path": "feature-forge/references/document-templates.md",
+      "sha256": "3c1b64e83f6dab4c621506f2163b801bc65f61ccd92ee0d6bc1de9d3c422b05b",
+      "headings": [
+        "# Feature Document Templates",
+        "## File set per feature",
+        "## Brief Template (`01_brief_[name].md`)",
+        "# Feature Brief: [Feature Name]",
+        "## Context",
+        "## Goal / Problem *",
+        "## Non-Goals *",
+        "## User Stories",
+        "## Requirements *",
+        "## Success Metrics *",
+        "## UX Notes",
+        "## Analytics / Logging",
+        "## Rollout / Flags",
+        "## Open Questions *",
+        "## PM Review",
+        "## Architecture Template (`02_architecture_[name].md`)",
+        "# Architecture: [Feature Name]",
+        "## Summary",
+        "## Analysis of Existing Structure",
+        "## Components / Modules Touched",
+        "## Data / State Changes",
+        "## Key Flows",
+        "## Alternatives Considered *",
+        "## Failure Modes / Edge Cases",
+        "## Security & Privacy Notes",
+        "## Test Strategy",
+        "## Open Questions",
+        "## Architect Review",
+        "## Security Review",
+        "## Plan Template (`03_plan_[name].md`)",
+        "# Plan: [Feature Name]",
+        "## Phase 1: [Name]",
+        "### Task 1.1 \u2014 [short name]",
+        "### Task 1.2 \u2014 [short name]",
+        "## Phase 2: [Name]",
+        "## Test List *",
+        "## Definition of Done *",
+        "## Engineering Manager Review",
+        "## Code Review Lead Review",
+        "## Reviews File Template (`0N_[type]_[name]_reviews.md`)",
+        "# Reviews \u2014 [Doc Type]: [Feature Name]",
+        "## [Persona] Review (Round 1)",
+        "## [Persona] Review (Round 2)",
+        "## Progress Index Template (`04_progress_[name].md`)",
+        "# Progress: [Feature Name]",
+        "## Status",
+        "## Task Index",
+        "## Changes from Plan",
+        "## Follow-ups",
+        "## Cleanup queue",
+        "## Test Results",
+        "## Feedback (Round 1)",
+        "## Per-Task Detail Template (`progress/phaseN_taskM_[shortname].md`)",
+        "# Phase N, Task M: [Short Name]",
+        "## What I built",
+        "## Files changed",
+        "## Tests",
+        "## Deviations from the plan",
+        "## Surprises",
+        "## Follow-ups",
+        "## Cleanup needed"
+      ]
+    },
+    {
+      "baseline": "pre-update-installed-codex",
+      "path": "feature-forge/references/micro-spec-template.md",
+      "sha256": "94b30ec5fb194e7b2297835e3c97e14a3275db2de12c897a44d3212aad029014",
+      "headings": [
+        "# Micro-Spec Template",
+        "## File Location",
+        "## Template",
+        "# [nn]: [Short descriptive title]",
+        "## What",
+        "## Why",
+        "## Acceptance Criteria",
+        "## Edge Cases",
+        "## Files Likely Touched",
+        "## Progress File",
+        "## Examples",
+        "### Good micro-spec (captures edge cases)",
+        "# 07: Fix suggestion edit lost on Add click",
+        "## What",
+        "## Acceptance Criteria",
+        "## Edge Cases",
+        "## Files Likely Touched",
+        "### Bad micro-spec (too vague, no edge cases)",
+        "# 07: Fix edit bug",
+        "## What",
+        "## Acceptance Criteria"
+      ]
+    },
+    {
+      "baseline": "pre-update-installed-codex",
+      "path": "feature-forge/references/post-deploy-checklist.md",
+      "sha256": "7802e091e01731d457aa7ae0a596d32ec4c51794016dab6921e7a1eaf7f67e9e",
+      "headings": [
+        "# Post-Deploy and Outcome Review Checklists",
+        "## Post-Deploy Checklist",
+        "## Outcome Review Checklist"
+      ]
+    },
+    {
+      "baseline": "pre-update-installed-codex",
+      "path": "feature-forge/references/tdd-guide.md",
+      "sha256": "aedf4615a5bda623977b9e760671e9bbab2d33d0adaf7aeee8436faab479e03d",
+      "headings": [
+        "# TDD Guide",
+        "## The Loop",
+        "### Step 1: Write the Test List",
+        "### Step 2: For Each Item",
+        "### Step 3: Repeat",
+        "## Test Types and When to Use Them",
+        "## When TDD Breaks Down",
+        "## Common Mistakes"
+      ]
+    }
+  ]
+}

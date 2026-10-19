@@ -1,0 +1,142 @@
+[
+  {
+    "id": "environment-readiness", "category": "restore-first",
+    "title": "A working environment before implementation and verification",
+    "legacy_file": "feature-forge/SKILL.md",
+    "legacy_excerpt": "Before dispatching implementation agents, confirm the infrastructure the feature needs, such as the dev servers, is still running.",
+    "current": "skills/feature-forge/references/verification-and-release.md",
+    "finding": "Isolation and final checks remain, but there is no practical readiness step for configuration keys, services, migrations, seed data, or a running app.",
+    "restore": "Add a shared environment-readiness reference used by feature and Whetstone routes. Read project setup instructions, identify prerequisites without exposing secret values, start the real app, and verify the intended environment. Keep unavailable prerequisites visible as blockers.",
+    "history": "Already absent in this detail from the pre-runbook public package."
+  },
+  {
+    "id": "production-verification", "category": "restore-first",
+    "title": "Concrete verification after landing",
+    "legacy_file": "feature-forge/references/post-deploy-checklist.md",
+    "legacy_excerpt": "- [ ] **Error monitoring:** No new errors in logs, error tracking, or monitoring dashboards\n- [ ] **Performance:** No significant degradation in response times or resource usage",
+    "current": "skills/feature-forge/references/verification-and-release.md",
+    "finding": "The new text says to verify the release and distinguish merged, deployed, and enabled. It no longer supplies the operational checks that make that statement useful.",
+    "restore": "Add release evidence for the actual deployed revision, health, applicable migrations, the real changed flow, error monitoring, performance regressions, and a usable recovery path. Let the agent perform available checks and report inaccessible checks. Do not restore a routine human checklist or approval gate.",
+    "history": "The detailed checklist was not in the pre-runbook public package."
+  },
+  {
+    "id": "visible-progress", "category": "restore-first",
+    "title": "A stable progress page with meaningful update events",
+    "legacy_file": "feature-forge/references/document-templates.md",
+    "legacy_excerpt": "The lede is rewritten on every update",
+    "current": "skills/feature-forge/references/templates.md",
+    "finding": "Progress is reduced to a list of topics. The creation/opening step, accountable writer, task owners, current blockers, and event-driven updates are no longer explained.",
+    "restore": "Provide a compact progress template with current state, attention needed, active owners, document links, acceptance/evidence, decisions, and next action. Update it when work starts or ends, a review returns, a blocker changes, or a release lands. Use actual tool timestamps. Do not freeze the old phase numbers or exact heading count.",
+    "history": "The public template was already compressed before the runbook rewrite."
+  },
+  {
+    "id": "worker-handoffs", "category": "restore-first",
+    "title": "Separate worker detail and durable review history",
+    "legacy_file": "feature-forge/references/agent-contracts.md",
+    "legacy_excerpt": "outcome, changed files, verification commands and evidence paths, a quick screenshot when the work has a visible surface, deviations,\nblockers, follow-ups, and `## Cleanup needed`.",
+    "current": "skills/feature-forge/references/contracts-and-slices.md",
+    "finding": "Contracts still name completion evidence, and review siblings still compose. The practical return format and ownership of the detailed record disappeared.",
+    "restore": "Add an optional worker-return template and review-round template. Name one writer per detail file, link evidence, preserve earlier review rounds, and keep decisions in the owning source. This helps unattended work resume without reconstructing the conversation.",
+    "history": "The concrete templates were already missing from the public package."
+  },
+  {
+    "id": "authoring-contract", "category": "restore-first",
+    "title": "Document authoring and source-to-render instructions",
+    "legacy_file": "feature-forge/references/document-templates.md",
+    "legacy_excerpt": "Write components as LAHE house components: small HTML blocks inside the Markdown",
+    "current": "skills/feature-forge/references/templates.md",
+    "finding": "Modular includes survive, but the component guidance, title/lede shape, source-versus-output editing rule, and practical composed-review instructions do not.",
+    "restore": "Add a focused authoring reference linking the installed review tool's component catalog. Explain when to compose leaves, edit Markdown, rebuild, and serve generated output with its source. Keep simple direct Markdown review available. Preserve historical conventions instead of rewriting documents to fit a tool.",
+    "history": "The detailed conventions were not carried into the pre-runbook public templates."
+  },
+  {
+    "id": "renderer-compatibility", "category": "restore-first",
+    "title": "The document rendering capabilities behind the old conventions",
+    "legacy_file": "feature-forge/scripts/build_feature_docs.py",
+    "legacy_excerpt": "Diagrams:  ```mermaid fenced blocks (rendered client-side)",
+    "current": "skills/feature-forge/scripts/build_feature_docs.py",
+    "finding": "The old installed renderer handled house components, legacy callouts, section layout, folded contents, review-finding links, and Mermaid. The bundled renderer keeps composition/navigation but uses a much smaller fallback stylesheet.",
+    "restore": "Repair compatibility through a portable renderer/style integration. Prioritize readable existing components and actual diagrams. Keep the current containment checks and offline contract. Decide deliberately how to render diagrams offline; do not restore private style-loader dependencies or a hidden network requirement.",
+    "history": "The simplified renderer dates to the public extraction, before the runbook rewrite. A fresh probe confirms the current output limitations."
+  },
+  {
+    "id": "ui-quality", "category": "restore-first",
+    "title": "An explicit bar for the finished user experience",
+    "legacy_file": "plan/SKILL.md",
+    "legacy_excerpt": "Honest feedback. Toasts and status messages report what actually happened. Never an optimistic \"done\" for something still in flight, or something that failed.",
+    "current": "skills/feature-forge/references/reviewers.md",
+    "finding": "The new route retains high-fidelity prototypes, staff design, customer personas, and design-language references. The concrete acceptance floor for the integrated product is weaker.",
+    "restore": "Add a short UI-quality reference covering hierarchy, consistent components/tokens, responsive and accessible states, honest feedback, meaningful motion, brand voice, and coherence across contributors. Use it as acceptance context, without requiring another reviewer roster.",
+    "history": "The richer Plan acceptance criteria were already absent from the public baseline."
+  },
+  {
+    "id": "review-operational-checks", "category": "restore-first",
+    "title": "Operational code-review prompts, especially the cost of writes",
+    "legacy_file": "feature-forge/references/code-review-checklist.md",
+    "legacy_excerpt": "- How often does it write? Per keystroke, per event, per poll, per commit? Name the trigger.\n- How much does each write carry? The changed part, or the whole record or file?",
+    "current": "skills/feature-forge/references/reviewers.md",
+    "finding": "Reviewer ownership and findings improved. Specific checks for write amplification, API compatibility, queries, idempotence, actionable errors, privacy, and operational logging are now mostly left to generic judgment or selected principles.",
+    "restore": "Add risk-triggered reviewer prompts. Preserve the unusual write-frequency/payload/flush check. Include a publishing check for secrets and sensitive data. Reuse existing pstack leaves rather than copying overlapping general advice.",
+    "history": "The concrete checklist did not exist in the pre-runbook public package."
+  },
+  {
+    "id": "cleanup-and-lessons", "category": "restore-first",
+    "title": "A complete closeout, including small changes",
+    "legacy_file": "feature-forge/SKILL.md",
+    "legacy_excerpt": "Lessons are written as they happen",
+    "current": "skills/whetstone/SKILL.md",
+    "finding": "Docs, diagrams, lessons, and owned cleanup remain in the new text. The explicit obligation to check them even for small changes, capture each surprise, and close the whole record has softened.",
+    "restore": "Add a portable closeout reference: verify commits/push and release, check durable docs/diagrams, record surprises as lessons, place follow-ups on the existing board, close progress, and inspect owned worktrees before teardown. Preserve the distinction between a lesson and a bug ticket. Avoid mandatory private skills or a long ceremony.",
+    "history": "The detailed lifecycle was absent earlier. The small-change lesson requirement was softened specifically by the runbook rewrite; compare the earlier public Whetstone cleanup change."
+  },
+  {
+    "id": "cross-doc-consistency", "category": "restore-later",
+    "title": "A compact document consistency and feasibility check",
+    "legacy_file": "../.codex/feature-forge/references/doc-review-checklist.md",
+    "legacy_excerpt": "- [ ] The plan covers every component described in the architecture. No architecture component is orphaned.",
+    "current": "skills/plan/SKILL.md",
+    "finding": "Requirements, alternatives, contracts, and the Plan table remain. The explicit check that the documents describe the same scope and a feasible integrated build is no longer concrete.",
+    "restore": "Offer a short author self-check for scope/terminology agreement, chosen rather than rejected alternatives, unresolved assumptions, orphaned components, dependencies, and failure coverage. Do not restore the old EM/code-lead chain or confidence cutoff.",
+    "history": "This is from the older installed Codex copy, not an asserted contract of the recent public package."
+  },
+  {
+    "id": "premise-no-build", "category": "restore-later",
+    "title": "Challenge the premise, including the option to build nothing",
+    "legacy_file": "feature-forge/SKILL.md",
+    "legacy_excerpt": "Challenge premise, force alternatives, answer \"what if we do nothing,\"",
+    "current": "skills/feature-forge/references/runbooks/prototype-first.md",
+    "finding": "The new route resolves the premise and explores prototype alternatives. The explicit no-build or existing-capability alternative has faded.",
+    "restore": "Add a brief discovery prompt when the request is uncertain: validate the user need and consider an existing capability, a smaller change, or no change. Keep it before the prototype and proportional to uncertainty. Do not reinstate a compulsory interview phase.",
+    "history": "The pre-runbook public router explicitly mentioned doing nothing; that explicit option disappeared in the rewrite."
+  },
+  {
+    "id": "packet-helper", "category": "restore-later",
+    "title": "Heading-selected dispatch packets",
+    "legacy_file": "feature-forge/scripts/forge_support.py",
+    "legacy_excerpt": "def packet(args):",
+    "current": "skills/feature-forge/scripts/forge_support.py",
+    "finding": "The current helper only captures verification runs. The old packet command selected source headings and validated the contract fields; the contract concept itself survives.",
+    "restore": "Restore a small optional packet builder if actual delegation repeatedly needs it. Keep source selection and clear errors for missing headings. Prove it saves repeated work before making it a required dispatch step.",
+    "history": "This command was already absent from the first public helper."
+  },
+  {
+    "id": "evidence-provenance", "category": "restore-later",
+    "title": "Evidence identity beyond a commit hash",
+    "legacy_file": "feature-forge/scripts/forge_support.py",
+    "legacy_excerpt": "def fingerprint(repo,evidence):",
+    "current": "skills/feature-forge/scripts/forge_support.py",
+    "finding": "The current helper explicitly admits that its revision does not identify uncommitted or external state. The old helper recorded content and environment fingerprints, but also overwrote logs and used shell command parsing.",
+    "restore": "Add reliable dirty-tree and relevant-environment identity without storing secret values. Keep immutable evidence folders and argv execution. Consider reuse only after those identities and external-state limits are verified; do not restore the old cache or log-overwrite behavior wholesale.",
+    "history": "The simpler evidence implementation predates the runbook rewrite."
+  },
+  {
+    "id": "local-principle-adapter", "category": "restore-later",
+    "title": "Local principle additions and the lesson-to-mechanism loop",
+    "legacy_file": "feature-forge/references/principles.md",
+    "legacy_excerpt": "- **Cheap checks first.** Order checks from cheapest to most expensive.",
+    "current": "skills/feature-forge/references/principles.md",
+    "finding": "The new package has the selected upstream leaves and better on-demand routing. The old installed collection also had local additions about repeated knowledge, broken tooling, check ordering, and routing lessons into mechanisms.",
+    "restore": "Compare those additions against the vendored leaves and retain only distinct useful guidance in a local adapter. Preserve upstream source files unchanged. Keep the newer behavioral-test guidance; do not restore the older assertion blacklist as an absolute rule.",
+    "history": "These local additions are not evidence that the selected upstream files were imported incorrectly."
+  }
+]

@@ -2,6 +2,8 @@
 
 The MVP is on main. The package and local Claude/Codex instructions now have a hard shipping rule: the full suite must pass with no test failures or errors, including pre-existing and setup failures. Existing cloud sessions still need the updated rule delivered or loaded. Keep the current global setup locally; cloud environment setup installs Forge globally inside the VM.
 
+The [legacy audit inventory](LEGACY_AUDIT.md) is ready for review. It identifies practical guidance worth restoring around the new structure and distinguishes that from capabilities already retained or deliberately removed. No restoration has been implemented as part of this audit.
+
 The default feature route is short brief, prototype, PRD, architecture, Plan, TDD, verification, ship, and land. Agents adapt their path to the actual task. The package includes the selected principles, writing guidance, and scoped comment review, and keeps the documentation record without routine human document approval.
 
 ## Hard shipping rule
