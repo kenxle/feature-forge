@@ -108,6 +108,8 @@ Inspected the upstream repository at revision `6b78e9f4e46c75d1697d837e51f07c269
 
 Start with references and narrowly adapted principles. Do not import pstack's whole orchestration stack, fixed delegation rules, or host-specific paths. Compare further files supplied by the maintainer before selecting imports. Substantial copied material must retain the upstream [MIT notice](https://github.com/cursor/plugins/blob/6b78e9f4e46c75d1697d837e51f07c2692e60b24/pstack/LICENSE).
 
+Use the [complete pstack source index](pstack-index.md) to mark any additional files for consideration.
+
 ## Implementation slices
 
 Each slice should leave the package usable. Reuse this plan across slices rather than restarting the documentation process.
