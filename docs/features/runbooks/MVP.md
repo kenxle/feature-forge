@@ -1,8 +1,31 @@
 # Forge MVP alongside the pstack trial
 
-The MVP is on main, and the local Claude and Codex development skills are updated. Start a fresh development session to load the new instructions. Nothing is needed from you now. Keep adding comments or share observations from real use whenever useful. The pstack trial can run in parallel.
+The MVP is on main, and the local Claude and Codex development skills are updated. For Claude Code cloud sessions, install and commit the package in each project repository, as described below. The local update alone does not reach the cloud. The pstack trial can run in parallel.
 
 The default feature route is short brief, prototype, PRD, architecture, Plan, TDD, verification, ship, and land. Agents adapt their path to the actual task. The package includes the selected principles, writing guidance, and scoped comment review, and keeps the documentation record without routine human document approval.
+
+## Use in Claude Code cloud sessions
+
+I recommend committing the installed package in each project that uses it. Cloud sessions load the cloned repository's `.claude/skills/` and cannot read the skills installed only on your laptop. [Anthropic's cloud skill guidance](https://code.claude.com/docs/en/skills#use-skills-in-cowork-and-cloud-sessions) confirms this distinction.
+
+From your up-to-date Feature Forge checkout, run the [installer](../../../scripts/install.py) against the target project. Replace the example path with that project's actual path:
+
+```sh
+python3 scripts/install.py /absolute/path/to/your-project --dry-run
+python3 scripts/install.py /absolute/path/to/your-project
+```
+
+Then complete the setup in that project:
+
+- Commit and push the installed `feature-forge`, `brief`, `architecture`, `plan`, and `whetstone` folders under `.claude/skills/`. Keep their supporting files, including vendored sources and license. The installer refuses existing destinations, so compare and preserve older copies before updating.
+- Check that Git tracks those folders. Use real committed files rather than links to folders on your laptop.
+- Start a new cloud session on the branch containing that commit. Ask Claude to read `.claude/skills/feature-forge/SKILL.md` to confirm the installed version, then invoke `/feature-forge` or `/whetstone`. Cloud sessions launched from the terminal clone the remote branch, so push first. [Anthropic's cloud launch guidance](https://code.claude.com/docs/en/claude-code-on-the-web#start-a-cloud-session-from-your-terminal).
+
+The skill instructions need no separate Forge service. For the optional HTML renderer, make Pandoc available in the cloud environment. Configure the project's build tools and test services there too. Cloud environment setup scripts install missing tools before Claude starts. [Cloud environment configuration](https://code.claude.com/docs/en/cloud-environments#setup-scripts).
+
+Account-wide skills enabled through claude.ai are another supported distribution route. For this linked package, I recommend repository copies first so each project records its chosen version. [Anthropic's account skill guidance](https://code.claude.com/docs/en/skills#use-skills-in-cowork-and-cloud-sessions).
+
+This explains the setup. No consuming project's cloud installation has been changed yet, and no cloud run has been verified.
 
 ## What is ready
 
