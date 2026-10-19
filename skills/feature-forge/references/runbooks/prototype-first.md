@@ -31,7 +31,7 @@ The prototype may be throwaway or become the implementation. Record that choice.
 Retained code still needs production checks. For nonvisual work, use a concrete
 interface example or spike when it helps; do not add a decorative prototype.
 
-## PRD, architecture, and Plan
+## PRD, Architecture, and Plan
 
 Write the PRD from the agreed experience. Use the detailed product guidance in
 the [brief skill](../../../brief/SKILL.md) and [templates](../templates.md).
