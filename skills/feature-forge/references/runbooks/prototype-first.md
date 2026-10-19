@@ -14,7 +14,7 @@ experience. Use a short conversation to resolve the premise. Leave detailed
 requirements and implementation choices for after the prototype.
 
 Build a clickable high-fidelity prototype using the project's design language
-and realistic content. Skip wireframes. Include the main journey and states
+and realistic content. Include the main journey and states
 that matter to the decision. Label simulated data and effects. Let the human
 explore it and record the chosen behavior, open questions, and scope. Resolve
 observable questions by trying them rather than sending them back to the human.

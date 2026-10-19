@@ -11,7 +11,7 @@ Develop and use the Forge MVP in parallel with the maintainer's pstack trial. Th
 ## What changes
 
 - Feature Forge becomes a small router that loads the runbook relevant to the work.
-- For a new user experience, write a short brief with target users, their context, the problem, and the desired outcome. Then build a clickable high-fidelity prototype. Derive the PRD's detailed requirements from the agreed experience. Skip wireframes.
+- For a new user experience, write a short brief with target users, their context, the problem, and the desired outcome. Then build a clickable high-fidelity prototype. Derive the PRD's detailed requirements from the agreed experience.
 - Use the prototype conversation to settle scope and record how far the agent may proceed. Documents then develop from that agreement and the agent continues through verified implementation and authorized shipping.
 - Small understood work can begin from an existing request or board item. The agent writes and maintains its spec, decisions, and evidence without waiting for the human to read and approve those documents before authorized shipping.
 - Keep the full dossier route for work that benefits from it or when the human explicitly wants it.

@@ -95,7 +95,7 @@ Read the project's instructions, fetch before choosing a base, and work in an
 isolated branch/worktree. The default route for a new user experience is:
 
 1. **Short brief.** Target users, context, problem, desired outcome, and constraints.
-2. **Prototype.** Build a clickable high-fidelity experience, let the human explore it, and record the chosen behavior. Skip wireframes. Keep or discard the code deliberately.
+2. **Prototype.** Build a clickable high-fidelity experience, let the human explore it, and record the chosen behavior. Keep or discard the code deliberately.
 3. **PRD.** Derive detailed requirements, failures, scope, analytics, and rollout from the agreed experience.
 4. **Architecture.** Investigate the codebase, choose data shapes, and preserve design alternatives and risks.
 5. **Plan.** Define coherent slices, the throughput checkpoint, and the authoritative verification table.
