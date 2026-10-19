@@ -1,6 +1,6 @@
 # Better Feature Forge runbooks
 
-Plan for the next implementation session. Make prototype-first work the normal route for new user experiences, automate well-understood board work, and retain the full dossier as an option. Keep verification strong while giving agents more freedom over how they build.
+Plan for the next implementation session. Make prototype-first work the normal route for new user experiences, automate well-understood board work, and retain the full dossier review route as an option. Agents still write and maintain the documents. The main change is that the human need not read and approve them before authorized work ships. Keep verification strong while giving agents more freedom over how they build.
 
 ## Current status
 
@@ -13,17 +13,17 @@ No decision is needed to start the package refactor. Additional pstack files can
 - Feature Forge becomes a small router that loads the runbook relevant to the work.
 - For a new user experience, capture the brief fields that guide the prototype: target users, their context, the problem, and the desired outcome. Then build a clickable high-fidelity prototype. Write detailed requirements and implementation specifics after exploring it. Skip wireframes.
 - Use the prototype conversation to settle scope and record how far the agent may proceed. Documents then develop from that agreement and the agent continues through verified implementation and authorized shipping.
-- Small understood work can begin from an existing request or board item. It should not require a new Whetstone spec that repeats the same information.
+- Small understood work can begin from an existing request or board item. The agent writes and maintains its spec, decisions, and evidence without waiting for the human to read and approve those documents before authorized shipping.
 - Keep the full dossier route for work that benefits from it or when the human explicitly wants it.
 - Keep acceptance evidence and independent review. Remove repeated approvals, fixed reviewer chains, and development prescriptions that do not improve those outcomes.
 
-The [product brief](../../ongoing/PRODUCT_BRIEF.md) already establishes velocity, agent judgment, multiple runbooks, and robust verification as goals. The [current orchestrator](../../../skills/feature-forge/SKILL.md) still requires a dossier and approval before implementation. The [current Whetstone skill](../../../skills/whetstone/SKILL.md) still requires a compact spec. Those are the main constraints this refactor changes.
+The [product brief](../../ongoing/PRODUCT_BRIEF.md) already establishes velocity, agent judgment, multiple runbooks, and robust verification as goals. The [current orchestrator](../../../skills/feature-forge/SKILL.md) requires human dossier approval before implementation. The [current Whetstone skill](../../../skills/whetstone/SKILL.md) couples its compact spec with required human approval. Separate document production from human approval gates: agents keep the records complete while proceeding under existing authority.
 
 ## Proposed runbooks
 
 | Runbook | When to use it | Minimum record | Human involvement |
 |---|---|---|---|
-| Direct change | Understood fixes, maintenance, and small behavior changes | Existing request or board item, acceptance, evidence, and outcome | Only unresolved product decisions or approval the project actually requires |
+| Direct change | Understood fixes, maintenance, and small behavior changes | Compact spec linked to the request or board item, decisions, acceptance, evidence, and outcome | No routine document approval; only unresolved product decisions or approval the project actually requires |
 | Prototype first | A new or substantially changed user experience | Prototype decision, brief, architecture, Plan, and concise progress | Early alignment and hands-on prototype review; return only for material changes or required shipping permission |
 | Full dossier | Consequential or ambiguous work, or an explicit request for the existing process | Existing comprehensive dossier and review history | Consolidated dossier review before build |
 | Board automation | A cloud or local runner picks up eligible work without a person present | Claimed board item, scope and authority, linked implementation record, evidence, and outcome | Eligibility and shipping policy established ahead of the run; unresolved items return to the board |
@@ -44,7 +44,7 @@ Record the chosen behavior and any unresolved questions. Label simulated data an
 
 Expand the brief seed from the agreed experience, retaining its user and context sections and adding detailed requirements and failure cases. Use architecture to resolve implementation choices and hidden risks. Use the Plan to define coherent slices and own the verification table. Documents should preserve useful reasoning without repeating the prototype narrative in every file.
 
-Continue without a second document gate when the existing agreement and project policy authorize it. Ask again only when new evidence changes a material product choice, scope, risk, or shipping authority. A prototype establishes the intended experience; it does not establish backend correctness or release safety.
+Continue without a second document gate when the existing agreement and project policy authorize it. Write and maintain the brief, architecture, Plan, and progress as the work develops so the human can inspect them whenever useful. Their completion does not create a new requirement for the human to read or approve them. Ask again only when new evidence changes a material product choice, scope, risk, or shipping authority. A prototype establishes the intended experience; it does not establish backend correctness or release safety.
 
 ## Verification is the common foundation
 
@@ -126,7 +126,7 @@ This is the authoritative verification table for the refactor. Evidence remains 
 
 | Requirement | Acceptance and failure case | Check | Owner | Evidence/status |
 |---|---|---|---|---|
-| Match process to work | A small understood fix proceeds without a redundant dossier; ambiguous work gets appropriate discovery | Independent route scenarios using the actual revised skills | Independent acceptance reviewer | Pending |
+| Match process to work | A small understood fix retains its spec, decisions, and evidence while proceeding without routine human document approval; ambiguous work gets appropriate discovery | Independent route scenarios using the actual revised skills | Independent acceptance reviewer | Pending |
 | Prototype before detailed specification | A new UI request uses a brief seed with target users and context, then reaches a clickable high-fidelity prototype before detailed requirements; simulated behavior is disclosed | Representative prototype-first walkthrough | Independent acceptance reviewer | Pending |
 | Preserve the full route | Explicit full-dossier requests still receive comprehensive records and consolidated review | Full-route scenario and package tests | Independent acceptance reviewer | Pending |
 | Continue under existing authority | Agreed work proceeds without repeated gates; material changes and forbidden shipping actions stop at the correct boundary | Authorization scenarios for each route | Independent acceptance reviewer | Pending |
@@ -134,7 +134,7 @@ This is the authoritative verification table for the refactor. Evidence remains 
 | Keep unattended ownership safe | Concurrent or resumed runs do not duplicate ownership, PRs, or side effects | Consumer adapter tests or serialized-run demonstration | Consumer runner owner | Pending; package prose cannot enforce this |
 | Separate landing from activation | Disabled flags preserve current behavior; activation follows recorded authority | Consumer flag and release checks | Consumer release owner | Pending |
 | Keep the package portable | Relative links resolve, installation preserves local changes, private references are absent | Full package suite and private-reference scan | Implementer | Pending |
-| Reduce process burden | Representative work shows which human interruptions and repeated documents were avoided, alongside quality outcomes | Record pilot actions and evidence; compute any counts from saved run data | Pilot owner | Pending; no measured improvement claimed |
+| Reduce process burden | Representative work shows which human reading and approval interruptions were avoided, while documents remain complete and quality outcomes are recorded | Record pilot actions and evidence; compute any counts from saved run data | Pilot owner | Pending; no measured improvement claimed |
 
 ## Resume here
 
