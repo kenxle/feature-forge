@@ -5,7 +5,13 @@ leaves with `<!-- forge-include: parts/brief/context.md -->`. Paths are relative
 to their containing source, stay inside the dossier and cannot cycle. Review
 siblings named `<document-stem>_reviews.md` compose after their document.
 
-## Brief
+## Short brief
+
+Target users, context, problem, desired outcome, known constraints, and open
+questions that affect the prototype. Keep this short and use it before the
+prototype. Link to the prototype artifact and record what its review settled.
+
+## PRD, or detailed brief in the full review route
 
 Problem/user/context; scope and non-goals; solution outline; requirements and
 failure cases; applicable UX; analytics/logging decision; rollout/flags decision;
@@ -16,7 +22,7 @@ No mandatory separate Success Metrics section. Product metrics are optional.
 
 Summary; existing structure; reconnaissance leaf; affected components; data/state
 contracts; flows; meaningful alternatives leaf and rationale; failure modes;
-security/privacy; links to Plan verification and brief questions; selected findings.
+security/privacy; links to Plan verification and product questions; selected findings.
 
 ## Plan
 
@@ -26,10 +32,24 @@ safe landing; workstream contracts; single verification table:
 | Requirement | Acceptance/failure case | Command/observation | Owner | Evidence/status |
 |---|---|---|---|---|
 
-Testing checkpoint findings/dispositions; human dossier approval; rollout and
-final verification actions. Tasks reference rows instead of repeating requirements.
+Implementation strategy includes the throughput checkpoint: blocking prerequisites,
+independent workstreams, shared writable state, and smallest safe decomposition.
+Keep it proportional and explain when a single owner is best.
+
+Testing findings/dispositions; rollout and final verification actions; release
+authority and readiness evidence. Record human dossier approval only when the
+chosen route or project requires it. Tasks reference acceptance rows instead of
+repeating requirements.
 
 ## Progress
 
 Summary; attention needed; phase status; tasks/evidence; decisions/events.
 Link every dossier document. Use explicit empty states and accurate approval records.
+
+## File organization
+
+Use numbered Markdown documents so the renderer orders the chosen route. A
+prototype-first folder may contain a short brief, prototype decision record with
+artifact links, PRD, architecture, Plan, and Progress in that order. Existing
+brief/architecture/Plan/Progress folders remain valid. Do not rename historical
+records merely to adopt the new sequence.

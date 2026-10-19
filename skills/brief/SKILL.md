@@ -1,9 +1,20 @@
 ---
 name: brief
-description: Write a feature brief defining context, solution and requirements.
+description: Write the short brief before prototyping, or the detailed PRD after the experience is agreed. Preserve detailed briefs for the full dossier route.
 user-invocable: true
 ---
 
 # Brief
 
-Use the [templates](../feature-forge/references/templates.md). Preserve problem/user/context, scope, solution outline, stable behavioral requirements and failures, analytics/logging and rollout/flag decisions with rationale, and open/resolved question history. Select optional independent PM review by need; integrate findings and dispositions. Compose modular sources for the human. Architecture follows, with consolidated human review after Plan.
+Read the selected route and use the [templates](../feature-forge/references/templates.md).
+Before prototyping, write a short brief: target users, context, problem, desired
+outcome, and known constraints. Keep detailed requirements for the PRD after the
+prototype conversation.
+
+For a PRD or the full route's detailed brief, preserve scope, solution outline,
+stable behavioral requirements and failures, analytics/logging, rollout/flag
+decisions, and open/resolved questions with rationale. Link existing user context
+instead of repeating it. Select PM review where useful and integrate findings.
+Compose modular sources for human inspection. Architecture follows the detailed
+product document. Human dossier approval belongs only to the explicitly selected
+full review route or a consuming project's own requirement.

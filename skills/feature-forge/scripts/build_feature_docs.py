@@ -23,7 +23,7 @@ def expand(path, root, stack=()):
 def build(folder):
     folder = Path(folder).resolve()
     docs = sorted(p for p in folder.glob('*.md')
-                  if re.match(r'0[0-4]_', p.name) and not p.stem.endswith('_reviews'))
+                  if re.match(r'\d{2,}_', p.name) and not p.stem.endswith('_reviews'))
     if not docs:
         raise ValueError('No numbered dossier Markdown documents found')
     if not shutil.which('pandoc'):

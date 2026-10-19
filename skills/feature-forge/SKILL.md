@@ -1,62 +1,55 @@
 ---
 name: feature-forge
-description: Guide substantial features through brief, architecture, plan, coherent slices, independent completion review and human shipping gates.
+description: Develop features through a short brief, prototype, PRD, architecture, Plan, TDD, verification, shipping and landing. Keep the full dossier review route available.
 user-invocable: true
 ---
 
 # Feature Forge
 
-Read the consuming project's instructions. Respect authorization, branch and
-shipping conventions; use actual project verification commands. Fetch before
-choosing a base. Establish an isolated branch/worktree and preserve unrelated work.
-Clarify premise, users, alternatives including doing nothing, and open decisions.
+Read the consuming project's instructions and existing work. Fetch before choosing
+a base, use an isolated branch/worktree, and preserve unrelated changes. Resolve
+questions from code, documents, or experiments before asking the human. Reserve
+questions for product decisions or authority the available evidence cannot settle.
 
-## Document and approve
+## Choose the route
 
-Create `docs/features/<feature>/` with optional clarification, numbered brief,
-architecture, plan and progress Markdown files. Use sibling brief/architecture/
-plan skills and [templates](references/templates.md). Split by readership with
-`<!-- forge-include: parts/brief/context.md -->`; compose all leaves and review
-history for the human. Give builders relevant authoritative sections, allowing
-necessary further investigation.
+- New or changed user experience: use [prototype first](references/runbooks/prototype-first.md).
+- Small understood change: use [Whetstone](../whetstone/SKILL.md), retaining its compact spec and evidence.
+- Explicit request for the comprehensive pre-build document review: use [full dossier](references/runbooks/full-dossier.md).
 
-Brief preserves context, solution outline, requirements, scope, analytics/logging,
-rollout/flags and question history. Select optional PM review by need.
-Architecture preserves reconnaissance, affected components, flows, failure modes
-and meaningful alternatives. Choose architecture/security perspectives by need.
-Skip wireframes. Plan owns the single verification table mapping requirements to
-measurable acceptance, failure variants, proof, owner and evidence. Select an
-optional independent Plan testing perspective when useful. The writer owns consistency/readability;
-do not add automatic clarity-reader or Plan code-lead/EM/design chains.
+For nonvisual features, use the prototype-first sequence with a concrete interface
+example or executable spike when it helps settle the behavior. Skip an artifact
+that adds no useful information and record why. Do not manufacture a UI.
 
-Integrate findings into source bodies and record dispositions and rationale.
-Present one comprehensive dossier for consolidated human approval before build.
-Use Markdown, optional HTML via `scripts/build_feature_docs.py <feature-folder>`
-(requires Pandoc), or Lahe following its installed skill and session contract.
-Record explicit approval and unresolved questions; silence is not approval.
+Routes are useful starting points. Adapt or combine them to fit the actual work;
+do not force a bug fix, investigation, refactor, or evaluation through the feature
+sequence. Keep the documents that explain the work and its decisions. Preserve
+explicit user choices, TDD for behavior changes, independent verification, and
+release authority when choosing a different path.
 
-## Build, independently verify and ship
+## Shared guidance
 
-Use [contracts and slices](references/contracts-and-slices.md). Choose safely
-landable outcomes with dependencies, shared-interface and integration ownership.
-Keep coupled behavior together and the app working after each landing. Do not
-repeat the docs pipeline per slice. Choose delegation, model, grouping, reuse
-and reviewer selection judiciously, within host capabilities and user policy.
-No fixed cap, prescribed pool or automatic roster.
+Use the [principles index](references/principles.md) to find applicable pstack
+principles. Read the relevant leaf before applying it. These principles guide
+judgment; they do not grant tool access or override project instructions.
+Give delegated agents the same index and applicable leaves in their contracts.
 
-Run targeted tests while building and seam tests after integrating workstreams.
-Follow the [test-first build loop](references/build-loop.md) for behavioral changes.
-Run independent code review, completion review and one final independent changed-user-flow walk before PR.
-Playwright or another browser tool is an option for browser workflows.
+Use the [writing guidance](references/writing.md) for prose and the
+[comment review adapter](references/comment-review.md) for useful scoped comment
+review. They do not introduce a fixed reviewer or tool chain.
 
-Before PR, assign an independent reviewer/evaluator to check integrated code and
-observed behavior against requirements and acceptance. Orchestrator self-review
-cannot substitute. An existing independent reviewer may own this scope explicitly.
-Use [review perspectives](references/reviewers.md): one owner per check, no
-duplicate parent/lead roster. Report pass/fail/unverified with revision, actual
-evidence and limits. Resolve required gaps and recheck affected criteria.
+Keep the documents using the [templates](references/templates.md). Markdown is
+authoritative. Compose source leaves and review history for human inspection;
+give builders the relevant authoritative sections. HTML is optional via
+`scripts/build_feature_docs.py <feature-folder>` and requires Pandoc. Use the
+installed Lahe skill when available for live review.
 
-Prepare coherent PRs with proof, dependencies and rollout. Await required human
-merge/deployment approval. Verify release, update durable docs/lessons and clean
-only owned temporary resources with authorization. Keep progress current with
-summary, attention needed, phases, tasks/evidence and decisions/events.
+Choose implementation order, tools, delegation, and reviewers to fit the work.
+Use [contracts and slices](references/contracts-and-slices.md) for coherent
+landings. Keep coupled behavior together and the application working after each
+landing. Do not repeat the document pipeline for each slice.
+
+Every route follows [verification and release](references/verification-and-release.md):
+TDD for behavior changes, independent review of the integrated result, real
+acceptance evidence, and release decisions under the project's existing authority.
+Keep progress, durable documents, and lessons current through landing.

@@ -36,6 +36,12 @@ class PackageTest(unittest.TestCase):
         for source in ROOT.rglob('*.md'):
             if '.git' in source.parts:
                 continue
+            # Frozen upstream review sources retain their original examples and
+            # links to unselected files. Package files never use this exemption.
+            if source.is_relative_to(ROOT / 'docs') and any(
+                    (parent / '.source-archive').is_file()
+                    for parent in source.parents if parent.is_relative_to(ROOT)):
+                continue
             for target in re.findall(r'\]\(([^)]+)\)', source.read_text()):
                 if '://' in target or target.startswith('#'):
                     continue
@@ -58,6 +64,9 @@ class PackageTest(unittest.TestCase):
             # The fresh installed copy has all renderer assets available.
             fresh = module('installed_renderer', installed / 'feature-forge/scripts/build_feature_docs.py')
             self.assertTrue(fresh.HEADER.exists())
+            self.assertTrue((installed / 'feature-forge/references/principles.md').is_file())
+            self.assertTrue((installed / 'feature-forge/vendor/pstack/LICENSE').is_file())
+            self.assertTrue(list((installed / 'feature-forge/vendor/pstack/skills').glob('principle-*/SKILL.md')))
 
     def test_include_containment_cycle_missing(self):
         with tempfile.TemporaryDirectory() as temp:
@@ -86,6 +95,26 @@ class PackageTest(unittest.TestCase):
             self.assertNotIn('forge-include:', brief)
             self.assertNotIn('<script', brief)
             self.assertEqual(len(pages), 4)
+
+    @unittest.skipUnless(shutil.which('pandoc'), 'Optional Pandoc not installed')
+    def test_prototype_first_dossier_keeps_plan_progress_and_reviews(self):
+        names = ('01_brief', '02_prototype', '03_prd', '04_architecture',
+                 '05_plan', '06_progress')
+        with tempfile.TemporaryDirectory() as temp:
+            folder = Path(temp)
+            for name in names:
+                (folder / (name + '.md')).write_text('# ' + name + '\n')
+            (folder / '03_prd.md').write_text('# Requirements\n\n[Plan](05_plan.md)\n')
+            (folder / '05_plan_reviews.md').write_text('Independent testing findings\n')
+            (folder / 'README.md').write_text('Not a numbered dossier page\n')
+            pages = renderer.build(folder)
+            self.assertEqual({page.stem for page in pages}, set(names))
+            for page in pages:
+                output = page.read_text()
+                for name in names:
+                    self.assertIn('href="' + name + '.html"', output)
+            self.assertIn('Independent testing findings', (folder / '05_plan.html').read_text())
+            self.assertIn('href="05_plan.html"', (folder / '03_prd.html').read_text())
 
 if __name__ == '__main__':
     unittest.main()

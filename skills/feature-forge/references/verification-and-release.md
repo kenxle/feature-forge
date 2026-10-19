@@ -1,0 +1,50 @@
+# Verification and release
+
+Every route retains documents, independent review, and evidence. The agent chooses
+methods that establish the required behavior using the consuming project's tools.
+
+## Build and verify
+
+Use the [test-first loop](build-loop.md) for behavior changes. Run targeted checks
+while developing, seam checks after integration, and the required final project
+checks. Exercise observable behavior and meaningful failures through the actual
+interface. Browser tools suit browser journeys; use the appropriate interface
+for APIs, CLIs, libraries, or other applications.
+
+Before PR, an independent reviewer checks integrated code quality and acceptance.
+An explicitly assigned reviewer can own both checks and the final changed-flow
+walk. Choose [review perspectives](reviewers.md) for actual risks. No fixed roster
+or duplicate parent/lead review chain is required. Self-review cannot replace the
+independent check. Missing required review, failed checks, or unverified required
+acceptance blocks release readiness. Record the gap rather than inventing proof;
+confidence cannot waive a required check.
+
+The Plan owns the verification table; Whetstone uses its compact spec instead.
+Record pass/fail/unverified, the inspected revision, commands or observations,
+evidence, and limits. Resolve required findings. Recheck what a change invalidates
+and reuse evidence that still matches the code and relevant conditions.
+
+## Ship and land
+
+Prepare coherent PRs with proof, dependencies, and rollout. Follow through on
+checks, review findings, conflicts, and required corrections. Judge automated
+findings against the code; fix real issues and explain dismissals.
+
+Use confidence based on acceptance evidence, independent review, remaining
+uncertainty, and recovery options to decide release readiness. An unsupported
+confidence score is not proof. When readiness is insufficient, improve the work
+or verification. Keep a specific blocker visible if it cannot be resolved.
+
+When ready and authorized, merge, deploy, and verify the release without adding a
+Forge approval request. Respect the project's standing grants and any restrictions
+it still imposes. Preparation, merging, deployment, and enabling a flag may have
+different authorization. A request to build does not by itself grant every action.
+
+Feature flags can let code land disabled when authorized. Check disabled and
+enabled paths and effects outside the flag, including migrations, startup, and
+background jobs. Record the flag's state, owner, activation prerequisites, and
+cleanup condition in the project's existing durable documentation.
+
+Verify the actual landed or deployed revision. Report separately what is merged,
+deployed, enabled, and unverified. Update durable docs and diagrams, record useful
+lessons, close the feature record, and clean only owned resources as authorized.

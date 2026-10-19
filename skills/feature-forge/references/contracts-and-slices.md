@@ -5,6 +5,11 @@ review owner, constraints, dependencies, uncertainty rule, quality checks and
 completion evidence. Relevant source selection never forbids necessary code
 investigation; raise missing decisions.
 
+Give each agent the shared [principles index](principles.md) and the relevant leaf
+paths. Include the current scope, task-specific authority, and applicable project
+instructions. All agents use the same principles and upstream revision; they load
+further leaves when useful instead of receiving the whole reference collection.
+
 Start with a useful end-to-end path. Split at stable interfaces or independent
 rollout/rollback boundaries, keeping coupled behavior together. Compatible
 prerequisites may land separately with identified consumers and proof. Each

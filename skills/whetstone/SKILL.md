@@ -6,4 +6,19 @@ user-invocable: true
 
 # Whetstone
 
-Use for small understood behavior changes; do trivial edits directly and escalate uncertain or consequential work to Feature Forge. Read project conventions, establish an isolated branch/worktree and preserve unrelated work. Write one compact spec with problem, behavior, scope, approach, questions, verification table, rollout and review owners. Obtain required human approval and select useful pre-build review. Implement with focused tests, integration and changed-flow checks. Before PR, an independent reviewer checks integrated code/behavior against the spec with pass/fail/unverified evidence; resolve required gaps. Follow human merge/deploy gates and release verification. Cleanup is never trimmed for a small change: check the project's durable docs and diagrams against the shipped code and update what is stale, record a lesson for every surprise (a bug ticket does not replace the lesson), then close the record and remove owned temporary resources. Keep concise progress; do not restart the full docs pipeline.
+Use for small understood behavior changes. Do trivial edits directly and route
+uncertain features through [Feature Forge](../feature-forge/SKILL.md). Read project
+conventions, fetch before choosing a base, establish an isolated branch/worktree,
+and preserve unrelated work.
+
+Write a compact spec with problem, behavior, scope, approach, questions, the
+verification table, rollout, and review owners. Keep the document without adding
+a routine human reading or approval gate. Apply the relevant
+[principles](../feature-forge/references/principles.md) and follow
+[verification and release](../feature-forge/references/verification-and-release.md).
+
+Use TDD for changed behavior, focused tests, integration checks, independent
+review, and changed-flow proof. Land when readiness and existing authority permit.
+Keep concise progress. Check durable docs and diagrams, record useful lessons,
+and close the record and owned resources as authorized. Do not restart the full
+document pipeline for a small change.

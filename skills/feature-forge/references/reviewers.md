@@ -16,6 +16,17 @@ Select reviewers by need; each check has one owner independent of its builder.
 A delegated lead may own checks explicitly; parents reuse evidence rather than
 dispatching overlapping rosters. Choose supported models by ambiguity and quality.
 
+Give reviewers the [shared principles index](principles.md) and a clear statement
+of the intended behavior. Independent reviewers judge the same scope from their
+assigned perspective. Cross-model review is useful when it adds signal, not a
+mandatory model roster.
+
+Synthesize findings instead of applying every suggestion. Verify each claim
+against the code and evidence, combine duplicates, and preserve disagreements.
+Separate issues to fix from useful suggestions, contextual observations, and
+dismissed findings. Give a concrete reason for each disposition. Agreement can
+strengthen a finding, but a defect proven by one reviewer still needs attention.
+
 | Perspective | Purpose |
 |---|---|
 | Product management | Substantial brief: user need, scope, outcomes, missing behavior and rollout |
