@@ -19,6 +19,6 @@ a routine human approval gate. Apply the relevant
 
 Use TDD for changed behavior, focused tests, integration checks, independent
 review, and changed-flow proof. Do verification, always. Land when readiness and existing authority permit.
-Keep concise progress. Check durable docs and diagrams, record useful lessons,
+Keep progress documentation. Check durable docs and diagrams, record useful lessons,
 and close the record and owned resources as authorized. Do not restart the full
 document pipeline for a small change.
