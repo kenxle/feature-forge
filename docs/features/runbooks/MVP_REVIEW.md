@@ -33,4 +33,12 @@ The reviewer identified the renderer's filename limit and ambiguous missing-revi
 
 These checks establish package behavior and instruction coherence. They do not establish real consumer feature quality, adapter execution, cloud execution, deployed behavior, remote source authenticity, or productivity improvement.
 
-The generic OpenAI skill validator rejects the existing Claude-specific user-invocable frontmatter. That result is recorded as a host compatibility limit, not a passing validation. Installed consumer copies have not been overwritten.
+The generic OpenAI skill validator rejects the existing Claude-specific user-invocable frontmatter. That result is recorded as a host compatibility limit, not a passing validation.
+
+## Landing and local adoption
+
+The MVP landed on main at revision `a638fd36fda4fba158a6cfe0e2f9c3f7372d3585`. The full package suite passed again with Pandoc and no optional skips before landing.
+
+Global Claude and Codex installations were compared with source. Previous copies and their local additions were preserved in backups outside skill discovery before replacement. The installed Feature Forge, brief, architecture, Plan, and Whetstone files match the landed source. Codex's user-skill aliases resolve to its updated copies. A workspace scan found no project-local copies that would shadow them. The local cleanup skill's template link was repaired.
+
+Both installed renderers successfully built the sample dossier. Content identity and those smoke checks establish the local installation, not host discovery in an already running session or successful execution of a consumer feature. A fresh development session should load the updated skills.

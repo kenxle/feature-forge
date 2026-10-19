@@ -1,10 +1,10 @@
 # Better Feature Forge runbooks
 
-Plan for the next implementation session. Use this feature sequence: short brief, prototype, PRD, architecture, Plan, TDD, verification, ship, and land. Automate well-understood board work and retain the full dossier review route as an option. Agents still write and maintain the documents. The human need not read and approve them before authorized work ships.
+Implementation plan and follow-up scope. Use this feature sequence: short brief, prototype, PRD, architecture, Plan, TDD, verification, ship, and land. Automate well-understood board work and retain the full dossier review route as an option. Agents still write and maintain the documents. The human need not read and approve them before authorized work ships.
 
 ## Current status
 
-The MVP is implemented on the branch: principles, the revised default feature flow, adaptable routes, writing/comment guidance, and shared verification/release. Package checks pass and independent instruction review has no blockers. See the [MVP status](MVP.md) and [verification record](MVP_REVIEW.md). Installed consumer copies have not been replaced.
+The MVP is on main: principles, the revised default feature flow, adaptable routes, writing/comment guidance, and shared verification/release. The local Claude and Codex development skills are updated, with previous copies preserved in backups. Package checks pass and independent instruction review has no blockers. See the [MVP status](MVP.md) and [verification record](MVP_REVIEW.md).
 
 Develop and use the Forge MVP in parallel with the maintainer's pstack trial. The [selection record](PSTACK_SELECTIONS.md) preserves the chosen sources and adaptations. The external architect skill is outside the MVP. Cloud board runners, other selected helper integrations, and update automation remain follow-up work. Consuming projects supply their own release authority and tools.
 
@@ -17,7 +17,7 @@ Develop and use the Forge MVP in parallel with the maintainer's pstack trial. Th
 - Keep the full dossier route for work that benefits from it or when the human explicitly wants it.
 - Keep acceptance evidence and independent review. Remove human approvals and instead use confidence based auto-releases. No fixed reviewer chains, use judgment. Development prescriptions should become runbooks that allow agency and judgment.
 
-The [product brief](../../ongoing/PRODUCT_BRIEF.md) already establishes velocity, agent judgment, multiple runbooks, and robust verification as goals. The [current orchestrator](../../../skills/feature-forge/SKILL.md) requires human dossier approval before implementation. The [current Whetstone skill](../../../skills/whetstone/SKILL.md) couples its compact spec with required human approval. Separate document production from human approval gates: agents keep the records complete while proceeding under existing authority.
+The [product brief](../../ongoing/PRODUCT_BRIEF.md) establishes velocity, agent judgment, multiple runbooks, and robust verification as goals. [Feature Forge](../../../skills/feature-forge/SKILL.md) and [Whetstone](../../../skills/whetstone/SKILL.md) now separate document production from routine human approval gates. Agents keep the records complete while proceeding under existing authority.
 
 ## Proposed runbooks
 

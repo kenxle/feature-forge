@@ -1,6 +1,6 @@
 # Forge MVP alongside the pstack trial
 
-Nothing is needed from you now. The MVP is implemented and pushed on the runbooks branch, with no product decisions waiting. Keep adding comments or share observations from real use whenever useful. The pstack trial can run in parallel.
+The MVP is on main, and the local Claude and Codex development skills are updated. Start a fresh development session to load the new instructions. Nothing is needed from you now. Keep adding comments or share observations from real use whenever useful. The pstack trial can run in parallel.
 
 The default feature route is short brief, prototype, PRD, architecture, Plan, TDD, verification, ship, and land. Agents adapt their path to the actual task. The package includes the selected principles, writing guidance, and scoped comment review, and keeps the documentation record without routine human document approval.
 
@@ -26,4 +26,8 @@ The OpenAI generic skill validator rejects the existing Claude-specific user-inv
 
 Pstack architect and arena are outside this MVP. The [selection record](PSTACK_SELECTIONS.md) retains other saved sources for later evaluation. The full plugin, general how/why workflows, full swarm/interrogate adaptations, board runner, upstream update automation, and wholesale Autonomy-section integration remain follow-up work.
 
-Installed project and global copies have not been overwritten. Use the existing compare-and-copy process to adopt this branch while preserving consumer changes. The package installer still refuses existing destinations.
+## Local adoption
+
+The global Feature Forge, brief, architecture, Plan, and Whetstone skills now match the landed package. The existing installations were compared first and preserved in backups outside skill discovery. Codex's user-skill directory points to its updated copies. No project-local copies were found in the workspace scan. The existing cleanup skill's Progress-template link was updated to the new template location.
+
+Content checks confirmed that the installed package files match source. Both installed renderers built the sample dossier successfully. The package suite passed with Pandoc and no optional skips. These checks establish installation and rendering, rather than completion of a real feature using the new process. The package installer still refuses existing destinations.
