@@ -17,6 +17,7 @@ Choose the scope beside each item. **Include in plan** adds it to the restoratio
 - [Rendering compatibility](#rendering-compatibility), a priority: preserve Lahe's visual quality, components, graphs, and rendered diagrams in the composed documents. Build on the house-style support that has now landed.
 - [Finished UI quality](#finished-ui-quality): honor the reviewed prototype and user feedback, use an agent design review when that baseline is absent, and enforce repeatable style rules with tooling.
 - [Complete closeout](#complete-closeout): finish the release record, durable docs, diagrams, lessons, board, progress, and owned cleanup, proportionally for small changes too.
+- [Record exactly which code was tested](#record-exactly-which-code-was-tested): identify the actual tested files and relevant setup, preserve original results, and make later changes visible.
 
 **Left out of the restoration plan:** [Operational review criteria](#operational-review-criteria).
 
@@ -224,7 +225,7 @@ The proposed improvement is to attach a reliable record of the tested files and 
 
 <div class="choice" data-choice="evidence-provenance">
   <p class="choice-q">Include this proposal in the restoration plan?</p>
-  <button type="button" value="include" data-recommended>Include in plan</button>
+  <button type="button" value="include" data-recommended data-chosen>Include in plan</button>
   <button type="button" value="defer">Defer</button>
   <button type="button" value="leave-out">Leave out</button>
 </div>
