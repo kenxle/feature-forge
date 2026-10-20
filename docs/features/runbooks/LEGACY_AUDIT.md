@@ -4,7 +4,9 @@ The new structure kept the main development and verification duties, but lost us
 
 The most important distinction is historical. The pre-update installed skill was much richer than the public package before this rewrite. Many gaps already existed in that public package. Git history alone would have missed them. Keeping a full-dossier route preserved its approval option, but did not preserve all the templates and presentation support behind it.
 
-Choose the scope beside each item. **Include in plan** adds it to the restoration scope; **Defer** keeps it as a follow-up; **Leave out** records that it should stay out. I will record your choices here and on the project board. The buttons decide the plan; implementation follows that agreed scope. No choices have been made yet.
+Choose the scope beside each item. **Include in plan** adds it to the restoration scope; **Defer** keeps it as a follow-up; **Leave out** records that it should stay out. I will record your choices here and on the project board. The buttons decide the plan; implementation follows that agreed scope.
+
+**Chosen scope:** Include working-environment readiness. Add shared guidance for keys, services, migrations, data, and a running app before implementation and final proof. Missing prerequisites remain shipping blockers. Other proposals await your choice.
 
 ## Restore first
 
@@ -16,7 +18,7 @@ Add a shared readiness reference for required keys, services, migrations, data, 
 
 <div class="choice" data-choice="environment-readiness">
   <p class="choice-q">Include this proposal in the restoration plan?</p>
-  <button type="button" value="include" data-recommended>Include in plan</button>
+  <button type="button" value="include" data-recommended data-chosen>Include in plan</button>
   <button type="button" value="defer">Defer</button>
   <button type="button" value="leave-out">Leave out</button>
 </div>
