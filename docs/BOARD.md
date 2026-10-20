@@ -2,7 +2,7 @@
 
 ## Backlog
 
-- **Restore practical guidance around the new runbooks:** The [legacy audit inventory](features/runbooks/LEGACY_AUDIT.md) compares the pre-update installed skills, the earlier public package, and the current structure. Review proposed restoration of environment readiness, release checks, progress/handoff templates, authoring/rendering support, quality criteria, and closeout. Retain the new routes, agent judgment, and hard shipping rule. This is an inventory, not implemented restoration.
+- **Implement the reviewed restoration scope:** The [legacy audit inventory](features/runbooks/LEGACY_AUDIT.md) review is complete. The selected restorations are recorded below. Retain the new routes, agent judgment, and hard shipping rule. The assignment helper is deferred; operational checklist restoration is excluded; cross-document consistency was not selected. House-style support landed separately; the remaining restoration work is pending.
 
 - **Restore environment readiness, selected for the plan:** Add shared guidance for required keys, services, migrations, data, and the running application before implementation and final proof. Use it across the feature and Whetstone routes. Keep missing setup visible as a shipping blocker. The [audit decision](features/runbooks/LEGACY_AUDIT.md#working-environment) records the selected scope; implementation is pending.
 
