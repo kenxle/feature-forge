@@ -2,7 +2,7 @@
 
 The selected guidance is restored, tested-content evidence is recorded, and
 Mermaid diagrams render offline. Local Claude and Codex skill copies are updated.
-Package checks and independent review pass. Publication is the remaining action.
+Package checks and independent review pass. The implementation is pushed to main.
 
 ## Attention needed
 
@@ -37,7 +37,7 @@ Node and browser dependencies. Direct Markdown review remains available.
 
 ## Release and closeout
 
-Ready to publish. No consumer application is deployed by this package change.
+Published to main. No consumer application is deployed by this package change.
 The existing board retains cloud installation, unattended board work, and the
 deferred assignment helper. The operational checklist and unselected
 cross-document checklist remain outside this restoration. The implementation
