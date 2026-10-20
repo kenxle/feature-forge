@@ -39,7 +39,8 @@ Use the [writing guidance](references/writing.md) for prose and the
 [comment review adapter](references/comment-review.md) for useful scoped comment
 review. They do not introduce a fixed reviewer or tool chain.
 
-Keep the documents using the [templates](references/templates.md). Markdown is
+Keep the documents using the [templates](references/templates.md) and
+[authoring guidance](references/document-authoring.md). Markdown is
 authoritative. Compose source leaves and review history for human inspection;
 give builders the relevant authoritative sections. HTML is optional via
 `scripts/build_feature_docs.py <feature-folder>` and requires Pandoc. The build
@@ -55,9 +56,16 @@ Use [contracts and slices](references/contracts-and-slices.md) for coherent
 landings. Keep coupled behavior together and the application working after each
 landing. Do not repeat the document pipeline for each slice.
 
+Check [environment readiness](references/environment-readiness.md) before
+implementation and final proof. Keep a stable
+[Progress page and handoff record](references/progress-and-handoffs.md).
+For user-facing work, verify [UI quality](references/ui-quality.md) against the
+reviewed prototype and feedback, with automated checks for repeatable style rules.
+
 Every route follows [verification and release](references/verification-and-release.md):
 TDD for behavior changes, independent review of the integrated result, real
 acceptance evidence, and release decisions under the project's existing authority.
 Shipping requires a passing full test suite with no failures or errors. Pre-existing,
 unrelated, and environment/setup failures still block shipping.
-Keep progress, durable documents, and lessons current through landing.
+Verify the [actual release](references/post-launch.md) and finish
+[closeout](references/closeout.md), including durable documents and lessons.

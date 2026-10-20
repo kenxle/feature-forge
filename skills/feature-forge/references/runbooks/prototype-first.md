@@ -13,6 +13,12 @@ context, the problem, desired outcome, and known constraints that affect the
 experience. Use a document to resolve the premise. Leave detailed
 requirements and implementation choices for after the prototype.
 
+Start with [product thinking](../product-thinking.md): the user's job, evidence,
+product assumptions, priority against board alternatives, and the best next move.
+Keep a focused source note and feed it into the short brief. Reuse what is known
+without a rigid interview or a new approval gate. Establish a stable
+[Progress page](../progress-and-handoffs.md) for the work.
+
 Build a clickable high-fidelity prototype using the project's design language
 and realistic content. Include the main journey and states
 that matter to the decision. Label simulated data and effects. Let the human
@@ -28,6 +34,8 @@ followed blindly, but evaluated, and they may inform the product decision and
 complement the human's hands-on prototype review.
 
 The prototype may be throwaway or become the implementation. Record that choice.
+Preserve the reviewed prototype and feedback as the
+[UI acceptance baseline](../ui-quality.md).
 Retained code still needs production checks. For nonvisual work, use a concrete
 interface example or spike when it helps; do not add a decorative prototype.
 

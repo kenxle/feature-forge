@@ -4,12 +4,17 @@ Use stable requirement IDs and relative Markdown links. Main docs may include
 leaves with `<!-- forge-include: parts/brief/context.md -->`. Paths are relative
 to their containing source, stay inside the dossier and cannot cycle. Review
 siblings named `<document-stem>_reviews.md` compose after their document.
+Use [document authoring](document-authoring.md) for components, source editing,
+and composed review. Use [progress and handoffs](progress-and-handoffs.md) for
+optional worker-return and review-round templates.
 
 ## Short brief
 
 Target users, context, problem, desired outcome, known constraints, and open
 questions that affect the prototype. Keep this short and use it before the
 prototype. Link to the prototype artifact and record what its review settled.
+Link the focused [product-thinking note](product-thinking.md), including the job,
+evidence, priority, alternatives, and preserved user corrections.
 
 ## PRD, or detailed brief in the full review route
 
@@ -44,8 +49,8 @@ Release readiness follows the [hard shipping rule](verification-and-release.md#h
 
 ## Progress
 
-Summary; attention needed; phase status; tasks/evidence; decisions/events.
-Link every dossier document. Use explicit empty states and accurate approval records.
+Use the [Progress template](progress-and-handoffs.md#progress-template). Give its
+summary one accountable writer, a stable address, and event-driven updates.
 
 ## File organization
 

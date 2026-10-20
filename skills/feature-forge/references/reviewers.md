@@ -13,6 +13,8 @@ integrates dispositions and assigns rechecks. These are generic agent instructio
 not dependencies on named private agents or plugins.
 
 Select reviewers by need; each check has one owner independent of its builder.
+For UI work, use [UI quality](ui-quality.md). The reviewed prototype and user
+feedback are the baseline. Review fidelity rather than reopening settled aesthetics.
 A delegated lead may own checks explicitly; parents reuse evidence rather than
 dispatching overlapping rosters. Choose supported models by ambiguity and quality.
 

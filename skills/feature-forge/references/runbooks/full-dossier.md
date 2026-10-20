@@ -9,6 +9,10 @@ system with the [architecture guidance](../../../architecture/SKILL.md). Write
 the [Plan](../../../plan/SKILL.md), including its authoritative verification
 table and implementation strategy. Use the [templates](../templates.md).
 
+Use [product thinking](../product-thinking.md) for the initial reasoning and
+[modular authoring](../document-authoring.md) to compose authoritative leaves.
+Keep the [Progress and review record](../progress-and-handoffs.md) current.
+
 Select useful reviewers by risk and uncertainty. Integrate findings into the
 source and record dispositions. Compose all leaves and review history into a
 comprehensive dossier. Obtain the consolidated human approval requested by this

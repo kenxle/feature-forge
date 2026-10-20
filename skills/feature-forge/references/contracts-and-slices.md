@@ -4,6 +4,8 @@ Each contract gives outcome, authoritative headings, owned files, authority and
 review owner, constraints, dependencies, uncertainty rule, quality checks and
 completion evidence. Relevant source selection never forbids necessary code
 investigation; raise missing decisions.
+Use optional [worker-return and review-round templates](progress-and-handoffs.md)
+when useful. Assign one writer per detail file and preserve earlier review rounds.
 
 Give each agent the shared [principles index](principles.md) and the relevant leaf
 paths. Include the current scope, task-specific authority, and applicable project

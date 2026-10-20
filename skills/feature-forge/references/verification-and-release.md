@@ -19,6 +19,10 @@ this rule. Preserve the actual results as evidence.
 
 ## Build and verify
 
+Check [environment readiness](environment-readiness.md) before implementation
+and final proof. For UI changes, apply [UI quality](ui-quality.md), including
+repeatable style checks and browser fidelity to the reviewed baseline.
+
 Use the [test-first loop](build-loop.md) for behavior changes. Run targeted checks
 while developing, seam checks after integration, and the required final project
 checks. Exercise observable behavior and meaningful failures through the actual
@@ -41,6 +45,8 @@ The Plan owns the verification table; Whetstone uses its compact spec instead.
 Record pass/fail/unverified, the inspected revision, commands or observations,
 evidence, and limits. Resolve required findings. Recheck what a change invalidates
 and reuse evidence that still matches the code and relevant conditions.
+Use [tested-code evidence](tested-code-evidence.md) to identify dirty files and
+relevant setup as well as the revision. The helper does not cache passing results.
 
 ## Ship and land
 
@@ -64,6 +70,7 @@ migrations, startup, and background jobs. Record the flag's state, owner,
 activation prerequisites, and cleanup condition in the project's existing durable
 documentation.
 
-Verify the actual landed or deployed revision. Report separately what is merged,
-deployed, enabled, and unverified. Update durable docs and diagrams, record useful
-lessons, close the feature record, and clean only owned resources as authorized.
+Follow [post-launch verification](post-launch.md) on the actual release, using
+scripts, live browser proof, and an LLM examination of the launched flow. Report
+merged, deployed, enabled, and verified states separately. Missing required proof
+leaves verification incomplete. Finish [closeout](closeout.md).

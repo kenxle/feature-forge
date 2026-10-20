@@ -6,6 +6,10 @@ The upstream sources are preserved with the link adjustment documented in the so
 
 Prefer fewer concepts and less maintenance burden while preserving observable behavior, clarity, security, accessibility, and meaningful tests. Reduced line count is a direction, not a quota.
 
+Read [local additions](local-principles.md) for repeated knowledge, broken tools,
+cheap checks first, and the lesson-to-mechanism loop. These complement the upstream
+leaves without changing their text.
+
 | Principle | When to use it |
 |---|---|
 | [Attack the Premise](../vendor/pstack/skills/principle-attack-the-premise/SKILL.md) | Apply when two or more fixes that share one premise have failed the same gate. Write the premise down and test it directly before you write another fix that assumes it. |
