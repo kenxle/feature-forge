@@ -55,8 +55,8 @@
     "legacy_file": "feature-forge/scripts/build_feature_docs.py",
     "legacy_excerpt": "Diagrams:  ```mermaid fenced blocks (rendered client-side)",
     "current": "skills/feature-forge/scripts/build_feature_docs.py",
-    "finding": "The old installed renderer handled house components, legacy callouts, section layout, folded contents, review-finding links, and Mermaid. The bundled renderer keeps composition/navigation but uses a much smaller fallback stylesheet.",
-    "restore": "Repair compatibility through a portable renderer/style integration. Prioritize readable existing components and actual diagrams. Keep the current containment checks and offline contract. Decide deliberately how to render diagrams offline; do not restore private style-loader dependencies or a hidden network requirement.",
+    "finding": "The audited baseline at 93c35d1 lost much of the old presentation support. Since that audit, house-style support landed in 8a17636: local Lahe style lookup, bundled CSS/fonts, page layout, and legacy callouts. Mermaid still appears as code in bundled output. The stored renderer probe describes the baseline, not this newer implementation.",
+    "restore": "Priority: preserve the visual quality of Lahe documentation, including typography, layout, components, graphs, and rendered diagrams. Build on the house-style support already landed. Complete graph and diagram rendering and verify representative actual rendered pages. Preserve source conventions, containment checks, and offline output. Use portable local assets or build-time rendering as appropriate; do not restore private machine dependencies or a hidden network requirement.",
     "history": "The simplified renderer dates to the public extraction, before the runbook rewrite. A fresh probe confirms the current output limitations."
   },
   {

@@ -13,6 +13,7 @@ Choose the scope beside each item. **Include in plan** adds it to the restoratio
 - [Visible progress](#visible-progress): restore a stable progress page with an accountable writer, meaningful update events, and links to current work and evidence.
 - [Worker handoffs and review history](#worker-handoffs-and-review-history): restore optional return and review-round templates, with one writer per detail file and a durable record of evidence, findings, and decisions.
 - [Document authoring](#document-authoring): keep focused source files for agents to read on demand, and build those same files into a complete document for the user.
+- [Rendering compatibility](#rendering-compatibility), a priority: preserve Lahe's visual quality, components, graphs, and rendered diagrams in the composed documents. Build on the house-style support that has now landed.
 
 Other proposals await your choice.
 
@@ -89,13 +90,17 @@ Add an authoring reference that uses the review tool's component catalog and exp
 
 ### Rendering compatibility
 
-The old installed renderer supported house components, legacy callouts, section layout, folded contents, finding links, and Mermaid. The portable renderer keeps includes, review composition, and navigation, but not that presentation contract. [Old renderer evidence](audit/legacy-excerpts.md#renderer-compatibility); [current renderer](../../../skills/feature-forge/scripts/build_feature_docs.py).
+The old installed renderer supported house components, legacy callouts, section layout, folded contents, finding links, and Mermaid. The audited baseline kept includes, review composition, and navigation, but lost much of that presentation contract. [Old renderer evidence](audit/legacy-excerpts.md#renderer-compatibility); [current renderer](../../../skills/feature-forge/scripts/build_feature_docs.py).
 
-Restore useful compatibility through portable tooling. Start with readable existing components and actual diagrams. Keep containment checks and the offline contract. Do not reintroduce private style dependencies or silently require a network connection.
+**Priority:** Restore the visual quality of the documentation we make with Lahe. Preserve its typography, page layout, components, graphs, and rendered diagrams in the composed human document. Judge the actual rendered pages, including representative components and graphs; preserving their source markup alone is not enough.
+
+**Already landed since the audit baseline:** [House-style support](https://github.com/kenxle/feature-forge/commit/8a17636) now finds the local Lahe style, bundles its CSS and fonts, and restores the expected page layout and legacy callout presentation. The [current style guide](../../ongoing/STYLE_GUIDE.md) describes that support. Mermaid still appears as code in bundled output, so graph and diagram rendering remains restoration work. The recorded probe below describes the older baseline, not this newer implementation.
+
+Complete the remaining compatibility through portable tooling. Keep source containment and offline output, using local assets or build-time rendering for diagrams as appropriate. Do not reintroduce private machine dependencies or a hidden network requirement. Preserve existing document conventions and repair the renderer when it cannot display them faithfully.
 
 <div class="choice" data-choice="renderer-compatibility">
   <p class="choice-q">Include this proposal in the restoration plan?</p>
-  <button type="button" value="include" data-recommended>Include in plan</button>
+  <button type="button" value="include" data-recommended data-chosen>Include in plan</button>
   <button type="button" value="defer">Defer</button>
   <button type="button" value="leave-out">Leave out</button>
 </div>
@@ -228,6 +233,6 @@ The audit compared the preserved pre-update Claude installation, the older Codex
 
 The [inventory data](audit/inventory.json) gives each proposed restoration its category, source, current comparison, and recommendation. The [collection script](audit/collect_evidence.py) verifies every quoted legacy excerpt, records [source fingerprints and headings](audit/sources.json), and runs the [renderer probe](audit/renderer-probe.json).
 
-The fresh probe preserved the source and house markup, but emitted Mermaid as code, included no diagram SVG, and bundled no house-component CSS. Dossier navigation remained present. This is evidence about the bundled offline output, not a test of Lahe's direct Markdown renderer or the old private rendering dependencies.
+The recorded probe of source at `93c35d1` preserved the source and house markup, but emitted Mermaid as code, included no diagram SVG, and bundled no house-component CSS. Dossier navigation remained present. This is evidence about that baseline's bundled offline output, not a test of Lahe's direct Markdown renderer or the house-style support that landed afterward.
 
 I would start with environment readiness and release proof, then restore the records and quality references. Treat renderer compatibility as its own tested tooling change. Keep packet generation and evidence reuse optional until their value is demonstrated in real work. No old gates or reviewer rosters need to come back with these additions.
