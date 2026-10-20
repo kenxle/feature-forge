@@ -14,6 +14,7 @@ Choose the scope beside each item. **Include in plan** adds it to the restoratio
 - [Worker handoffs and review history](#worker-handoffs-and-review-history): restore optional return and review-round templates, with one writer per detail file and a durable record of evidence, findings, and decisions.
 - [Document authoring](#document-authoring): keep focused source files for agents to read on demand, and build those same files into a complete document for the user.
 - [Rendering compatibility](#rendering-compatibility), a priority: preserve Lahe's visual quality, components, graphs, and rendered diagrams in the composed documents. Build on the house-style support that has now landed.
+- [Finished UI quality](#finished-ui-quality): honor the reviewed prototype and user feedback, use an agent design review when that baseline is absent, and enforce repeatable style rules with tooling.
 
 Other proposals await your choice.
 
@@ -109,11 +110,17 @@ Complete the remaining compatibility through portable tooling. Keep source conta
 
 High-fidelity prototypes, staff design, and customer personas remain. The integrated product's explicit acceptance floor has weakened. [Old honest-feedback criterion](audit/legacy-excerpts.md#ui-quality); [current reviewer guidance](../../../skills/feature-forge/references/reviewers.md).
 
-Add a concise UI-quality reference: hierarchy, shared components/tokens, responsive and accessible states, honest feedback, meaningful motion, brand voice, and consistency across contributors. Use it as acceptance context, without another mandatory reviewer chain.
+Add a concise UI-quality reference that starts with the design already agreed with the user. When a prototype or styles have been reviewed, use that result and the user's feedback as the acceptance baseline. Review the implementation for fidelity and fix drift. Do not use later design reviews to replace approved aesthetic choices with a reviewer's preferences. Surface a material new issue or conflict rather than silently redesigning the approved experience.
+
+When there is no reviewed prototype or style baseline, the agent should do its own design review. Consider hierarchy, shared components/tokens, responsive and accessible states, honest feedback, meaningful motion, brand voice, and consistency across contributors. Keep this proportional to the change, without another mandatory reviewer chain. Functional, accessibility, and required verification checks still apply when the design has been approved.
+
+Enforce repeatable design rules with linters or equivalent automated checks. Start with the consuming project's existing checks and style policy. Useful candidates include raw values that bypass design tokens, prohibited inline styles, and drift between documented tokens and their source. Where component use can be checked reliably, enforce the project's shared-component rules too. Keep legitimate exceptions explicit and narrow.
+
+Run these checks through the project's normal verification command, with hooks where useful. Verify the checks themselves against fixtures that contain violations and valid examples. Browser review verifies the actual experience and fidelity to the agreed design. Use independent design judgment when no reviewed baseline exists. This applies the existing [encode-lessons-in-structure principle](../../../skills/feature-forge/vendor/pstack/skills/principle-encode-lessons-in-structure/SKILL.md).
 
 <div class="choice" data-choice="ui-quality">
   <p class="choice-q">Include this proposal in the restoration plan?</p>
-  <button type="button" value="include" data-recommended>Include in plan</button>
+  <button type="button" value="include" data-recommended data-chosen>Include in plan</button>
   <button type="button" value="defer">Defer</button>
   <button type="button" value="leave-out">Leave out</button>
 </div>
