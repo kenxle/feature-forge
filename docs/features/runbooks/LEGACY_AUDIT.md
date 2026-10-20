@@ -6,7 +6,7 @@ The most important distinction is historical. The pre-update installed skill was
 
 Choose the scope beside each item. **Include in plan** adds it to the restoration scope; **Defer** keeps it as a follow-up; **Leave out** records that it should stay out. I will record your choices here and on the project board. The buttons decide the plan; implementation follows that agreed scope.
 
-**Chosen scope:** Include working-environment readiness. Add shared guidance for keys, services, migrations, data, and a running app before implementation and final proof. Missing prerequisites remain shipping blockers. Other proposals await your choice.
+**Chosen scope:** Include working-environment readiness and automated verification after launch. Check the live release with scripts and Playwright, and have an LLM examine the deployed feature or bug-fix flow. Missing prerequisites and required proof remain blockers. Other proposals await your choice.
 
 ## Restore first
 
@@ -27,11 +27,13 @@ Add a shared readiness reference for required keys, services, migrations, data, 
 
 "Verify the release" survived. Specific checks for production errors, performance, migrations, health, the deployed flow, and recovery became much less concrete. [Old operational checks](audit/legacy-excerpts.md#production-verification); [current release guidance](../../../skills/feature-forge/references/verification-and-release.md#ship-and-land).
 
-Add a short release reference that verifies the actual deployed revision and records applicable checks, flag state, and recovery. Agents do the checks they can and report the remaining gaps. Do not restore a routine human approval step.
+Add a short release reference that automates post-launch verification as far as possible. Use repeatable scripts for operational checks and Playwright to exercise the live site. Have an LLM examine the launched feature or bug-fix flow using the actual browser interaction and captured evidence. This complements the checks before release.
+
+Verify the actual deployed revision and record applicable health, migration, error, performance, flag-state, and recovery checks. Keep script output, browser evidence, and the LLM's findings with the release record. Missing required checks leave verification incomplete and require follow-through. Do not restore a routine human approval step.
 
 <div class="choice" data-choice="production-verification">
   <p class="choice-q">Include this proposal in the restoration plan?</p>
-  <button type="button" value="include" data-recommended>Include in plan</button>
+  <button type="button" value="include" data-recommended data-chosen>Include in plan</button>
   <button type="button" value="defer">Defer</button>
   <button type="button" value="leave-out">Leave out</button>
 </div>

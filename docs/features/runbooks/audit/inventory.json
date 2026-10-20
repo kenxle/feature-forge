@@ -16,7 +16,7 @@
     "legacy_excerpt": "- [ ] **Error monitoring:** No new errors in logs, error tracking, or monitoring dashboards\n- [ ] **Performance:** No significant degradation in response times or resource usage",
     "current": "skills/feature-forge/references/verification-and-release.md",
     "finding": "The new text says to verify the release and distinguish merged, deployed, and enabled. It no longer supplies the operational checks that make that statement useful.",
-    "restore": "Add release evidence for the actual deployed revision, health, applicable migrations, the real changed flow, error monitoring, performance regressions, and a usable recovery path. Let the agent perform available checks and report inaccessible checks. Do not restore a routine human checklist or approval gate.",
+    "restore": "Automate post-launch verification as far as possible. Use repeatable scripts for operational checks and Playwright against the live site. Have an LLM examine the deployed feature or bug-fix flow using actual browser interaction and captured evidence. Record the deployed revision, health, applicable migrations, error monitoring, performance, flag state, recovery, script output, browser evidence, and LLM findings. Missing required checks leave verification incomplete and require follow-through. Do not restore a routine human checklist or approval gate.",
     "history": "The detailed checklist was not in the pre-runbook public package."
   },
   {
