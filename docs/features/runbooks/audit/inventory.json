@@ -119,7 +119,7 @@
     "legacy_excerpt": "def packet(args):",
     "current": "skills/feature-forge/scripts/forge_support.py",
     "finding": "The current helper only captures verification runs. The old packet command selected source headings and validated the contract fields; the contract concept itself survives.",
-    "restore": "An optional script would assemble an agent's goal, constraints, completion checks, and selected documentation sections into a Markdown assignment, refusing missing required fields. The lead chooses the sources; the script copies the selected sections. Defer restoration unless preparing such assignments repeatedly justifies automation. Agents can already read relevant source files directly; clear assignments do not depend on this helper.",
+    "restore": "The original purpose was to reduce token usage by giving each agent less text. An optional script would assemble an agent's goal, constraints, completion checks, and selected documentation sections into a Markdown assignment, refusing missing required fields. The smaller dossier and selective source reading may already suffice. Recommend deferring the script and inspecting what workers actually receive. Restore it only if observed avoidable context cost remains; clear assignments do not depend on this helper.",
     "history": "This command was already absent from the first public helper."
   },
   {

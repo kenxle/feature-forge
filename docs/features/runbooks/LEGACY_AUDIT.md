@@ -197,11 +197,11 @@ Restore a brief author self-check: scope and terminology agree, the Plan impleme
 
 ### Helper for preparing agent assignments
 
-When a lead agent gives work to another agent, it needs to explain the goal, constraints, relevant documentation, and proof of completion. The old script assembled that assignment into a Markdown file. The lead chose the source files and headings to include; the script copied those sections and checked that required assignment fields were present. [Old helper evidence](audit/legacy-excerpts.md#packet-helper); [current helper](../../../skills/feature-forge/scripts/forge_support.py).
+The purpose was to reduce token usage by giving each agent less text to read. When a lead agent gives work to another agent, it needs to explain the goal, constraints, relevant documentation, and proof of completion. The old script assembled that assignment into a Markdown file. The lead chose the source files and headings to include; the script copied those sections and checked that required assignment fields were present. [Old helper evidence](audit/legacy-excerpts.md#packet-helper); [current helper](../../../skills/feature-forge/scripts/forge_support.py).
 
 For example, an agent building an export dialog could receive the dialog requirements, the relevant architecture section, and the acceptance checks for that work. It would not need the entire feature dossier to start. The script prepared that smaller reading package; it did not choose the work or implement it.
 
-**Recommendation: Defer the script.** The current guidance already lets agents read the relevant sources directly. Bring the helper back only if preparing assignments becomes repeated work worth automating. Clear assignments remain useful with or without this script.
+**Recommendation: Defer the script.** The smaller dossier may already provide enough token savings, and agents can read relevant sources selectively. Check what workers actually receive before adding another tool. Restore the helper only if that shows avoidable context cost that the simpler structure does not solve. Clear assignments remain useful with or without this script.
 
 <div class="choice" data-choice="packet-helper">
   <p class="choice-q">Include this proposal in the restoration plan?</p>
