@@ -6,7 +6,13 @@ The most important distinction is historical. The pre-update installed skill was
 
 Choose the scope beside each item. **Include in plan** adds it to the restoration scope; **Defer** keeps it as a follow-up; **Leave out** records that it should stay out. I will record your choices here and on the project board. The buttons decide the plan; implementation follows that agreed scope.
 
-**Chosen scope:** Include working-environment readiness and automated verification after launch. Check the live release with scripts and Playwright, and have an LLM examine the deployed feature or bug-fix flow. Missing prerequisites and required proof remain blockers. Other proposals await your choice.
+**Chosen scope:**
+
+- [Working-environment readiness](#working-environment): check setup before implementation and final proof. Missing prerequisites remain shipping blockers.
+- [Automated verification after launch](#verification-after-landing): check the live release with scripts and Playwright, and have an LLM examine the deployed feature or bug-fix flow. Missing required proof remains a blocker.
+- [Visible progress](#visible-progress): restore a stable progress page with an accountable writer, meaningful update events, and links to current work and evidence.
+
+Other proposals await your choice.
 
 ## Restore first
 
@@ -46,7 +52,7 @@ Restore a usable progress template and update triggers. Show current work, owner
 
 <div class="choice" data-choice="visible-progress">
   <p class="choice-q">Include this proposal in the restoration plan?</p>
-  <button type="button" value="include" data-recommended>Include in plan</button>
+  <button type="button" value="include" data-recommended data-chosen>Include in plan</button>
   <button type="button" value="defer">Defer</button>
   <button type="button" value="leave-out">Leave out</button>
 </div>
