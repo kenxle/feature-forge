@@ -44,9 +44,9 @@ and reuse evidence that still matches the code and relevant conditions.
 
 ## Ship and land
 
-Prepare coherent PRs with proof, dependencies, and rollout. Follow through on
-checks, review findings, conflicts, and required corrections. Judge automated
-findings against the code; fix real issues and explain dismissals.
+All tests should pass before shipping, regardless of whether the tests are related to your work or not. Failing tests means you need to go fix something.
+
+Prepare coherent PRs with proof, dependencies, and rollout. Follow through onchecks, review findings, conflicts, and required corrections. Judge automatedfindings against the code; fix real issues and explain dismissals.
 
 Use confidence based on acceptance evidence, independent review, remaining
 uncertainty, and recovery options to decide release readiness. An unsupported
