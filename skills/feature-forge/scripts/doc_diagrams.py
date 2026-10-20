@@ -13,7 +13,9 @@ import xml.etree.ElementTree as ET
 
 CODE = re.compile(r'<pre\b([^>]*)>\s*<code\b([^>]*)>(.*?)</code>\s*</pre>', re.S)
 CLASSES = re.compile(r'\bclass=["\']([^"\']*)["\']')
-DIAGRAM_STYLE = ('<style>.forge-diagram img{display:block;max-width:100%;height:auto;'
+DIAGRAM_STYLE = ('<style>.forge-diagram{min-width:0;max-width:100%}'
+                 '.forge-diagram-view{overflow-x:auto;max-width:100%}'
+                 '.forge-diagram img{display:block;max-width:none;height:auto;'
                  'margin:0 auto}.forge-diagram figcaption{text-align:center}</style>')
 
 
@@ -49,9 +51,11 @@ def svg_image(svg):
             dimensions = f' width="{width}" height="{height}" style="width:{width}px"'
     except (KeyError, ValueError):
         pass
-    return ('<figure class="forge-diagram"><img src="data:image/svg+xml;base64,' + data +
-            '" alt="' + html.escape(alt, quote=True) + '"' + dimensions + '><figcaption>' +
-            html.escape(title) + '</figcaption></figure>')
+    return ('<figure class="forge-diagram"><div class="forge-diagram-view" tabindex="0" '
+            'role="region" aria-label="' + html.escape(title, quote=True) +
+            '. Scroll horizontally if needed."><img src="data:image/svg+xml;base64,' + data +
+            '" alt="' + html.escape(alt, quote=True) + '"' + dimensions + '></div><figcaption>' +
+            html.escape(title) + '. Scroll horizontally if needed.</figcaption></figure>')
 
 
 def render(page, environ=None):

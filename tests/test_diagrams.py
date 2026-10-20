@@ -56,6 +56,7 @@ class DiagramTest(unittest.TestCase):
                 self.assertIn('<path ', svg)
             self.assertIn('alt="Build then verify"', page)
             self.assertIn('width="100" height="80" style="width:100px"', page)
+            self.assertIn('class="forge-diagram-view" tabindex="0" role="region"', page)
             self.assertNotIn('<script', page)
             self.assertEqual((self.folder / '01_release.md').read_bytes(), original)
 
