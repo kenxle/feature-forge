@@ -42,7 +42,12 @@ review. They do not introduce a fixed reviewer or tool chain.
 Keep the documents using the [templates](references/templates.md). Markdown is
 authoritative. Compose source leaves and review history for human inspection;
 give builders the relevant authoritative sections. HTML is optional via
-`scripts/build_feature_docs.py <feature-folder>` and requires Pandoc. Use the
+`scripts/build_feature_docs.py <feature-folder>` and requires Pandoc. The build
+uses the house document style when it can find it: first the folder named by
+`FORGE_DOC_STYLE_DIR`, then Lahe through the `lahe` command on PATH. It inlines
+the style in the page, so Lahe's style switcher can restyle it, and lays the
+page out as the style expects. Without a style it builds a plain page and
+prints one line to stderr. No user-level instruction file is needed. Use the
 installed Lahe skill when available for live review.
 
 Choose implementation order, tools, delegation, and reviewers to fit the work.
