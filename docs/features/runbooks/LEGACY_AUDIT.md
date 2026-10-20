@@ -12,6 +12,7 @@ Choose the scope beside each item. **Include in plan** adds it to the restoratio
 - [Automated verification after launch](#verification-after-landing): check the live release with scripts and Playwright, and have an LLM examine the deployed feature or bug-fix flow. Missing required proof remains a blocker.
 - [Visible progress](#visible-progress): restore a stable progress page with an accountable writer, meaningful update events, and links to current work and evidence.
 - [Worker handoffs and review history](#worker-handoffs-and-review-history): restore optional return and review-round templates, with one writer per detail file and a durable record of evidence, findings, and decisions.
+- [Document authoring](#document-authoring): keep focused source files for agents to read on demand, and build those same files into a complete document for the user.
 
 Other proposals await your choice.
 
@@ -75,11 +76,13 @@ Add optional templates for changed files, evidence, deviations, surprises, follo
 
 The new templates list content, but omit much of the guidance for components, title/lede, source editing, composed review, and rebuilding. [Old authoring contract](audit/legacy-excerpts.md#authoring-contract); [current templates](../../../skills/feature-forge/references/templates.md).
 
+Restore the authoring guidance around modular documentation. Keep focused, authoritative source files so each agent consumes only the sections relevant to its work. Build those same files into a complete document for the user to read. Edit the source and rebuild the composed document so the agent and human views stay in sync. The existing includes and review-sibling composition already support this structure.
+
 Add an authoring reference that uses the review tool's component catalog and explains source versus generated output. Keep direct Markdown review for simple pages. Preserve existing conventions and repair tools when they cannot render them.
 
 <div class="choice" data-choice="authoring-contract">
   <p class="choice-q">Include this proposal in the restoration plan?</p>
-  <button type="button" value="include" data-recommended>Include in plan</button>
+  <button type="button" value="include" data-recommended data-chosen>Include in plan</button>
   <button type="button" value="defer">Defer</button>
   <button type="button" value="leave-out">Leave out</button>
 </div>

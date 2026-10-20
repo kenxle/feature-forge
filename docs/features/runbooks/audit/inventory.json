@@ -46,7 +46,7 @@
     "legacy_excerpt": "Write components as LAHE house components: small HTML blocks inside the Markdown",
     "current": "skills/feature-forge/references/templates.md",
     "finding": "Modular includes survive, but the component guidance, title/lede shape, source-versus-output editing rule, and practical composed-review instructions do not.",
-    "restore": "Add a focused authoring reference linking the installed review tool's component catalog. Explain when to compose leaves, edit Markdown, rebuild, and serve generated output with its source. Keep simple direct Markdown review available. Preserve historical conventions instead of rewriting documents to fit a tool.",
+    "restore": "Make modular authoring explicit: keep focused, authoritative source files so agents consume only relevant sections, and build those same files into a complete document for the user. Use the existing includes and review-sibling composition. Edit source files and rebuild the human document to keep both views in sync. Add a focused authoring reference linking the installed review tool's component catalog and explaining source versus generated output. Keep simple direct Markdown review available. Preserve historical conventions instead of rewriting documents to fit a tool.",
     "history": "The detailed conventions were not carried into the pre-runbook public templates."
   },
   {
