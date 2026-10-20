@@ -23,6 +23,7 @@ def module(name, path):
     return result
 
 installer = module('installer', ROOT / 'scripts/install.py')
+layout = module('layout', ROOT / 'skills/feature-forge/scripts/doc_layout.py')
 renderer = module('renderer', ROOT / 'skills/feature-forge/scripts/build_feature_docs.py')
 support = module('support', ROOT / 'skills/feature-forge/scripts/forge_support.py')
 
@@ -319,6 +320,113 @@ class HouseStyleTest(unittest.TestCase):
         self.assertEqual(len(plain.stderr.strip().splitlines()), 1)
         self.assertIn('House style not found', plain.stderr)
         self.assertNotIn('data-lahe-doc-style', (folder / '01_brief_csv-export.html').read_text())
+
+
+    def make_command(self, name, content, mode=0o755):
+        """A fake lahe command in its own folder on PATH; returns the folder."""
+        bindir = self.root / ('bin-' + name)
+        bindir.mkdir()
+        command = bindir / 'lahe'
+        (command.write_bytes if isinstance(content, bytes) else command.write_text)(content)
+        command.chmod(mode)
+        return bindir
+
+    def test_an_unusable_variable_with_working_lahe_uses_lahe_and_says_so(self):
+        clone = self.make_lahe_clone('wrapper')
+        empty = self.root / 'empty'
+        empty.mkdir()
+        folder = self.root / 'csv-export'
+        shutil.copytree(ROOT / 'tests/fixtures/csv-export', folder)
+        _, err = self.build(folder, {'PATH': str(clone['bin']), 'FORGE_DOC_STYLE_DIR': str(empty)})
+        self.assertIn('FIXTURE-STYLE-TOKENS', (folder / '01_brief_csv-export.html').read_text())
+        self.assertEqual(len(err.strip().splitlines()), 1)
+        self.assertIn('FORGE_DOC_STYLE_DIR is not usable', err)
+        self.assertIn(str(empty), err)
+        self.assertIn('system-tokens.css is missing', err)
+        self.assertIn('Lahe', err)
+
+    def assert_lahe_found_but_not_located(self, content):
+        bindir = self.make_command('odd', content)
+        folder = self.root / 'csv-export'
+        shutil.copytree(ROOT / 'tests/fixtures/csv-export', folder)
+        _, err = self.build(folder, {'PATH': str(bindir)})
+        self.assertNotIn('data-lahe-doc-style', (folder / '01_brief_csv-export.html').read_text())
+        self.assertEqual(len(err.strip().splitlines()), 1)
+        self.assertIn('found lahe at ' + str(bindir / 'lahe'), err)
+        self.assertIn('could not locate its style folder', err)
+        self.assertIn('FORGE_DOC_STYLE_DIR', err)
+        self.assertNotIn('Install Lahe', err)
+        self.assertEqual(err.count('House style not found'), 1)
+
+    def test_an_empty_lahe_command_names_itself_and_asks_for_the_variable(self):
+        self.assert_lahe_found_but_not_located('')
+
+    def test_a_binary_lahe_command_names_itself_and_asks_for_the_variable(self):
+        self.assert_lahe_found_but_not_located(b'\x7fELF\x02\x01\x01\x00\xff\xfe\x00\x80' * 20)
+
+    def test_a_wrapper_with_a_relative_path_is_not_guessed_at(self):
+        self.assert_lahe_found_but_not_located('#!/bin/sh\nexec node ../clone/bin/lahe.js "$@"\n')
+
+    def test_a_callout_that_opens_with_a_heading_keeps_it_inside_the_panel(self):
+        folder = self.root / 'heading'
+        folder.mkdir()
+        (folder / '01_page.md').write_text(
+            '# Page\n\nLede.\n\n## Part\n\n::: callout-question\n### Why this\n\nBecause.\n:::\n')
+        self.build(folder, WITH_STYLE)
+        page = (folder / '01_page.html').read_text()
+        panel = re.search(r'<div[^>]*insight insight--caveat[^>]*>(.*?)</div>', page, re.S)
+        self.assertIsNotNone(panel, 'the callout did not become an insight panel')
+        self.assertIn('Why this', panel.group(1))
+        self.assertIn('Because.', panel.group(1))
+        self.assertNotIn('<section class="callout', page)
+
+
+class LayoutTest(unittest.TestCase):
+    """The HTML rewrites in doc_layout, on small inputs and without Pandoc."""
+
+    def test_a_run_of_same_kind_callouts_merges_into_one_panel(self):
+        html = ('<div class="callout callout-metric"><p>One</p></div>\n'
+                '<div class="callout callout-metric"><p>Two</p></div>\n'
+                '<p>Between</p>\n'
+                '<div class="callout callout-metric"><p>Three</p></div>')
+        out = layout.merge_callout_runs(layout.map_callouts(html))
+        self.assertEqual(out.count('<div'), 2)
+        self.assertEqual(out.count('class="insight callout-metric"'), 2)
+        first = out[:out.index('<p>Between</p>')]
+        self.assertIn('One', first)
+        self.assertIn('Two', first)
+        self.assertEqual(first.count('<div'), 1)
+        self.assertIn('Three', out[out.index('<p>Between</p>'):])
+
+    def test_a_different_kind_or_label_ends_the_run(self):
+        html = ('<div class="callout callout-metric"><p>One</p></div>'
+                '<div class="callout callout-suggest"><p>Two</p></div>')
+        out = layout.merge_callout_runs(layout.map_callouts(html))
+        self.assertEqual(out.count('<div'), 2)
+
+    def test_merging_keeps_the_ids_of_merged_callouts_as_anchors(self):
+        html = ('<div id="a" class="callout callout-metric"><p>One</p></div>'
+                '<div id="b" class="callout callout-metric"><p>Two</p></div>')
+        out = layout.merge_callout_runs(layout.map_callouts(html))
+        self.assertIn('<span id="b"></span>', out)
+
+    def test_requirement_callouts_lose_their_wrapper_and_keep_a_label(self):
+        html = ('<div id="r1" class="callout-req"><p>R1: must work</p></div>\n'
+                '<div class="callout-metric"><p>Kept</p></div>')
+        out = layout.unwrap_plain_callouts(layout.map_callouts(html))
+        self.assertNotIn('callout-req', out)
+        self.assertIn('<p class="eyebrow" id="r1">Requirement</p>', out)
+        self.assertIn('<p>R1: must work</p>', out)
+        self.assertEqual(out.count('<div'), 1)
+        self.assertIn('insight', out)
+
+    def test_a_section_callout_becomes_a_div_with_its_heading_inside(self):
+        html = ('<section id="q" class="callout-question"><h3>Heading</h3>'
+                '<section><p>Nested</p></section><p>Body</p></section><p>After</p>')
+        out = layout.callout_sections_to_divs(html)
+        self.assertEqual(out, '<div id="q" class="callout-question"><h3>Heading</h3>'
+                              '<section><p>Nested</p></section><p>Body</p></div><p>After</p>')
+        self.assertIn('insight insight--caveat', layout.map_callouts(out))
 
 
 class PortabilityTest(unittest.TestCase):

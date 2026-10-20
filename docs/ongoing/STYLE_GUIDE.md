@@ -8,9 +8,9 @@
 
 **Level of detail:** Rules a builder can apply without asking, with the reason for each.
 
-**Describes:** `skills/feature-forge/assets/`, `skills/feature-forge/scripts/build_feature_docs.py`
+**Describes:** `skills/feature-forge/assets/`, `skills/feature-forge/scripts/build_feature_docs.py`, `doc_style.py` and `doc_layout.py` beside it
 
-**Sources:** [header asset](../../skills/feature-forge/assets/header.html), [renderer](../../skills/feature-forge/scripts/build_feature_docs.py), [Lahe pairing](../lahe.md).
+**Sources:** [header asset](../../skills/feature-forge/assets/header.html), [house header asset](../../skills/feature-forge/assets/house_header.html), [renderer](../../skills/feature-forge/scripts/build_feature_docs.py), [style lookup](../../skills/feature-forge/scripts/doc_style.py), [page layout](../../skills/feature-forge/scripts/doc_layout.py), [Lahe pairing](../lahe.md).
 First draft by Seneschal.
 
 ## Scope

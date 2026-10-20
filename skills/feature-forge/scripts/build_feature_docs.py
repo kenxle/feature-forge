@@ -116,7 +116,7 @@ def build(folder, environ=None):
     if not shutil.which('pandoc'):
         raise ValueError('HTML requires Pandoc; Markdown remains usable without it')
     style, note = doc_style.find_style(environ)
-    if style is None:
+    if note:
         print(note, file=sys.stderr)
     outputs = {p.resolve(): p.with_suffix('.html').name for p in docs}
     stems = [p.stem for p in docs]

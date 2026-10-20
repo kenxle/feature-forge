@@ -10,7 +10,7 @@
 
 **Describes:** `skills/`, `scripts/`
 
-**Sources:** [installer](../../scripts/install.py), [renderer](../../skills/feature-forge/scripts/build_feature_docs.py), [evidence helper](../../skills/feature-forge/scripts/forge_support.py), [Feature Forge](../../skills/feature-forge/SKILL.md).
+**Sources:** [installer](../../scripts/install.py), [renderer](../../skills/feature-forge/scripts/build_feature_docs.py), [style lookup](../../skills/feature-forge/scripts/doc_style.py), [page layout](../../skills/feature-forge/scripts/doc_layout.py), [evidence helper](../../skills/feature-forge/scripts/forge_support.py), [Feature Forge](../../skills/feature-forge/SKILL.md).
 ## System shape
 
 This repository publishes instructions and local command-line helpers. It has no application server, database, or hosted state. A consuming project's agent interprets the skills and supplies its own tools, models, and approval rules.
@@ -24,7 +24,7 @@ This repository publishes instructions and local command-line helpers. It has no
 | Shared guidance | Templates, reviewer perspectives, work contracts, and build loop | [references](../../skills/feature-forge/references/) |
 | Engineering principles | Load applicable pstack leaves with upstream provenance and license | [index](../../skills/feature-forge/references/principles.md), [source record](../../skills/feature-forge/vendor/pstack/UPSTREAM.md) |
 | Writing and comments | Use vendored prose guidance and the unchanged Comment Sicko prompt through local host adapters | [writing](../../skills/feature-forge/references/writing.md), [comment review](../../skills/feature-forge/references/comment-review.md) |
-| Dossier rendering | Expand Markdown sources, invoke Pandoc and write local HTML | [renderer](../../skills/feature-forge/scripts/build_feature_docs.py), [header](../../skills/feature-forge/assets/header.html) |
+| Dossier rendering | Expand Markdown sources, invoke Pandoc and write local HTML | [renderer](../../skills/feature-forge/scripts/build_feature_docs.py), [style lookup](../../skills/feature-forge/scripts/doc_style.py), [page layout](../../skills/feature-forge/scripts/doc_layout.py), [plain header](../../skills/feature-forge/assets/header.html), [house header](../../skills/feature-forge/assets/house_header.html) |
 | Verification capture | Run a supplied command and record its output, status, and revision | [evidence helper](../../skills/feature-forge/scripts/forge_support.py) |
 
 ## Installation boundary
@@ -41,7 +41,7 @@ The Plan owns acceptance evidence and the throughput checkpoint. Whetstone uses 
 
 ## Renderer flow
 
-The renderer selects numbered dossier Markdown at the feature folder's top level. It expands `forge-include` directives relative to their containing file, rejects paths outside the folder, and detects cycles. It appends review siblings, rewrites links between selected documents, and adds shared navigation. With a house style found (`FORGE_DOC_STYLE_DIR`, then Lahe through the `lahe` command), it inlines the style and lays each page out as the style expects, and copies the font files the style names beside the pages. Without one, it uses the bundled plain stylesheet and prints one line to stderr. Pandoc renders each source. The helper renders all sources before writing output files; it does not provide an atomic filesystem transaction.
+The renderer selects numbered dossier Markdown at the feature folder's top level. It expands `forge-include` directives relative to their containing file, rejects paths outside the folder, and detects cycles. It appends review siblings, rewrites links between selected documents, and adds shared navigation. With a house style found (`FORGE_DOC_STYLE_DIR`, then Lahe through the `lahe` command), it inlines the style (a variable that is set but unusable is reported on stderr, and Lahe's style is used if it works) and lays each page out as the style expects, and copies the font files the style names beside the pages. Without one, it uses the bundled plain stylesheet and prints one line to stderr. Pandoc renders each source. The helper renders all sources before writing output files; it does not provide an atomic filesystem transaction.
 
 Markdown remains authoritative. Generated HTML is a review artifact. Raw HTML is supported for trusted authors, so the renderer is unsuitable for untrusted input. The bundled output has no CDN or browser-script dependency.
 

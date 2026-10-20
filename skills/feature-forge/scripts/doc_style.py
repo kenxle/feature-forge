@@ -25,9 +25,9 @@ STYLE_FILES = ('system-tokens.css', 'document.css', 'lahe-markdown.css')
 # rejected instead of inlined.
 MUST_HOLD = ('--surface', '.toplinks', '.contents-list', '.xref', '.status-dot')
 FONT_URL = re.compile(r'\./\.lahe-fonts/([A-Za-z0-9._-]+\.woff2)')
+SET_HINT = ('Set ' + STYLE_ENV + ' to a folder holding ' + ', '.join(STYLE_FILES) + '.')
 NOT_FOUND = ('House style not found, so the pages use the plain offline style. '
-             'To get the house style, install Lahe so the lahe command is on PATH, '
-             'or set ' + STYLE_ENV + ' to a folder holding ' + ', '.join(STYLE_FILES) + '.')
+             'Install Lahe so the lahe command is on PATH. ' + SET_HINT)
 
 
 class Style:
@@ -40,25 +40,29 @@ class Style:
         return '<style ' + STYLE_ATTR + '>\n' + self.css + '\n</style>'
 
 
-def lahe_style_dir(environ):
-    """Return Lahe's style folder, found through the lahe command, or None."""
+def locate_lahe(environ):
+    """Return (command, style folder) for the lahe command on PATH.
+
+    command is None when there is no lahe command. The folder is None when the
+    command is there but its clone cannot be worked out from it.
+    """
     command = shutil.which('lahe', path=environ.get('PATH', ''))
     if not command:
-        return None
+        return None, None
     target = os.path.realpath(command)
     if not target.endswith(os.path.join('bin', 'lahe.js')):
         try:
             with open(target, encoding='utf-8', errors='replace') as handle:
                 text = handle.read(8192)
         except OSError:
-            return None
+            return command, None
         found = (re.search(r'"(/[^"]*/bin/lahe\.js)"', text)
-                 or re.search(r'(/\S*/bin/lahe\.js)', text))
+                 or re.search(r'(?<![\w.~/-])(/\S*/bin/lahe\.js)', text))
         if not found:
-            return None
+            return command, None
         target = found.group(1)
     clone = os.path.dirname(os.path.dirname(target))
-    return os.path.join(clone, 'vendor', 'stclair-doc-style')
+    return command, os.path.join(clone, 'vendor', 'stclair-doc-style')
 
 
 def _strip_token_import(css):
@@ -91,27 +95,35 @@ def read_style(folder, source):
 
 
 def find_style(environ=None):
-    """Return (Style, None) when a usable style is found, else (None, message).
+    """Return (Style or None, note or None).
 
-    The message is one line for stderr. environ defaults to os.environ.
+    The note is one line for stderr. It comes with no style (the build falls
+    back to the plain page) and also with a style when the variable was set but
+    refused and Lahe's style was used instead. environ defaults to os.environ.
     """
     environ = os.environ if environ is None else environ
-    problem = None
+    refused = None
     override = environ.get(STYLE_ENV)
     if override:
         folder = os.path.abspath(os.path.expanduser(override))
         style, why = read_style(folder, STYLE_ENV)
         if style:
             return style, None
-        problem = STYLE_ENV + ' is not usable: ' + why
-    folder = lahe_style_dir(environ)
-    if folder:
+        refused = STYLE_ENV + ' is not usable: ' + why
+    command, folder = locate_lahe(environ)
+    problem = None
+    if command and not folder:
+        problem = ('found lahe at ' + command + ' but could not locate its style folder')
+    elif folder:
         style, why = read_style(folder, 'Lahe')
         if style:
-            return style, None
-        problem = problem or 'Lahe was found but its style is not usable: ' + why
-    if problem:
-        return None, 'House style not found (' + problem + '). ' + NOT_FOUND
+            note = refused + '; used the style from Lahe instead.' if refused else None
+            return style, note
+        problem = 'found lahe at ' + command + ' but its style is not usable: ' + why
+    reasons = '; '.join(r for r in (refused, problem) if r)
+    if reasons:
+        return None, ('House style not found (' + reasons + '), so the pages use the '
+                      'plain offline style. ' + SET_HINT)
     return None, NOT_FOUND
 
 
