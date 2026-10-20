@@ -1,6 +1,6 @@
 # Restore the practical guidance around the new runbooks
 
-The new structure kept the main development and verification duties, but lost useful detail about doing them well. I recommend restoring focused references for setup, release checks, progress, document authoring, UI quality, and closeout. Keep the router small and the prototype-first route intact. This is an inventory for review; this audit has not changed any skills.
+The new structure kept the main development and verification duties, but lost useful detail about doing them well. Restore lightweight product thinking before the prototype, alongside focused references for setup, release checks, progress, document authoring, UI quality, and closeout. Keep the router small and the prototype-first route intact. This is an inventory for review; this audit has not implemented these restorations.
 
 The most important distinction is historical. The pre-update installed skill was much richer than the public package before this rewrite. Many gaps already existed in that public package. Git history alone would have missed them. Keeping a full-dossier route preserved its approval option, but did not preserve all the templates and presentation support behind it.
 
@@ -8,6 +8,7 @@ Choose the scope beside each item. **Include in plan** adds it to the restoratio
 
 **Chosen scope:**
 
+- [Product thinking before the prototype](#product-thinking-before-the-prototype): clarify the job, challenge product assumptions, and compare priority and alternatives before committing to build.
 - [Working-environment readiness](#working-environment): check setup before implementation and final proof. Missing prerequisites remain shipping blockers.
 - [Automated verification after launch](#verification-after-landing): check the live release with scripts and Playwright, and have an LLM examine the deployed feature or bug-fix flow. Missing required proof remains a blocker.
 - [Visible progress](#visible-progress): restore a stable progress page with an accountable writer, meaningful update events, and links to current work and evidence.
@@ -22,6 +23,29 @@ Choose the scope beside each item. **Include in plan** adds it to the restoratio
 Other proposals await your choice.
 
 ## Restore first
+
+<a id="the-no-build-alternative"></a>
+
+### Product thinking before the prototype
+
+The gap is broader than a no-build option. The separate Crucible skill supplied product thinking: understand the user's job, challenge assumptions, examine evidence, and ask whether this deserves priority over other work. The new route's instruction to resolve the premise does not preserve that reasoning. [Product-thinking source evidence](audit/product-thinking-evidence.md); [old router summary](audit/legacy-excerpts.md#premise-no-build); [current prototype route](../../../skills/feature-forge/references/runbooks/prototype-first.md#brief-to-prototype).
+
+Restore a lightweight product-thinking step before the short brief and prototype. Use the product goals, existing capabilities, relevant evidence, and the project board to work out:
+
+- Who needs this, what triggers the need, what they are trying to accomplish, and what they do today. Record the job in plain language, with uncertainty visible.
+- Which product assumptions matter and what supports them. Assumptions concern user needs, behavior, or value. Keep requirements and architecture decisions out of a premises checklist.
+- Why this work matters compared with named alternatives on the board, what it unlocks, and what choosing it displaces.
+- Whether the best next move is an existing capability, a smaller change, adopting something, building the feature, or doing nothing.
+- The recommendation, its evidence, unresolved questions, and the next useful action. Preserve the user's corrections and settled decisions for the brief writer.
+
+Keep the reasoning in a focused source note that can feed the short brief and the composed human document. Reuse what is already known, investigate answerable questions, and scale the discussion to uncertainty. Do not restore a rigid interview, compulsory premise voting, forced alternatives, or a routine approval gate. Writing down the job remains useful; a formulaic first draft should not become unquestioned truth.
+
+<div class="choice" data-choice="premise-no-build">
+  <p class="choice-q">Include this proposal in the restoration plan?</p>
+  <button type="button" value="include" data-recommended data-chosen>Include in plan</button>
+  <button type="button" value="defer">Defer</button>
+  <button type="button" value="leave-out">Leave out</button>
+</div>
 
 ### Working environment
 
@@ -169,20 +193,15 @@ Restore a brief author self-check: scope and terminology agree, the Plan impleme
   <button type="button" value="leave-out">Leave out</button>
 </div>
 
-### The no-build alternative
+<a id="dispatch-packet-helper"></a>
 
-The previous public router explicitly considered doing nothing. The new route resolves the premise, but that option is less visible. Add a discovery prompt for uncertain requests: existing capability, smaller change, or no change. Do not restore a compulsory interview phase. [Old premise check](audit/legacy-excerpts.md#premise-no-build); [current prototype route](../../../skills/feature-forge/references/runbooks/prototype-first.md#brief-to-prototype).
+### Helper for preparing agent assignments
 
-<div class="choice" data-choice="premise-no-build">
-  <p class="choice-q">Include this proposal in the restoration plan?</p>
-  <button type="button" value="include" data-recommended>Include in plan</button>
-  <button type="button" value="defer">Defer</button>
-  <button type="button" value="leave-out">Leave out</button>
-</div>
+When a lead agent gives work to another agent, it needs to explain the goal, constraints, relevant documentation, and proof of completion. The old script assembled that assignment into a Markdown file. The lead chose the source files and headings to include; the script copied those sections and checked that required assignment fields were present. [Old helper evidence](audit/legacy-excerpts.md#packet-helper); [current helper](../../../skills/feature-forge/scripts/forge_support.py).
 
-### Dispatch packet helper
+For example, an agent building an export dialog could receive the dialog requirements, the relevant architecture section, and the acceptance checks for that work. It would not need the entire feature dossier to start. The script prepared that smaller reading package; it did not choose the work or implement it.
 
-The old helper could assemble selected source headings into a validated work contract. The current helper only captures verification runs. Restore a small optional packet builder if repeated delegation justifies it. The contract itself already survives; a tool is an aid, not another required step. [Old packet command](audit/legacy-excerpts.md#packet-helper); [current helper](../../../skills/feature-forge/scripts/forge_support.py).
+**Recommendation: Defer the script.** The current guidance already lets agents read the relevant sources directly. Bring the helper back only if preparing assignments becomes repeated work worth automating. Clear assignments remain useful with or without this script.
 
 <div class="choice" data-choice="packet-helper">
   <p class="choice-q">Include this proposal in the restoration plan?</p>
@@ -191,9 +210,17 @@ The old helper could assemble selected source headings into a validated work con
   <button type="button" value="leave-out">Leave out</button>
 </div>
 
-### Stronger evidence identity
+<a id="stronger-evidence-identity"></a>
 
-The old helper fingerprinted content and environment. The new helper records a revision and explicitly admits its limits for dirty or external state. Restore reliable identity first, without exposing secrets. Keep immutable evidence folders and argument-list execution. Do not restore log overwriting, shell-string execution, or an unproven reuse cache. [Old fingerprinting](audit/legacy-excerpts.md#evidence-provenance); [current evidence helper](../../../skills/feature-forge/scripts/forge_support.py).
+### Record exactly which code was tested
+
+A passing test result should identify the code and setup that were actually tested. The current helper records the Git commit. That is useful, but an agent can edit files without making a new commit.
+
+For example, tests pass, then an agent changes a file without committing. Both versions still have the same commit name. The earlier pass does not prove that the changed code works. Recording the relevant file contents as well would make that mismatch visible.
+
+The proposed improvement is to attach a reliable record of the tested files and relevant setup to each result. Describe settings without exposing passwords or keys. Name external services or data that the record cannot fully identify, rather than implying that a file check proves those too. Keep each run's original logs, and rerun checks when relevant code or conditions change. [Old helper evidence](audit/legacy-excerpts.md#evidence-provenance); [current helper](../../../skills/feature-forge/scripts/forge_support.py).
+
+**Recommendation: Include the ability to identify the tested code accurately.** Keep automatic reuse of earlier passes out of scope until it can be trusted. The benefit is being able to tell whether a passing result belongs to the code we are about to ship.
 
 <div class="choice" data-choice="evidence-provenance">
   <p class="choice-q">Include this proposal in the restoration plan?</p>
@@ -247,4 +274,4 @@ The [inventory data](audit/inventory.json) gives each proposed restoration its c
 
 The recorded probe of source at `93c35d1` preserved the source and house markup, but emitted Mermaid as code, included no diagram SVG, and bundled no house-component CSS. Dossier navigation remained present. This is evidence about that baseline's bundled offline output, not a test of Lahe's direct Markdown renderer or the house-style support that landed afterward.
 
-I would start with environment readiness and release proof, then restore the records and quality references. Treat renderer compatibility as its own tested tooling change. Keep packet generation and evidence reuse optional until their value is demonstrated in real work. No old gates or reviewer rosters need to come back with these additions.
+Start with product thinking before the prototype, environment readiness, and release proof. Restore the selected records and quality references, with faithful document rendering as a priority tooling change. Keep packet generation and evidence reuse optional until their value is demonstrated in real work. No old gates or reviewer rosters need to come back with these additions.

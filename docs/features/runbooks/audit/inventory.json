@@ -102,28 +102,29 @@
     "history": "This is from the older installed Codex copy, not an asserted contract of the recent public package."
   },
   {
-    "id": "premise-no-build", "category": "restore-later",
-    "title": "Challenge the premise, including the option to build nothing",
+    "id": "premise-no-build", "category": "restore-first",
+    "title": "Product thinking before the prototype",
     "legacy_file": "feature-forge/SKILL.md",
     "legacy_excerpt": "Challenge premise, force alternatives, answer \"what if we do nothing,\"",
     "current": "skills/feature-forge/references/runbooks/prototype-first.md",
-    "finding": "The new route resolves the premise and explores prototype alternatives. The explicit no-build or existing-capability alternative has faded.",
-    "restore": "Add a brief discovery prompt when the request is uncertain: validate the user need and consider an existing capability, a smaller change, or no change. Keep it before the prototype and proportional to uncertainty. Do not reinstate a compulsory interview phase.",
-    "history": "The pre-runbook public router explicitly mentioned doing nothing; that explicit option disappeared in the rewrite."
+    "finding": "The separate installed Crucible skill covered user jobs, evidence, product assumptions, roadmap priority, opportunity cost, and alternatives. The new prototype route only says to resolve the premise. The original audit understated this as a no-build prompt.",
+    "restore": "Restore lightweight product thinking before the short brief and prototype. Clarify the real user job and context, status quo, evidence, product assumptions, priority against named board alternatives, opportunity cost, and whether to reuse, adopt, reduce scope, build, or do nothing. Record a recommendation, uncertainty, user corrections, and next action in a focused note that feeds the brief and composed document. Keep requirements and architecture out of premises. Scale depth to uncertainty without a rigid interview, compulsory premise voting, forced alternatives, or routine approval gate.",
+    "history": "The public router summarized premise challenges and doing nothing. The fuller product-thinking workflow lives in the separately inspected installed Crucible source, outside the preserved five-skill snapshot; no particular public Git revision is asserted for it.",
+    "related_evidence": "product-thinking-evidence.md"
   },
   {
     "id": "packet-helper", "category": "restore-later",
-    "title": "Heading-selected dispatch packets",
+    "title": "Helper for preparing agent assignments",
     "legacy_file": "feature-forge/scripts/forge_support.py",
     "legacy_excerpt": "def packet(args):",
     "current": "skills/feature-forge/scripts/forge_support.py",
     "finding": "The current helper only captures verification runs. The old packet command selected source headings and validated the contract fields; the contract concept itself survives.",
-    "restore": "Restore a small optional packet builder if actual delegation repeatedly needs it. Keep source selection and clear errors for missing headings. Prove it saves repeated work before making it a required dispatch step.",
+    "restore": "An optional script would assemble an agent's goal, constraints, completion checks, and selected documentation sections into a Markdown assignment, refusing missing required fields. The lead chooses the sources; the script copies the selected sections. Defer restoration unless preparing such assignments repeatedly justifies automation. Agents can already read relevant source files directly; clear assignments do not depend on this helper.",
     "history": "This command was already absent from the first public helper."
   },
   {
     "id": "evidence-provenance", "category": "restore-later",
-    "title": "Evidence identity beyond a commit hash",
+    "title": "Record exactly which code was tested",
     "legacy_file": "feature-forge/scripts/forge_support.py",
     "legacy_excerpt": "def fingerprint(repo,evidence):",
     "current": "skills/feature-forge/scripts/forge_support.py",
