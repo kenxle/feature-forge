@@ -44,9 +44,9 @@ and reuse evidence that still matches the code and relevant conditions.
 
 ## Ship and land
 
-Prepare coherent PRs with proof, dependencies, and rollout. Follow through on
-checks, review findings, conflicts, and required corrections. Judge automated
-findings against the code; fix real issues and explain dismissals.
+All tests should pass before shipping, regardless of whether the tests are related to your work or not. Failing tests means you need to go fix something.
+
+Prepare coherent PRs with proof, dependencies, and rollout. Follow through onchecks, review findings, conflicts, and required corrections. Judge automatedfindings against the code; fix real issues and explain dismissals.
 
 Use confidence based on acceptance evidence, independent review, remaining
 uncertainty, and recovery options to decide release readiness. An unsupported
@@ -58,10 +58,11 @@ Forge approval request. Respect the project's standing grants and any restrictio
 it still imposes. Preparation, merging, deployment, and enabling a flag may have
 different authorization. A request to build does not by itself grant every action.
 
-Feature flags can let code land disabled when authorized. Check disabled and
-enabled paths and effects outside the flag, including migrations, startup, and
-background jobs. Record the flag's state, owner, activation prerequisites, and
-cleanup condition in the project's existing durable documentation.
+Feature flags can let code land disabled and should be considered for automated
+merges. Check disabled and enabled paths and effects outside the flag, including
+migrations, startup, and background jobs. Record the flag's state, owner,
+activation prerequisites, and cleanup condition in the project's existing durable
+documentation.
 
 Verify the actual landed or deployed revision. Report separately what is merged,
 deployed, enabled, and unverified. Update durable docs and diagrams, record useful
