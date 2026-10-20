@@ -22,6 +22,8 @@ Choose the scope beside each item. **Include in plan** adds it to the restoratio
 
 **Left out of the restoration plan:** [Operational review criteria](#operational-review-criteria).
 
+**Deferred:** [Helper for preparing agent assignments](#helper-for-preparing-agent-assignments). Try the smaller dossier and selective reading before adding tooling for token savings.
+
 Other proposals await your choice.
 
 ## Restore first
@@ -208,7 +210,7 @@ For example, an agent building an export dialog could receive the dialog require
 <div class="choice" data-choice="packet-helper">
   <p class="choice-q">Include this proposal in the restoration plan?</p>
   <button type="button" value="include">Include in plan</button>
-  <button type="button" value="defer" data-recommended>Defer</button>
+  <button type="button" value="defer" data-recommended data-chosen>Defer</button>
   <button type="button" value="leave-out">Leave out</button>
 </div>
 

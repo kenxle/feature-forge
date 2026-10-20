@@ -114,6 +114,8 @@
   },
   {
     "id": "packet-helper", "category": "restore-later",
+    "decision": "defer",
+    "decision_note": "The user deferred the script. Try the smaller dossier and selective source reading first; revisit only if avoidable worker context cost remains.",
     "title": "Helper for preparing agent assignments",
     "legacy_file": "feature-forge/scripts/forge_support.py",
     "legacy_excerpt": "def packet(args):",
