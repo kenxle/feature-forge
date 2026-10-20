@@ -25,3 +25,7 @@
 - **Load global Forge skills into cloud sessions:** Keep the existing global local setup. Configure cloud environment setup to download Forge and install its skills globally inside the VM. No per-project Forge files or links are needed. Use the existing installer with the VM home directory as its target. Handle later updates and cached environments without overwriting consumer edits. Verify skill discovery in a real cloud session. See the [cloud setup recommendation](features/runbooks/MVP.md#use-in-claude-code-cloud-sessions).
 
 - **Roll out the hard shipping rule to cloud agents:** Refresh cloud skill copies and any older shipping instructions. Confirm that a failing full suite blocks release even when failures predate the change or come from missing setup keys. The package and local copies are updated; existing cloud sessions have not been changed from here. See the [hard shipping rule](features/runbooks/MVP.md#hard-shipping-rule).
+
+## Decisions
+
+- **Leave operational review criteria out of the restoration plan:** The user declined the proposed checklist restoration. Preserve the [audit comparison and decision](features/runbooks/LEGACY_AUDIT.md#operational-review-criteria) as history. Existing verification and review requirements continue to apply.

@@ -71,6 +71,8 @@
   },
   {
     "id": "review-operational-checks", "category": "restore-first",
+    "decision": "leave-out",
+    "decision_note": "Excluded from the restoration plan by the user. Preserve the historical comparison; do not implement this proposed restoration.",
     "title": "Operational code-review prompts, especially the cost of writes",
     "legacy_file": "feature-forge/references/code-review-checklist.md",
     "legacy_excerpt": "- How often does it write? Per keystroke, per event, per poll, per commit? Name the trigger.\n- How much does each write carry? The changed part, or the whole record or file?",

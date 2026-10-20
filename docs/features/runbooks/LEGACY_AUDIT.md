@@ -16,6 +16,8 @@ Choose the scope beside each item. **Include in plan** adds it to the restoratio
 - [Rendering compatibility](#rendering-compatibility), a priority: preserve Lahe's visual quality, components, graphs, and rendered diagrams in the composed documents. Build on the house-style support that has now landed.
 - [Finished UI quality](#finished-ui-quality): honor the reviewed prototype and user feedback, use an agent design review when that baseline is absent, and enforce repeatable style rules with tooling.
 
+**Left out of the restoration plan:** [Operational review criteria](#operational-review-criteria).
+
 Other proposals await your choice.
 
 ## Restore first
@@ -127,15 +129,17 @@ Run these checks through the project's normal verification command, with hooks w
 
 ### Operational review criteria
 
+**Decision: Leave this restoration out of the plan.** The comparison below remains as the audit record.
+
 The reviewer contract improved, but the old checklist supplied useful prompts that generic review can miss. The cost-of-writes questions are especially distinctive. [Old write-cost check](audit/legacy-excerpts.md#review-operational-checks); [current reviewer guidance](../../../skills/feature-forge/references/reviewers.md).
 
 Add risk-triggered prompts for write frequency/payload/flushes, API compatibility, queries, idempotence, privacy, logging, and actionable errors. Restore an explicit check for secrets before publishing. Link existing principles where they already cover the topic.
 
 <div class="choice" data-choice="review-operational-checks">
   <p class="choice-q">Include this proposal in the restoration plan?</p>
-  <button type="button" value="include" data-recommended>Include in plan</button>
+  <button type="button" value="include">Include in plan</button>
   <button type="button" value="defer">Defer</button>
-  <button type="button" value="leave-out">Leave out</button>
+  <button type="button" value="leave-out" data-chosen>Leave out</button>
 </div>
 
 ### Complete closeout
