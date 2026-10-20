@@ -58,10 +58,11 @@ Forge approval request. Respect the project's standing grants and any restrictio
 it still imposes. Preparation, merging, deployment, and enabling a flag may have
 different authorization. A request to build does not by itself grant every action.
 
-Feature flags can let code land disabled when authorized. Check disabled and
-enabled paths and effects outside the flag, including migrations, startup, and
-background jobs. Record the flag's state, owner, activation prerequisites, and
-cleanup condition in the project's existing durable documentation.
+Feature flags can let code land disabled and should be considered for automated
+merges. Check disabled and enabled paths and effects outside the flag, including
+migrations, startup, and background jobs. Record the flag's state, owner,
+activation prerequisites, and cleanup condition in the project's existing durable
+documentation.
 
 Verify the actual landed or deployed revision. Report separately what is merged,
 deployed, enabled, and unverified. Update durable docs and diagrams, record useful
