@@ -15,6 +15,7 @@ Choose the scope beside each item. **Include in plan** adds it to the restoratio
 - [Document authoring](#document-authoring): keep focused source files for agents to read on demand, and build those same files into a complete document for the user.
 - [Rendering compatibility](#rendering-compatibility), a priority: preserve Lahe's visual quality, components, graphs, and rendered diagrams in the composed documents. Build on the house-style support that has now landed.
 - [Finished UI quality](#finished-ui-quality): honor the reviewed prototype and user feedback, use an agent design review when that baseline is absent, and enforce repeatable style rules with tooling.
+- [Complete closeout](#complete-closeout): finish the release record, durable docs, diagrams, lessons, board, progress, and owned cleanup, proportionally for small changes too.
 
 **Left out of the restoration plan:** [Operational review criteria](#operational-review-criteria).
 
@@ -150,7 +151,7 @@ Add a portable closeout reference for release evidence, commits/push, durable do
 
 <div class="choice" data-choice="cleanup-and-lessons">
   <p class="choice-q">Include this proposal in the restoration plan?</p>
-  <button type="button" value="include" data-recommended>Include in plan</button>
+  <button type="button" value="include" data-recommended data-chosen>Include in plan</button>
   <button type="button" value="defer">Defer</button>
   <button type="button" value="leave-out">Leave out</button>
 </div>
