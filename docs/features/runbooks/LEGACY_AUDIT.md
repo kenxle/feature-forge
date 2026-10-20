@@ -11,6 +11,7 @@ Choose the scope beside each item. **Include in plan** adds it to the restoratio
 - [Working-environment readiness](#working-environment): check setup before implementation and final proof. Missing prerequisites remain shipping blockers.
 - [Automated verification after launch](#verification-after-landing): check the live release with scripts and Playwright, and have an LLM examine the deployed feature or bug-fix flow. Missing required proof remains a blocker.
 - [Visible progress](#visible-progress): restore a stable progress page with an accountable writer, meaningful update events, and links to current work and evidence.
+- [Worker handoffs and review history](#worker-handoffs-and-review-history): restore optional return and review-round templates, with one writer per detail file and a durable record of evidence, findings, and decisions.
 
 Other proposals await your choice.
 
@@ -65,7 +66,7 @@ Add optional templates for changed files, evidence, deviations, surprises, follo
 
 <div class="choice" data-choice="worker-handoffs">
   <p class="choice-q">Include this proposal in the restoration plan?</p>
-  <button type="button" value="include" data-recommended>Include in plan</button>
+  <button type="button" value="include" data-recommended data-chosen>Include in plan</button>
   <button type="button" value="defer">Defer</button>
   <button type="button" value="leave-out">Leave out</button>
 </div>
