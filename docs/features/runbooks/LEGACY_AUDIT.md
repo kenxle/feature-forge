@@ -18,6 +18,7 @@ Choose the scope beside each item. **Include in plan** adds it to the restoratio
 - [Finished UI quality](#finished-ui-quality): honor the reviewed prototype and user feedback, use an agent design review when that baseline is absent, and enforce repeatable style rules with tooling.
 - [Complete closeout](#complete-closeout): finish the release record, durable docs, diagrams, lessons, board, progress, and owned cleanup, proportionally for small changes too.
 - [Record exactly which code was tested](#record-exactly-which-code-was-tested): identify the actual tested files and relevant setup, preserve original results, and make later changes visible.
+- [Local principle additions](#local-principle-additions): preserve useful local guidance that adds to the selected upstream principles, while keeping the vendored originals unchanged.
 
 **Left out of the restoration plan:** [Operational review criteria](#operational-review-criteria).
 
@@ -236,7 +237,7 @@ Compare the old local additions with the selected upstream leaves. Retain distin
 
 <div class="choice" data-choice="local-principle-adapter">
   <p class="choice-q">Include this proposal in the restoration plan?</p>
-  <button type="button" value="include" data-recommended>Include in plan</button>
+  <button type="button" value="include" data-recommended data-chosen>Include in plan</button>
   <button type="button" value="defer">Defer</button>
   <button type="button" value="leave-out">Leave out</button>
 </div>
