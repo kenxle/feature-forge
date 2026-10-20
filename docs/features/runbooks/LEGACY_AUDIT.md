@@ -4,29 +4,183 @@ The new structure kept the main development and verification duties, but lost us
 
 The most important distinction is historical. The pre-update installed skill was much richer than the public package before this rewrite. Many gaps already existed in that public package. Git history alone would have missed them. Keeping a full-dossier route preserved its approval option, but did not preserve all the templates and presentation support behind it.
 
+Choose the scope beside each item. **Include in plan** adds it to the restoration scope; **Defer** keeps it as a follow-up; **Leave out** records that it should stay out. I will record your choices here and on the project board. The buttons decide the plan; implementation follows that agreed scope. No choices have been made yet.
+
 ## Restore first
 
-| Capability | What is missing or weaker now | How to add it back |
-|---|---|---|
-| Working environment | The old process checked that servers and other infrastructure were running. The new rules require final proof but offer little practical setup guidance. [Old setup check](audit/legacy-excerpts.md#environment-readiness); [current verification](../../../skills/feature-forge/references/verification-and-release.md). | Add a shared readiness reference for required keys, services, migrations, data, and the actual running app. Check prerequisites before implementation and again before final proof. Missing setup remains a shipping blocker. |
-| Verification after landing | "Verify the release" survived. Specific checks for production errors, performance, migrations, health, the deployed flow, and recovery became much less concrete. [Old operational checks](audit/legacy-excerpts.md#production-verification); [current release guidance](../../../skills/feature-forge/references/verification-and-release.md#ship-and-land). | Add a short release reference that verifies the actual deployed revision and records applicable checks, flag state, and recovery. Agents do the checks they can and report the remaining gaps. Do not restore a routine human approval step. |
-| Visible progress | The current template names the topics but no longer explains who creates the page, how the user finds it, or which events update it. [Old progress guidance](audit/legacy-excerpts.md#visible-progress); [current template](../../../skills/feature-forge/references/templates.md#progress). | Restore a usable progress template and update triggers. Show current work, owners, blockers, document links, proof, and next action. Use tool timestamps. Keep a stable page without freezing the old phase numbers or heading count. |
-| Worker handoffs and review history | Contract fields and review-sibling composition remain. Concrete worker-return and review-round templates are gone. [Old return record](audit/legacy-excerpts.md#worker-handoffs); [current contracts](../../../skills/feature-forge/references/contracts-and-slices.md). | Add optional templates for changed files, evidence, deviations, surprises, follow-ups, and cleanup. Give each detail file one writer. Preserve earlier review rounds and record dispositions in their owning sources. This makes resumed and unattended work easier to reconstruct. |
-| Document authoring | The new templates list content, but omit much of the guidance for components, title/lede, source editing, composed review, and rebuilding. [Old authoring contract](audit/legacy-excerpts.md#authoring-contract); [current templates](../../../skills/feature-forge/references/templates.md). | Add an authoring reference that uses the review tool's component catalog and explains source versus generated output. Keep direct Markdown review for simple pages. Preserve existing conventions and repair tools when they cannot render them. |
-| Rendering compatibility | The old installed renderer supported house components, legacy callouts, section layout, folded contents, finding links, and Mermaid. The portable renderer keeps includes, review composition, and navigation, but not that presentation contract. [Old renderer evidence](audit/legacy-excerpts.md#renderer-compatibility); [current renderer](../../../skills/feature-forge/scripts/build_feature_docs.py). | Restore useful compatibility through portable tooling. Start with readable existing components and actual diagrams. Keep containment checks and the offline contract. Do not reintroduce private style dependencies or silently require a network connection. |
-| Finished UI quality | High-fidelity prototypes, staff design, and customer personas remain. The integrated product's explicit acceptance floor has weakened. [Old honest-feedback criterion](audit/legacy-excerpts.md#ui-quality); [current reviewer guidance](../../../skills/feature-forge/references/reviewers.md). | Add a concise UI-quality reference: hierarchy, shared components/tokens, responsive and accessible states, honest feedback, meaningful motion, brand voice, and consistency across contributors. Use it as acceptance context, without another mandatory reviewer chain. |
-| Operational review criteria | The reviewer contract improved, but the old checklist supplied useful prompts that generic review can miss. The cost-of-writes questions are especially distinctive. [Old write-cost check](audit/legacy-excerpts.md#review-operational-checks); [current reviewer guidance](../../../skills/feature-forge/references/reviewers.md). | Add risk-triggered prompts for write frequency/payload/flushes, API compatibility, queries, idempotence, privacy, logging, and actionable errors. Restore an explicit check for secrets before publishing. Link existing principles where they already cover the topic. |
-| Complete closeout | Docs, diagrams, lessons, and owned cleanup remain, but "record useful lessons" is weaker than the old small-change obligation to capture surprises and close the full record. [Old lesson capture](audit/legacy-excerpts.md#cleanup-and-lessons); [earlier public Whetstone cleanup change](https://github.com/kenxle/feature-forge/commit/81a8471665d6a72c4866fedecb16a37146c8aae1); [current Whetstone](../../../skills/whetstone/SKILL.md). | Add a portable closeout reference for release evidence, commits/push, durable docs/diagrams, lessons, the existing board, progress, and owned worktrees. Keep the lesson distinct from a bug ticket. Apply it proportionally to small changes too. |
+### Working environment
+
+The old process checked that servers and other infrastructure were running. The new rules require final proof but offer little practical setup guidance. [Old setup check](audit/legacy-excerpts.md#environment-readiness); [current verification](../../../skills/feature-forge/references/verification-and-release.md).
+
+Add a shared readiness reference for required keys, services, migrations, data, and the actual running app. Check prerequisites before implementation and again before final proof. Missing setup remains a shipping blocker.
+
+<div class="choice" data-choice="environment-readiness">
+  <p class="choice-q">Include this proposal in the restoration plan?</p>
+  <button type="button" value="include" data-recommended>Include in plan</button>
+  <button type="button" value="defer">Defer</button>
+  <button type="button" value="leave-out">Leave out</button>
+</div>
+
+### Verification after landing
+
+"Verify the release" survived. Specific checks for production errors, performance, migrations, health, the deployed flow, and recovery became much less concrete. [Old operational checks](audit/legacy-excerpts.md#production-verification); [current release guidance](../../../skills/feature-forge/references/verification-and-release.md#ship-and-land).
+
+Add a short release reference that verifies the actual deployed revision and records applicable checks, flag state, and recovery. Agents do the checks they can and report the remaining gaps. Do not restore a routine human approval step.
+
+<div class="choice" data-choice="production-verification">
+  <p class="choice-q">Include this proposal in the restoration plan?</p>
+  <button type="button" value="include" data-recommended>Include in plan</button>
+  <button type="button" value="defer">Defer</button>
+  <button type="button" value="leave-out">Leave out</button>
+</div>
+
+### Visible progress
+
+The current template names the topics but no longer explains who creates the page, how the user finds it, or which events update it. [Old progress guidance](audit/legacy-excerpts.md#visible-progress); [current template](../../../skills/feature-forge/references/templates.md#progress).
+
+Restore a usable progress template and update triggers. Show current work, owners, blockers, document links, proof, and next action. Use tool timestamps. Keep a stable page without freezing the old phase numbers or heading count.
+
+<div class="choice" data-choice="visible-progress">
+  <p class="choice-q">Include this proposal in the restoration plan?</p>
+  <button type="button" value="include" data-recommended>Include in plan</button>
+  <button type="button" value="defer">Defer</button>
+  <button type="button" value="leave-out">Leave out</button>
+</div>
+
+### Worker handoffs and review history
+
+Contract fields and review-sibling composition remain. Concrete worker-return and review-round templates are gone. [Old return record](audit/legacy-excerpts.md#worker-handoffs); [current contracts](../../../skills/feature-forge/references/contracts-and-slices.md).
+
+Add optional templates for changed files, evidence, deviations, surprises, follow-ups, and cleanup. Give each detail file one writer. Preserve earlier review rounds and record dispositions in their owning sources. This makes resumed and unattended work easier to reconstruct.
+
+<div class="choice" data-choice="worker-handoffs">
+  <p class="choice-q">Include this proposal in the restoration plan?</p>
+  <button type="button" value="include" data-recommended>Include in plan</button>
+  <button type="button" value="defer">Defer</button>
+  <button type="button" value="leave-out">Leave out</button>
+</div>
+
+### Document authoring
+
+The new templates list content, but omit much of the guidance for components, title/lede, source editing, composed review, and rebuilding. [Old authoring contract](audit/legacy-excerpts.md#authoring-contract); [current templates](../../../skills/feature-forge/references/templates.md).
+
+Add an authoring reference that uses the review tool's component catalog and explains source versus generated output. Keep direct Markdown review for simple pages. Preserve existing conventions and repair tools when they cannot render them.
+
+<div class="choice" data-choice="authoring-contract">
+  <p class="choice-q">Include this proposal in the restoration plan?</p>
+  <button type="button" value="include" data-recommended>Include in plan</button>
+  <button type="button" value="defer">Defer</button>
+  <button type="button" value="leave-out">Leave out</button>
+</div>
+
+### Rendering compatibility
+
+The old installed renderer supported house components, legacy callouts, section layout, folded contents, finding links, and Mermaid. The portable renderer keeps includes, review composition, and navigation, but not that presentation contract. [Old renderer evidence](audit/legacy-excerpts.md#renderer-compatibility); [current renderer](../../../skills/feature-forge/scripts/build_feature_docs.py).
+
+Restore useful compatibility through portable tooling. Start with readable existing components and actual diagrams. Keep containment checks and the offline contract. Do not reintroduce private style dependencies or silently require a network connection.
+
+<div class="choice" data-choice="renderer-compatibility">
+  <p class="choice-q">Include this proposal in the restoration plan?</p>
+  <button type="button" value="include" data-recommended>Include in plan</button>
+  <button type="button" value="defer">Defer</button>
+  <button type="button" value="leave-out">Leave out</button>
+</div>
+
+### Finished UI quality
+
+High-fidelity prototypes, staff design, and customer personas remain. The integrated product's explicit acceptance floor has weakened. [Old honest-feedback criterion](audit/legacy-excerpts.md#ui-quality); [current reviewer guidance](../../../skills/feature-forge/references/reviewers.md).
+
+Add a concise UI-quality reference: hierarchy, shared components/tokens, responsive and accessible states, honest feedback, meaningful motion, brand voice, and consistency across contributors. Use it as acceptance context, without another mandatory reviewer chain.
+
+<div class="choice" data-choice="ui-quality">
+  <p class="choice-q">Include this proposal in the restoration plan?</p>
+  <button type="button" value="include" data-recommended>Include in plan</button>
+  <button type="button" value="defer">Defer</button>
+  <button type="button" value="leave-out">Leave out</button>
+</div>
+
+### Operational review criteria
+
+The reviewer contract improved, but the old checklist supplied useful prompts that generic review can miss. The cost-of-writes questions are especially distinctive. [Old write-cost check](audit/legacy-excerpts.md#review-operational-checks); [current reviewer guidance](../../../skills/feature-forge/references/reviewers.md).
+
+Add risk-triggered prompts for write frequency/payload/flushes, API compatibility, queries, idempotence, privacy, logging, and actionable errors. Restore an explicit check for secrets before publishing. Link existing principles where they already cover the topic.
+
+<div class="choice" data-choice="review-operational-checks">
+  <p class="choice-q">Include this proposal in the restoration plan?</p>
+  <button type="button" value="include" data-recommended>Include in plan</button>
+  <button type="button" value="defer">Defer</button>
+  <button type="button" value="leave-out">Leave out</button>
+</div>
+
+### Complete closeout
+
+Docs, diagrams, lessons, and owned cleanup remain, but "record useful lessons" is weaker than the old small-change obligation to capture surprises and close the full record. [Old lesson capture](audit/legacy-excerpts.md#cleanup-and-lessons); [earlier public Whetstone cleanup change](https://github.com/kenxle/feature-forge/commit/81a8471665d6a72c4866fedecb16a37146c8aae1); [current Whetstone](../../../skills/whetstone/SKILL.md).
+
+Add a portable closeout reference for release evidence, commits/push, durable docs/diagrams, lessons, the existing board, progress, and owned worktrees. Keep the lesson distinct from a bug ticket. Apply it proportionally to small changes too.
+
+<div class="choice" data-choice="cleanup-and-lessons">
+  <p class="choice-q">Include this proposal in the restoration plan?</p>
+  <button type="button" value="include" data-recommended>Include in plan</button>
+  <button type="button" value="defer">Defer</button>
+  <button type="button" value="leave-out">Leave out</button>
+</div>
 
 ## Restore selectively
 
-| Capability | Recommendation and limit |
-|---|---|
-| Cross-document consistency | Restore a brief author self-check: scope and terminology agree, the Plan implements the chosen architecture, components have owners, assumptions are supported, and failure cases have proof. The older Codex checklist was concrete here. Do not restore its reviewer chain or confidence cutoff. [Old consistency check](audit/legacy-excerpts.md#cross-doc-consistency); [current Plan](../../../skills/plan/SKILL.md). |
-| The no-build alternative | The previous public router explicitly considered doing nothing. The new route resolves the premise, but that option is less visible. Add a discovery prompt for uncertain requests: existing capability, smaller change, or no change. Do not restore a compulsory interview phase. [Old premise check](audit/legacy-excerpts.md#premise-no-build); [current prototype route](../../../skills/feature-forge/references/runbooks/prototype-first.md#brief-to-prototype). |
-| Dispatch packet helper | The old helper could assemble selected source headings into a validated work contract. The current helper only captures verification runs. Restore a small optional packet builder if repeated delegation justifies it. The contract itself already survives; a tool is an aid, not another required step. [Old packet command](audit/legacy-excerpts.md#packet-helper); [current helper](../../../skills/feature-forge/scripts/forge_support.py). |
-| Stronger evidence identity | The old helper fingerprinted content and environment. The new helper records a revision and explicitly admits its limits for dirty or external state. Restore reliable identity first, without exposing secrets. Keep immutable evidence folders and argument-list execution. Do not restore log overwriting, shell-string execution, or an unproven reuse cache. [Old fingerprinting](audit/legacy-excerpts.md#evidence-provenance); [current evidence helper](../../../skills/feature-forge/scripts/forge_support.py). |
-| Local principle additions | Compare the old local additions with the selected upstream leaves. Retain distinct guidance about repeated knowledge, broken tooling, cheap checks first, and converting lessons into mechanisms in a local adapter. Keep vendored originals unchanged. The newer behavioral-test principle is more nuanced than the old assertion blacklist, so keep it. [Old local additions](audit/legacy-excerpts.md#local-principle-adapter); [current principles](../../../skills/feature-forge/references/principles.md). |
+### Cross-document consistency
+
+Restore a brief author self-check: scope and terminology agree, the Plan implements the chosen architecture, components have owners, assumptions are supported, and failure cases have proof. The older Codex checklist was concrete here. Do not restore its reviewer chain or confidence cutoff. [Old consistency check](audit/legacy-excerpts.md#cross-doc-consistency); [current Plan](../../../skills/plan/SKILL.md).
+
+<div class="choice" data-choice="cross-doc-consistency">
+  <p class="choice-q">Include this proposal in the restoration plan?</p>
+  <button type="button" value="include" data-recommended>Include in plan</button>
+  <button type="button" value="defer">Defer</button>
+  <button type="button" value="leave-out">Leave out</button>
+</div>
+
+### The no-build alternative
+
+The previous public router explicitly considered doing nothing. The new route resolves the premise, but that option is less visible. Add a discovery prompt for uncertain requests: existing capability, smaller change, or no change. Do not restore a compulsory interview phase. [Old premise check](audit/legacy-excerpts.md#premise-no-build); [current prototype route](../../../skills/feature-forge/references/runbooks/prototype-first.md#brief-to-prototype).
+
+<div class="choice" data-choice="premise-no-build">
+  <p class="choice-q">Include this proposal in the restoration plan?</p>
+  <button type="button" value="include" data-recommended>Include in plan</button>
+  <button type="button" value="defer">Defer</button>
+  <button type="button" value="leave-out">Leave out</button>
+</div>
+
+### Dispatch packet helper
+
+The old helper could assemble selected source headings into a validated work contract. The current helper only captures verification runs. Restore a small optional packet builder if repeated delegation justifies it. The contract itself already survives; a tool is an aid, not another required step. [Old packet command](audit/legacy-excerpts.md#packet-helper); [current helper](../../../skills/feature-forge/scripts/forge_support.py).
+
+<div class="choice" data-choice="packet-helper">
+  <p class="choice-q">Include this proposal in the restoration plan?</p>
+  <button type="button" value="include">Include in plan</button>
+  <button type="button" value="defer" data-recommended>Defer</button>
+  <button type="button" value="leave-out">Leave out</button>
+</div>
+
+### Stronger evidence identity
+
+The old helper fingerprinted content and environment. The new helper records a revision and explicitly admits its limits for dirty or external state. Restore reliable identity first, without exposing secrets. Keep immutable evidence folders and argument-list execution. Do not restore log overwriting, shell-string execution, or an unproven reuse cache. [Old fingerprinting](audit/legacy-excerpts.md#evidence-provenance); [current evidence helper](../../../skills/feature-forge/scripts/forge_support.py).
+
+<div class="choice" data-choice="evidence-provenance">
+  <p class="choice-q">Include this proposal in the restoration plan?</p>
+  <button type="button" value="include" data-recommended>Include in plan</button>
+  <button type="button" value="defer">Defer</button>
+  <button type="button" value="leave-out">Leave out</button>
+</div>
+
+### Local principle additions
+
+Compare the old local additions with the selected upstream leaves. Retain distinct guidance about repeated knowledge, broken tooling, cheap checks first, and converting lessons into mechanisms in a local adapter. Keep vendored originals unchanged. The newer behavioral-test principle is more nuanced than the old assertion blacklist, so keep it. [Old local additions](audit/legacy-excerpts.md#local-principle-adapter); [current principles](../../../skills/feature-forge/references/principles.md).
+
+<div class="choice" data-choice="local-principle-adapter">
+  <p class="choice-q">Include this proposal in the restoration plan?</p>
+  <button type="button" value="include" data-recommended>Include in plan</button>
+  <button type="button" value="defer">Defer</button>
+  <button type="button" value="leave-out">Leave out</button>
+</div>
 
 ## What was retained
 
