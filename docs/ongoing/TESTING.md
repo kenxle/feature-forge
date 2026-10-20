@@ -19,11 +19,11 @@ Use Python from the repository root:
 python3 -m unittest discover -s tests -v
 ```
 
-No Python third-party dependencies are needed. Install Pandoc to exercise HTML composition. Without it, the rendering test reports a skip. Treat that as incomplete renderer verification when changing rendering behavior.
+No Python third-party dependencies are needed. Install Pandoc to exercise HTML composition. Without it, the rendering tests report a skip. Treat that as incomplete renderer verification when changing rendering behavior.
 
 ## What the suite covers
 
-The [package tests](../../tests/test_package.py) check fresh and dry-run installation, conflict refusal preserving edits, installed renderer assets and principles/license, local Markdown link targets, include escape/cycle/missing-source rejection, both dossier routes with review history and navigation, and evidence failure reporting with prior-run preservation. The prototype-first case verifies that the later Plan and Progress pages are included and PRD links are rewritten.
+The [package tests](../../tests/test_package.py) check fresh and dry-run installation, conflict refusal preserving edits, installed renderer assets and principles/license, local Markdown link targets, include escape/cycle/missing-source rejection, both dossier routes with review history and navigation, and evidence failure reporting with prior-run preservation. Style tests build with a made-up style folder (`tests/fixtures/house-style/`) and check that the page carries the `data-lahe-doc-style` block, the layout the style expects, styled components and copied fonts, that the style is found through the variable and through the `lahe` command (wrapper script and symlink), and that without a style the plain page and one stderr line result. They fail if the renderer stops using the house style. The prototype-first case verifies that the later Plan and Progress pages are included and PRD links are rewritten.
 
 Source archives under docs may carry a `.source-archive` marker. The link check skips those preserved upstream snapshots because they can contain template placeholders and links to unselected material. Package files under skills receive no such exemption. Local review copies are archives too. Verify source-copy integrity separately when importing upstream material.
 

@@ -41,7 +41,7 @@ The Plan owns acceptance evidence and the throughput checkpoint. Whetstone uses 
 
 ## Renderer flow
 
-The renderer selects numbered dossier Markdown at the feature folder's top level. It expands `forge-include` directives relative to their containing file, rejects paths outside the folder, and detects cycles. It appends review siblings, rewrites links between selected documents, and adds shared navigation and bundled styling. Pandoc renders each source. The helper renders all sources before writing output files; it does not provide an atomic filesystem transaction.
+The renderer selects numbered dossier Markdown at the feature folder's top level. It expands `forge-include` directives relative to their containing file, rejects paths outside the folder, and detects cycles. It appends review siblings, rewrites links between selected documents, and adds shared navigation. With a house style found (`FORGE_DOC_STYLE_DIR`, then Lahe through the `lahe` command), it inlines the style and lays each page out as the style expects, and copies the font files the style names beside the pages. Without one, it uses the bundled plain stylesheet and prints one line to stderr. Pandoc renders each source. The helper renders all sources before writing output files; it does not provide an atomic filesystem transaction.
 
 Markdown remains authoritative. Generated HTML is a review artifact. Raw HTML is supported for trusted authors, so the renderer is unsuitable for untrusted input. The bundled output has no CDN or browser-script dependency.
 
