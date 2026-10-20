@@ -18,6 +18,7 @@ import tempfile
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import doc_layout
 import doc_style
+import doc_diagrams
 
 INCLUDE = re.compile(r'<!--\s*forge-include:\s*([^>]+?)\s*-->')
 ASSETS = Path(__file__).resolve().parents[1] / 'assets'
@@ -141,6 +142,10 @@ def build(folder, environ=None):
                         return '](' + outputs[absolute] + (sep + fragment if sep else '') + ')'
                 return match.group(0)
             page = render_plain(source, re.sub(r'\]\(([^)]+)\)', rewrite, body), plain_nav)
+        try:
+            page = doc_diagrams.render(page, environ)
+        except ValueError as exc:
+            raise ValueError(source.name + ': ' + str(exc)) from exc
         rendered.append((source.with_suffix('.html'), page))
     # Validate and render every source before updating outputs.
     for target, page in rendered:
