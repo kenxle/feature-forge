@@ -142,8 +142,17 @@ python3 skills/feature-forge/scripts/build_feature_docs.py /absolute/path/to/you
 python3 -m unittest discover -s tests -v
 ```
 
-The renderer bundles CSS, expands modular includes and review siblings, rewrites
-local document links and adds navigation. It uses no CDN or browser scripts.
+The renderer expands modular includes and review siblings, rewrites local
+document links and adds navigation. It uses no CDN or browser scripts.
+
+It builds in the house document style when it can find one: first the folder
+named by `FORGE_DOC_STYLE_DIR` (a folder holding `system-tokens.css`,
+`document.css` and `lahe-markdown.css`), then the style that ships with
+[Lahe](https://github.com/kenxle/live-agentic-html-editor), found through the
+`lahe` command on PATH. The style is inlined in the page, and the page uses its
+title block, links row, folded contents, numbered sections and components. When
+no style is found, the build writes a plain page with a small bundled
+stylesheet and prints one line to stderr.
 Raw HTML is supported for
 trusted local authoring; do not render untrusted documents. Edit Markdown and rebuild.
 

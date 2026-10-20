@@ -1,0 +1,10 @@
+@import url("system-tokens.css");
+/* Made-up components for tests. Not a real style. */
+body { background: var(--surface); color: var(--on-surface); }
+.hero { padding: 1rem; }
+.toplinks { display: flex; gap: 1rem; }
+.contents-list { margin: 0; }
+.insight { border-left: 4px solid #07a; padding-left: 1rem; }
+.xref { font-size: .9rem; }
+.status-dot { display: inline-block; }
+.sheet { margin-top: 2rem; }
