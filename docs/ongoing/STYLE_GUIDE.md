@@ -29,8 +29,13 @@ Feature Forge defaults to using [Lahe](https://github.com/kenxle/live-agentic-ht
 
 ## Review surfaces
 
-Bundled HTML works offline, with or without the house style. The style lookup reads local files only. Mermaid blocks stay as readable code because rendering them needs a script from a CDN. Do not add CDN assets or browser scripts without a deliberate contract change. Lahe is a separate optional review surface; follow its installed instructions and preserve the source-to-render relationship described in [Lahe pairing](../lahe.md).
+Bundled HTML works offline, with or without the house style. The style lookup reads local files only. Mermaid blocks render at build time through the separately installed local Mermaid CLI. The [diagram helper](../../skills/feature-forge/scripts/doc_diagrams.py) embeds self-contained SVG images and retains source in a disclosure. Descriptions come from the diagram's accessible title and description where supplied. There is no CDN or browser-script dependency. Missing tooling or invalid diagrams fail the build instead of silently displaying code in place of the diagram. Lahe is a separate optional review surface; follow its installed instructions and preserve the source-to-render relationship described in [Lahe pairing](../lahe.md).
 
 ## Change discipline
+
+Diagrams retain their intrinsic size so labels stay readable. Wide diagrams use
+a keyboard-focusable horizontal scroll region inside the figure on narrow pages.
+The page itself should not overflow. Captions name the diagram and explain the
+scroll affordance. Do not shrink a large graph until its labels become illegible.
 
 Treat the current stylesheet as implementation, not as an approved new brand. Check representative dossiers and navigation after style changes. Keep include leaves and review siblings visible in the composed human record. The package has no token or component library of its own. The house style comes from Lahe or from the folder the user names. Tests use a made-up style under `tests/fixtures/house-style/` and never a real one.

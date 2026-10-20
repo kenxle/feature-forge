@@ -2,7 +2,7 @@
 
 The MVP is on main. The package and local Claude/Codex instructions now have a hard shipping rule: the full suite must pass with no test failures or errors, including pre-existing and setup failures. Existing cloud sessions still need the updated rule delivered or loaded. Keep the current global setup locally; cloud environment setup installs Forge globally inside the VM.
 
-The [legacy audit inventory](LEGACY_AUDIT.md) review is complete. It records the selected restoration scope, deferral of the assignment helper, and exclusion of the operational checklist. Cross-document consistency was not selected. House-style support landed separately during the review; the remaining restoration work is pending on the [project board](../../BOARD.md).
+The [legacy audit inventory](LEGACY_AUDIT.md) review is complete. It records the selected restoration scope, deferral of the assignment helper, and exclusion of the operational checklist. Cross-document consistency was not selected. House-style support landed separately during the review. The selected restorations are [implemented and verified](../restoration/PROGRESS.md); the [project board](../../BOARD.md) retains the deferred follow-ups.
 
 The default feature route is short brief, prototype, PRD, architecture, Plan, TDD, verification, ship, and land. Agents adapt their path to the actual task. The package includes the selected principles, writing guidance, and scoped comment review, and keeps the documentation record without routine human document approval.
 

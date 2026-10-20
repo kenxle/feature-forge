@@ -25,7 +25,7 @@ This repository publishes instructions and local command-line helpers. It has no
 | Engineering principles | Load applicable pstack leaves with upstream provenance and license | [index](../../skills/feature-forge/references/principles.md), [source record](../../skills/feature-forge/vendor/pstack/UPSTREAM.md) |
 | Writing and comments | Use vendored prose guidance and the unchanged Comment Sicko prompt through local host adapters | [writing](../../skills/feature-forge/references/writing.md), [comment review](../../skills/feature-forge/references/comment-review.md) |
 | Dossier rendering | Expand Markdown sources, invoke Pandoc and write local HTML | [renderer](../../skills/feature-forge/scripts/build_feature_docs.py), [style lookup](../../skills/feature-forge/scripts/doc_style.py), [page layout](../../skills/feature-forge/scripts/doc_layout.py), [plain header](../../skills/feature-forge/assets/header.html), [house header](../../skills/feature-forge/assets/house_header.html) |
-| Verification capture | Run a supplied command and record its output, status, and revision | [evidence helper](../../skills/feature-forge/scripts/forge_support.py) |
+| Verification capture | Run a supplied command and record output, status, working-file identity, and described setup | [evidence helper](../../skills/feature-forge/scripts/forge_support.py), [evidence contract](../../skills/feature-forge/references/tested-code-evidence.md) |
 
 ## Installation boundary
 
@@ -35,7 +35,7 @@ Installed copies do not track this checkout. Fix package problems here, compare 
 
 ## Feature records and approval
 
-The default route uses a short brief, prototype decision, PRD, architecture, Plan, and Progress. The prototype precedes detailed requirements. The full review route retains the established brief/architecture/Plan/Progress organization. Optional leaves preserve details and review history. The renderer accepts filenames starting with a numeric prefix of at least two digits and an underscore, including the longer new route. Historical records need no renaming.
+The default route uses lightweight product reasoning, a short brief, prototype decision, PRD, architecture, Plan, and Progress. The prototype precedes detailed requirements. The full review route retains the established brief/architecture/Plan/Progress organization. Focused references cover environment readiness, progress and handoffs, document authoring, UI quality, post-launch verification, and closeout. Optional leaves preserve details and review history. The renderer accepts filenames starting with a numeric prefix of at least two digits and an underscore, including the longer new route. Historical records need no renaming.
 
 The Plan owns acceptance evidence and the throughput checkpoint. Whetstone uses its compact spec's table. Default document production does not add an approval gate. The explicit full review route retains consolidated human approval before build. Shared verification and release guidance covers independent review, evidence, confidence, and existing project authority. These are instruction contracts rather than runtime enforcement.
 
@@ -43,15 +43,17 @@ The Plan owns acceptance evidence and the throughput checkpoint. Whetstone uses 
 
 The renderer selects numbered dossier Markdown at the feature folder's top level. It expands `forge-include` directives relative to their containing file, rejects paths outside the folder, and detects cycles. It appends review siblings, rewrites links between selected documents, and adds shared navigation. With a house style found (`FORGE_DOC_STYLE_DIR`, then Lahe through the `lahe` command), it inlines the style (a variable that is set but unusable is reported on stderr, and Lahe's style is used if it works) and lays each page out as the style expects, and copies the font files the style names beside the pages. Without one, it uses the bundled plain stylesheet and prints one line to stderr. Pandoc renders each source. The helper renders all sources before writing output files; it does not provide an atomic filesystem transaction.
 
-Markdown remains authoritative. Generated HTML is a review artifact. Raw HTML is supported for trusted authors, so the renderer is unsuitable for untrusted input. The bundled output has no CDN or browser-script dependency.
+After Pandoc renders each page, [diagram rendering](../../skills/feature-forge/scripts/doc_diagrams.py) finds Mermaid code blocks and invokes a separately installed local Mermaid CLI. It validates the SVG, rejects external resources, and embeds it as an image with a description and source disclosure. SVG image documents isolate diagram IDs and CSS. Missing or failed tooling stops the build before pages are overwritten. Documents without Mermaid need no Mermaid installation.
+
+Markdown remains authoritative. Generated HTML is a review artifact. Raw HTML is supported for trusted authors, so the renderer is unsuitable for untrusted input. The bundled output has no CDN or browser-script dependency. Authors remain responsible for local assets in their raw HTML.
 
 ## Evidence flow
 
-The evidence helper runs an argument list in the specified repository. It saves combined output to `output.log` and command metadata to `result.json`. It refuses existing evidence files and returns the actual command status. The recorded revision does not identify dirty files or external state. Evidence is an observation from that invocation, not a reusable completion verdict.
+The evidence helper runs an argument list in the specified repository. It saves combined output to `output.log` and command metadata to `result.json`. It refuses existing evidence files. Before and after manifests identify working files, modes, deletions, symlinks, and the revision. Optional caller-described nonsecret setup is recorded separately. Changed contents or conditions remain visible. Capture errors preserve the actual command status and output while making the helper fail. Ignored files, external state, symlink targets, and submodule contents remain explicit limits. Evidence is an observation from that invocation, not a reusable completion verdict.
 
 ## Outside tools
 
-Python runs the helpers and tests. Pandoc is optional for HTML and rendering tests. Git supplies revision metadata. Lahe is an optional separately installed review tool; the package does not contain its state or lifecycle implementation. Browser automation and deployment tools come from the consuming project.
+Python runs the helpers and tests. Pandoc is optional for HTML and rendering tests. Mermaid CLI and its compatible Node and browser installation are required only for dossiers containing Mermaid. Git supplies source metadata and ignore rules. Lahe is an optional separately installed review tool; the package does not contain its state or lifecycle implementation. Browser automation and deployment tools come from the consuming project.
 
 ## Refactor boundaries
 

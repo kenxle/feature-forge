@@ -29,6 +29,24 @@ Source archives under docs may carry a `.source-archive` marker. The link check 
 
 The [CSV fixture](../../tests/fixtures/csv-export/README.md) is synthetic renderer input. It is not evidence of an implemented consumer application.
 
+[Evidence tests](../../tests/test_evidence.py) exercise dirty and untracked files,
+deletions, modes, symlinks, changes during a command, described setup, capture
+errors, and immutable prior results. [Diagram tests](../../tests/test_diagrams.py)
+exercise main sources, includes, and review siblings in both styles, invalid
+output, missing tooling, external-resource rejection, and preservation of prior
+pages on a failed build. They use a local stand-in for the Mermaid CLI so the
+Python suite needs no Node package.
+
+For real diagram and visual proof, copy the
+[visual fixture](../../tests/fixtures/visual-dossier/01_experience.md) and its
+sibling files into a scratch feature folder. Install
+[Mermaid CLI](https://github.com/mermaid-js/mermaid-cli) with compatible Node and
+browser dependencies, then build with `mmdc` on PATH or `FORGE_MERMAID_CLI` set.
+Inspect flowchart, graph, and sequence output in a browser at wide and narrow
+widths. Check diagrams, components, navigation, source disclosures, local fonts,
+and operation with network requests blocked. Run this integration check when
+changing diagram behavior. The stand-in tests do not prove the real CLI works.
+
 ## What counts as green
 
 Run the full suite after changing skills, helpers, or tests. Resolve failures. Report optional skips explicitly. Before pushing, scan tracked content for private paths and dependencies using the command in [repository instructions](../../AGENTS.md). Inspect each hit rather than treating an empty test log as proof of portability.

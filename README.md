@@ -104,6 +104,15 @@ isolated branch/worktree. The default route for a new user experience is:
 8. **Ship.** Prepare coherent PRs with proof and rollout, then follow checks and review findings through readiness.
 9. **Land.** Merge and deploy when evidence and existing authority permit. Verify the actual release, update durable documentation and lessons, and close the record.
 
+Before the short brief, use lightweight
+[product thinking](skills/feature-forge/references/product-thinking.md) to clarify
+the user job, evidence, priority, and credible alternatives. Focused references
+restore [setup](skills/feature-forge/references/environment-readiness.md),
+[progress and handoffs](skills/feature-forge/references/progress-and-handoffs.md),
+[UI fidelity and style checks](skills/feature-forge/references/ui-quality.md),
+[automated post-launch proof](skills/feature-forge/references/post-launch.md), and
+[closeout](skills/feature-forge/references/closeout.md). Load them when relevant.
+
 For nonvisual work, use a concrete interface example or spike when useful rather
 than manufacturing a UI. [Whetstone](skills/whetstone/SKILL.md) retains a compact
 spec for small changes. Choose the [full dossier route](skills/feature-forge/references/runbooks/full-dossier.md)
@@ -144,6 +153,12 @@ python3 -m unittest discover -s tests -v
 
 The renderer expands modular includes and review siblings, rewrites local
 document links and adds navigation. It uses no CDN or browser scripts.
+Mermaid fences render locally as embedded SVG images, with their source available
+in a disclosure. Dossiers containing Mermaid require separately installed
+[Mermaid CLI](https://github.com/mermaid-js/mermaid-cli) and its compatible Node
+and browser dependencies. Put `mmdc` on PATH or set `FORGE_MERMAID_CLI` to its
+executable. The renderer does not install dependencies automatically. A missing
+renderer or invalid diagram fails the build before replacing existing pages.
 
 It builds in the house document style when it can find one: first the folder
 named by `FORGE_DOC_STYLE_DIR` (a folder holding `system-tokens.css`,
@@ -155,6 +170,10 @@ no style is found, the build writes a plain page with a small bundled
 stylesheet and prints one line to stderr.
 Raw HTML is supported for
 trusted local authoring; do not render untrusted documents. Edit Markdown and rebuild.
+See [modular authoring](skills/feature-forge/references/document-authoring.md) for
+source leaves, components, and composed review. The
+[evidence helper](skills/feature-forge/references/tested-code-evidence.md) records
+tested working files and described setup alongside each run's original output.
 
 [Lahe pairing](docs/lahe.md) uses the separate
 [Live Agentic HTML Editor](https://github.com/kenxle/live-agentic-html-editor).

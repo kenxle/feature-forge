@@ -1,12 +1,12 @@
 # Restore the practical guidance around the new runbooks
 
-The new structure kept the main development and verification duties, but lost useful detail about doing them well. Restore lightweight product thinking before the prototype, alongside focused references for setup, release checks, progress, document authoring, UI quality, and closeout. Keep the router small and the prototype-first route intact. This is an inventory for review; this audit has not implemented these restorations.
+The new structure kept the main development and verification duties, but lost useful detail about doing them well. Restore lightweight product thinking before the prototype, alongside focused references for setup, release checks, progress, document authoring, UI quality, and closeout. Keep the router small and the prototype-first route intact. The audit preserves the review inventory. The selected restorations are now implemented; see [implementation progress](../restoration/PROGRESS.md).
 
-**Review complete.** The selected additions below define the restoration scope. Implementation remains pending, apart from the house-style support that landed separately during this review. The assignment helper is deferred, and the operational checklist is excluded. Cross-document consistency was not selected and remains outside the agreed scope.
+**Review complete.** The selected additions below define the restoration scope. The selected scope is implemented, including offline diagrams and tested-content evidence. See the [verification record](../restoration/PLAN.md#verification) and [independent review](../restoration/REVIEW.md). House-style support landed separately during this review. The assignment helper is deferred, and the operational checklist is excluded. Cross-document consistency was not selected and remains outside the agreed scope.
 
 The most important distinction is historical. The pre-update installed skill was much richer than the public package before this rewrite. Many gaps already existed in that public package. Git history alone would have missed them. Keeping a full-dossier route preserved its approval option, but did not preserve all the templates and presentation support behind it.
 
-Choose the scope beside each item. **Include in plan** adds it to the restoration scope; **Defer** keeps it as a follow-up; **Leave out** records that it should stay out. I will record your choices here and on the project board. The buttons decide the plan; implementation follows that agreed scope.
+The buttons below preserve the settled scope. **Include in plan** marks an implemented restoration, **Defer** keeps a follow-up, and **Leave out** records an excluded proposal. The item text remains as the reviewed proposal and historical comparison.
 
 **Chosen scope:**
 
